@@ -1,0 +1,442 @@
+{
+	"kind": "youtube#searchListResponse",
+	"etag": "REvZ5Ws_BomnKK-ik77Do667SfM",
+	"nextPageToken": "CAoQAA",
+	"regionCode": "KR",
+	"pageInfo": {
+		"totalResults": 1000000,
+		"resultsPerPage": 13
+	},
+	"items": [
+		{
+			"kind": "youtube#searchResult",
+			"etag": "8yOMrMBHNqtCeV-MYpNJINx1kjQ",
+			"id": {
+				"kind": "youtube#channel",
+				"channelId": "UCdeWxKJuvtUG2xyN6pOJEvA"
+			},
+			"snippet": {
+				"publishedAt": "2010-07-04T06:28:27Z",
+				"channelId": "UCdeWxKJuvtUG2xyN6pOJEvA",
+				"title": "Interactive Developer",
+				"description": "코드로 만드는 애니메이션, 영감, 실리콘밸리의 생활과 해외취업에 대해 이야기 합니다. https://blog.cmiscm.com/",
+				"thumbnails": {
+					"default": {
+						"url": "https://yt3.ggpht.com/ytc/AMLnZu8DheYUwEBTieLOJ7hM7Q1-a56Snbu2ievnIqr3=s88-c-k-c0xffffffff-no-rj-mo"
+					},
+					"medium": {
+						"url": "https://yt3.ggpht.com/ytc/AMLnZu8DheYUwEBTieLOJ7hM7Q1-a56Snbu2ievnIqr3=s240-c-k-c0xffffffff-no-rj-mo"
+					},
+					"high": {
+						"url": "https://yt3.ggpht.com/ytc/AMLnZu8DheYUwEBTieLOJ7hM7Q1-a56Snbu2ievnIqr3=s800-c-k-c0xffffffff-no-rj-mo"
+					}
+				},
+				"channelTitle": "Interactive Developer",
+				"liveBroadcastContent": "none",
+				"publishTime": "2010-07-04T06:28:27Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "IAiq4pZ9j7lAeO2pXopt0UUYcWc",
+			"id": {
+				"kind": "youtube#channel",
+				"channelId": "UCgaxgVio7J9JgZrONkwiSEQ"
+			},
+			"snippet": {
+				"publishedAt": "2021-05-21T14:09:44Z",
+				"channelId": "UCgaxgVio7J9JgZrONkwiSEQ",
+				"title": "GIS DEVELOPER",
+				"description": "안녕하세요, GIS Developer 김형준입니다. 지리정보시스템(GIS) 분야에서 활동하고 있는 소프트웨어 개발자입니다. GIS는 현실 세계 ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://yt3.ggpht.com/FUeyMQkDhzHMiq12P4mi1hh1kMu8UN0qnX0AjWHhEvzd41Z5qRx8PsZQ7GXKe2kiF7zIHuXz=s88-c-k-c0xffffffff-no-rj-mo"
+					},
+					"medium": {
+						"url": "https://yt3.ggpht.com/FUeyMQkDhzHMiq12P4mi1hh1kMu8UN0qnX0AjWHhEvzd41Z5qRx8PsZQ7GXKe2kiF7zIHuXz=s240-c-k-c0xffffffff-no-rj-mo"
+					},
+					"high": {
+						"url": "https://yt3.ggpht.com/FUeyMQkDhzHMiq12P4mi1hh1kMu8UN0qnX0AjWHhEvzd41Z5qRx8PsZQ7GXKe2kiF7zIHuXz=s800-c-k-c0xffffffff-no-rj-mo"
+					}
+				},
+				"channelTitle": "GIS DEVELOPER",
+				"liveBroadcastContent": "none",
+				"publishTime": "2021-05-21T14:09:44Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "OZOI2GRPrcLfcvvXEOHVr-GKfQI",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "2vnliMZmwZ4"
+			},
+			"snippet": {
+				"publishedAt": "2022-06-03T17:00:11Z",
+				"channelId": "UCu1xbgCV5o48h_BYCQD7KJg",
+				"title": "The Truth About Becoming a Web Developer",
+				"description": "Learn how to code the right way here: - Master React.js Here: https://bit.ly/LearnReactNow - Complete Jr to Sr Web Dev Roadmap: ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/2vnliMZmwZ4/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/2vnliMZmwZ4/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/2vnliMZmwZ4/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "Chris Sean",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-06-03T17:00:11Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "1czzfCRe16UBOmfuXeBto8QjU44",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "Fkd9TWUtFm0"
+			},
+			"snippet": {
+				"publishedAt": "2012-10-24T19:34:17Z",
+				"channelId": "UCAuUUnT6oDeKwE6v1NGQxug",
+				"title": "A 12-year-old app developer | Thomas Suarez",
+				"description": "Visit http://TED.com to get our entire library of TED Talks, transcripts, translations, personalized talk recommendations and more.",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/Fkd9TWUtFm0/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/Fkd9TWUtFm0/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/Fkd9TWUtFm0/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "TED",
+				"liveBroadcastContent": "none",
+				"publishTime": "2012-10-24T19:34:17Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "mSYMDZkEx5_xXkn5UboRLWXY4Ao",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "pEfrdAtAmqk"
+			},
+			"snippet": {
+				"publishedAt": "2022-08-24T17:05:46Z",
+				"channelId": "UCsBjURrPoezykLs9EqgamOA",
+				"title": "God-Tier Developer Roadmap",
+				"description": "The programming iceberg is complete roadmap to the loved, hated, historical, and weird programming languages that you should ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/pEfrdAtAmqk/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/pEfrdAtAmqk/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/pEfrdAtAmqk/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "Fireship",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-08-24T17:05:46Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "6GeUlNDRerCkVzBP4NuSgP8HU3A",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "SCOY4MPpuyI"
+			},
+			"snippet": {
+				"publishedAt": "2021-01-11T22:39:42Z",
+				"channelId": "UCZ9qFEC82qM6Pk-54Q4TVWA",
+				"title": "Why You Shouldn&#39;t Become a Software Developer in 2021",
+				"description": "Trying to become a software developer for the wrong reasons will often mean you have a high chance of failure. In this video I talk ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/SCOY4MPpuyI/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/SCOY4MPpuyI/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/SCOY4MPpuyI/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "Andy Sterkowitz",
+				"liveBroadcastContent": "none",
+				"publishTime": "2021-01-11T22:39:42Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "8YgA-aN3DMbyTUWol5-quuy2O6M",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "OIfDWhFKd1c"
+			},
+			"snippet": {
+				"publishedAt": "2021-03-27T12:00:14Z",
+				"channelId": "UCs4y2CueccxT6ZmAAlZkBNQ",
+				"title": "តើweb developer ជាទូទៅធ្វើការរបៀបណា?",
+				"description": "តើweb developer ជាទូទៅធ្វើការរបៀបណា? Photo in thumbnail: Photo by Christina Morillo from Pexels.",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/OIfDWhFKd1c/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/OIfDWhFKd1c/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/OIfDWhFKd1c/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "Sambat Lim",
+				"liveBroadcastContent": "none",
+				"publishTime": "2021-03-27T12:00:14Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "TGw19hgoZGivJ8ZU_CvdPevArpw",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "vej8Hjl1gbw"
+			},
+			"snippet": {
+				"publishedAt": "2021-05-25T14:37:55Z",
+				"channelId": "UCQAhHBxFTnkZxy-V4hZ8X_w",
+				"title": "Senior VS Junior 😂 | Funny Developer | Short 🔥",
+				"description": "Hey What's up guys, Arsil Here, I am Software Developer and Ethical Hacker. I have started this channel to teach you all the new ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/vej8Hjl1gbw/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/vej8Hjl1gbw/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/vej8Hjl1gbw/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "Different Developer",
+				"liveBroadcastContent": "none",
+				"publishTime": "2021-05-25T14:37:55Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "GBR3ZGf2IHfwNfmv1IoL6xXsOng",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "HlRVwl_iEzI"
+			},
+			"snippet": {
+				"publishedAt": "2022-04-24T10:30:54Z",
+				"channelId": "UC6qQOTx9LuKMC5p2dbjmSRg",
+				"title": "Developer - HATE Podcast 281",
+				"description": "Developer is the 281st guest of our original HATE Podcast series. Download available at 10.000 listens on our Soundcloud ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/HlRVwl_iEzI/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/HlRVwl_iEzI/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/HlRVwl_iEzI/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "HATE",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-04-24T10:30:54Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "Qt90rgxDiDdF6WcYxLc_OFvYx9w",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "EJ6fALsLUKg"
+			},
+			"snippet": {
+				"publishedAt": "2023-01-10T15:02:49Z",
+				"channelId": "UCuHVjteDW9tCb8QqMrtGvwQ",
+				"title": "2023 Is Going To Be A Rough Year For Game Developers",
+				"description": "Get 50% off Full Time Game Dev: https://www.fulltimegamedev.com/ ▻ Enroll in my FREE 3D course!",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/EJ6fALsLUKg/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/EJ6fALsLUKg/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/EJ6fALsLUKg/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "Thomas Brush",
+				"liveBroadcastContent": "none",
+				"publishTime": "2023-01-10T15:02:49Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "-s5idS-Y5aS2JwuHXHFBQhLbZpg",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "IyGpOx3rlnA"
+			},
+			"snippet": {
+				"publishedAt": "2023-01-14T19:34:54Z",
+				"channelId": "UCgUOWrjLEhmHE9tqYtoeS_g",
+				"title": "Xbox Leaders Hyping 2023 &amp; The Developer Direct Event",
+				"description": "The Xbox showcase event that is coming on January 25th is now getting even more hype as Xbox leaders are discussing their ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/IyGpOx3rlnA/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/IyGpOx3rlnA/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/IyGpOx3rlnA/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "Destin",
+				"liveBroadcastContent": "none",
+				"publishTime": "2023-01-14T19:34:54Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "Pf-lheEUPgxmc54wpGZ4o1eeiCc",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "NFu9gibxt8A"
+			},
+			"snippet": {
+				"publishedAt": "2023-01-15T12:00:12Z",
+				"channelId": "UCyUBW72KU30dfAYWLVNZO8Q",
+				"title": "How to be a GREAT Developer",
+				"description": "UNCLESTEF'S DEVELOPER BOOTCAMP AND MENTORING PROGRAM https://unclestef.com/ CODER'S CAREER PATHS ...",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/NFu9gibxt8A/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/NFu9gibxt8A/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/NFu9gibxt8A/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "Stefan Mischook",
+				"liveBroadcastContent": "none",
+				"publishTime": "2023-01-15T12:00:12Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "oQt9N8EEPjnvardCdehVyP9hrD8",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "CMKEhqMnxTg"
+			},
+			"snippet": {
+				"publishedAt": "2023-01-14T04:58:06Z",
+				"channelId": "UC59K-uG2A5ogwIrHw4bmlEg",
+				"title": "T Shaped Developer",
+				"description": "java #learning #programming #shorts #creatingforindia #telusko.",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/CMKEhqMnxTg/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/CMKEhqMnxTg/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/CMKEhqMnxTg/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					}
+				},
+				"channelTitle": "Telusko",
+				"liveBroadcastContent": "none",
+				"publishTime": "2023-01-14T04:58:06Z"
+			}
+		}
+	]
+}
