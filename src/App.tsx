@@ -1,15 +1,15 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { Reset } from 'styled-reset';
 import Header from './components/Header';
 import SNB from './components/SNB';
+import VideoDisplay from './components/VideoContainer';
 
 function App() {
 	return (
 		<>
-			<Reset />
 			<Header />
 			<SNB />
+			<VideoDisplay />
 			<Outlet />
 		</>
 	);
