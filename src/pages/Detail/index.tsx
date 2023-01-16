@@ -2,19 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import Youtube, { axiosSearchTest, searchTest } from '../../util/api/api';
 import searchData from '../../mockup/search.json';
+import videoData from '../../mockup/video.json';
+import PlayerBox from '../../components/PlayerBox';
+import DescriptionBox from '../../components/VideoInfoBox';
+import CommentBox from '../../components/CommentBox';
 
 // const client = new Youtube();
-
 // const tempt = async () => {
 // 	const res = await client.search('frozen');
 // 	console.log('tempt ', res);
 // };
-
 // tempt();
 // searchTest('frozen');
 // axiosSearchTest('frozen');
 
-console.log(searchData);
+console.log('목업: ', searchData);
 
 const Detail = () => {
 	return (
@@ -22,7 +24,7 @@ const Detail = () => {
 			<PrimaryBox>
 				<PlayerBox />
 				<DescriptionBox />
-				<CommentsBox />
+				<CommentBox />
 			</PrimaryBox>
 			<SecondaryBox />
 		</Layout>
@@ -46,16 +48,4 @@ const SecondaryBox = styled.div`
 	background-color: yellow;
 	width: 20vw;
 	height: 100vh;
-`;
-const PlayerBox = styled.div`
-	background-color: orange;
-	height: 400px;
-`;
-const DescriptionBox = styled.div`
-	background-color: gray;
-	height: 400px;
-`;
-const CommentsBox = styled.div`
-	background-color: blue;
-	height: 600px;
 `;

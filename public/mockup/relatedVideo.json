@@ -1,0 +1,446 @@
+{
+	"kind": "youtube#searchListResponse",
+	"etag": "JG3Gjo6V9SOJDB1TthYitZunUlM",
+	"items": [
+		{
+			"kind": "youtube#searchResult",
+			"etag": "OP2u9qa4mk7ONtXXR_VGCNR47Rw",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "-uleG_Vecis"
+			},
+			"snippet": {
+				"publishedAt": "2022-05-04T15:25:07Z",
+				"channelId": "UCsBjURrPoezykLs9EqgamOA",
+				"title": "100+ Computer Science Concepts Explained",
+				"description": "Learn the fundamentals of Computer Science with a quick breakdown of jargon that every software engineer should know. Over 100 technical concepts from the CS curriculum are explained to provide a foundation for programmers.\n\n#compsci #programming #tech\n\n🔗 Resources\n\n- Computer Science https://undergrad.cs.umd.edu/what-computer-science\n- CS101 Stanford https://online.stanford.edu/courses/soe-ycscs101-sp-computer-science-101\n- Controversial Developer Opinions https://youtu.be/goy4lZfDtCE\n- Design Patterns https://youtu.be/tv-_1er1mWI\n\n\n🔥 Get More Content - Upgrade to PRO\n\nUpgrade to Fireship PRO at https://fireship.io/pro\nUse code lORhwXd2 for 25% off your first payment. \n\n🎨 My Editor Settings\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font\n\n🔖 Topics Covered\n\nTurning Machine\nCPU\nTransistor\nBit\nByte\nCharacter Encoding ASCII\nBinary\nHexadecimal\nNibble\nMachine Code\nRAM\nMemory Address\nI/O\nKernel (Drivers)\nShell\nCommand Line Interface\nSSH\nMainframe\nProgramming Language\nAbstraction\nInterpreted\nCompiled\nExecutable\nData Types\nVariable\nDynamic Typing\nStatic Typing\nPointer\nGarbage Collector\nint \nsigned / unsigned\nfloat \nDouble\nChar\nstring\nBig endian\nLittle endian\nArray\nLinked List\nSet\nStack\nQueue\nHash\nTree\nGraph\nNodes and Edges\nAlgorithms\nFunctions\nReturn\nArguments\nOperators\nBoolean\nExpression\nStatement\nConditional Logic\nWhile Loop\nFor Loop\nIterable\nVoid\nRecursion\nCall Stack\nStack Overflow\nBase Condition\nBig-O\nTime Complexity\nSpace Complexity\nBrute Force\nDivide and conquer\nDynamic Programming\nMemoization\nGreedy\nDijkstra's Shortest Path\nBacktracking\nDeclarative\nFunctional Language\nImperative\nProcedural Language\nMultiparadigm\nOOP\nClass\nProperties\nMethods\nInheritance\nDesign Patterns\nInstantiate\nHeap Memory\nReference\nThreads\nParallelism\nConcurrency\nBare Metal\nVirtual Machine\nIP Address\nURL\nDNS\nTCP\nPackets. \nSSL\nHTTP\nAPI\nPrinters",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/-uleG_Vecis/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/-uleG_Vecis/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/-uleG_Vecis/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/-uleG_Vecis/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/-uleG_Vecis/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "Fireship",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-05-04T15:25:07Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "MlSte94C5cldVMGJ868VlNWmKw0",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "8PhdfcX9tG0"
+			},
+			"snippet": {
+				"publishedAt": "2022-07-21T16:11:29Z",
+				"channelId": "UCsBjURrPoezykLs9EqgamOA",
+				"title": "I tried 10 code editors",
+				"description": "The top 10 code editors for programmers in 2022. We start by exploring simple text editors like vim, then show the evolution to IDEs like Visual Studio. \n\n#programming #code #top10 \n\n🔗 Resources\n\nVS Code course https://fireship.io/courses/vscode-tricks\nEditor war https://en.wikipedia.org/wiki/Editor_war\nVS Code in 100 Seconds https://youtu.be/KMxo3T_MTvY\nvim in 100 Seconds https://youtu.be/-txKSRn0qeA\n\n🔥 Get More Content - Upgrade to PRO\n\nUpgrade to Fireship PRO at https://fireship.io/pro\nUse code lORhwXd2 for 25% off your first payment. \n\n🎨 My Editor Settings\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font\n\n🔖 Topics Covered\n\n- How do you choose a code editor?\n- What is the best code editor?\n- vim vs emacs\n- VS Code vs vim\n- the editor wars\n- tools required to learn to code",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/8PhdfcX9tG0/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/8PhdfcX9tG0/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/8PhdfcX9tG0/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/8PhdfcX9tG0/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/8PhdfcX9tG0/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "Fireship",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-07-21T16:11:29Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "oklEqaNqez96mb4bL3Jbd0clz7w",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "_k-F-MMvQV4"
+			},
+			"snippet": {
+				"publishedAt": "2022-05-20T14:53:33Z",
+				"channelId": "UCsBjURrPoezykLs9EqgamOA",
+				"title": "10 Programmer Stereotypes",
+				"description": "Programmers are weird. It is human nature to put people into a box with stereotypes and the tech industry is no exception. Let's take a look at 10 common stereotypes people use for software engineers and developers https://fireship.io/pro \n\n#tech #programming #comedy\n\n💀 Other Funny, but Useless Videos\n\nReact for the Haters https://youtu.be/HyWYpM_S-2c\nJava for the Haters https://youtu.be/m4-HM_sCvtQ\n\n🔥 Get a Fireship T-shirt - Upgrade for Life!\n\nUpgrade to Fireship PRO at https://fireship.io/pro\nUse code lORhwXd2 for 25% off your first payment\n\n🔖 Topics Covered\n\n- What are programmer stereotypes?\n- What are programmers really like?\n- Code memes\n- are all programmers introverts?\n- programming humor\n- jokes about code\n- making fun of coders\n- what is hacking really like?",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/_k-F-MMvQV4/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/_k-F-MMvQV4/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/_k-F-MMvQV4/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/_k-F-MMvQV4/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/_k-F-MMvQV4/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "Fireship",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-05-20T14:53:33Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "WONcthOQSdzpfv5jrxYR8k1tHi0",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "vqs_0W-MSB0"
+			},
+			"snippet": {
+				"publishedAt": "2021-05-06T15:50:17Z",
+				"channelId": "UCsBjURrPoezykLs9EqgamOA",
+				"title": "How a CPU Works in 100 Seconds // Apple Silicon M1 vs Intel i9",
+				"description": "Learn how the central processing unit (CPU) works in your computer. Compare performance and processor architecture between the Intel and Apple Silicon M1 chips with @AZisk \n\n#compsci #tech #100SecondsOfCode\n\n🔥 Subscribe to Alex's Channel 🔥\n\nhttps://www.youtube.com/channel/UCajiMK_CY9icRhLepS8_3ug\n\n🔗 Resources\n\nApple Silicon Breakdown https://www.macrumors.com/guide/apple-silicon/\nVisual CPU http://visual6502.org/\nClock Speed https://www.intel.com/content/www/us/en/gaming/resources/cpu-clock-speed.html\n\n📚 Chapters\n\n00:00 How a CPU Works\n01:06 Instruction Cycle\n02:25 Apple M1 vs Intel i9\n06:10 Performance Benchmarking\n9:06 Best Dev Stacks for M1\n10:12 Worst Stacks for M1\n11:55 Final Summary\n\n🔥 Watch more with Fireship PRO\n\nUpgrade to Fireship PRO at https://fireship.io/pro\nUse code lORhwXd2 for 25% off your first payment. \n\n🎨 My Editor Settings\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/vqs_0W-MSB0/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/vqs_0W-MSB0/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/vqs_0W-MSB0/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/vqs_0W-MSB0/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/vqs_0W-MSB0/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "Fireship",
+				"liveBroadcastContent": "none",
+				"publishTime": "2021-05-06T15:50:17Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "M_WeOk0MYaBaCZvWkOxYyifcUVk",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "vdiYtiKD8eI"
+			},
+			"snippet": {
+				"publishedAt": "2023-01-15T17:04:23Z",
+				"channelId": "UCsBjURrPoezykLs9EqgamOA",
+				"title": "The Official JavaScript Tier List is Here",
+				"description": "Breakdown of the State of JS survey results released in 2023. Which web frameworks are most popular and which ones are most hated? How much money do frontend developers actually make? \n\n#javascript #tierlist #TheCodeReport\n\n💬 Chat with Me on Discord\n\nhttps://discord.gg/fireship\n\n🔗 Resources\n\nState of JS Results https://stateofjs.com\nTech Trends in the year 2023 https://youtu.be/1v_TEnpqHXE\n\n📚 Chapters\n\n🔥 Get More Content - Upgrade to PRO\n\nUpgrade at https://fireship.io/pro\nUse code YT25 for 25% off PRO access \n\n🎨 My Editor Settings\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font\n\n🔖 Topics Covered\n\n- Trending tools for web developers\n- Top JS frameworks for 2023\n- React vs Svelte\n- React vs Vue\n- React vs Angular\n- Web development salary expectations\n- How much do JavaScript developers earn?",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/vdiYtiKD8eI/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/vdiYtiKD8eI/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/vdiYtiKD8eI/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/vdiYtiKD8eI/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/vdiYtiKD8eI/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "Fireship",
+				"liveBroadcastContent": "none",
+				"publishTime": "2023-01-15T17:04:23Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "93f-kRpIdB4wUFDo_5ORAyLGASA",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "cuHDQhDhvPE"
+			},
+			"snippet": {
+				"publishedAt": "2021-08-11T17:17:45Z",
+				"channelId": "UCsBjURrPoezykLs9EqgamOA",
+				"title": "I built the same app 10 times // Which JS Framework is best?",
+				"description": "I built a simple app with 10 different JavaScript frameworks... Learn the pros and cons of each JS framework before building your next app https://github.com/fireship-io/10-javascript-frameworks\n\n#javascript #webdev #top10\n\n🔗 Resources\n\nFull Courses https://fireship.io/courses/\nPerformance Benchmarks https://github.com/krausest/js-framework-benchmark\nSource code https://github.com/fireship-io/10-javascript-frameworks\n\n📚 Chapters\n\n00:00 JavaScript Frameworks\n00:53 1. Vanilla\n04:21 2. React\n07:48 3. Angular\n10:15 4. Vue\n12:18 5. Svelte\n14:16 6. Lit\n16:11 7. Stencil\n17:18 8. Solid\n18:35 9. Alpine\n20:17 10. Mithril\n\n 🤓 Install the quiz app\n\niOS https://itunes.apple.com/us/app/fireship/id1462592372?mt=8\nAndroid https://play.google.com/store/apps/details?id=io.fireship.quizapp\n\n🔥 Watch more with Fireship PRO\n\nUpgrade to Fireship PRO at https://fireship.io/pro\nUse code lORhwXd2 for 25% off your first payment. \n\n🎨 My Editor Settings\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/cuHDQhDhvPE/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/cuHDQhDhvPE/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/cuHDQhDhvPE/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/cuHDQhDhvPE/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/cuHDQhDhvPE/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "Fireship",
+				"liveBroadcastContent": "none",
+				"publishTime": "2021-08-11T17:17:45Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "pFmgHW5oSMTH4C4h6cB4kQeIdw0",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "9s29LKfEFjQ"
+			},
+			"snippet": {
+				"publishedAt": "2022-06-29T03:46:39Z",
+				"channelId": "UChz9LmLfA1Q2SCx32fYw-Og",
+				"title": "How I would learn to code (If I could start over)",
+				"description": "Starting in Special Ed and ending at Microsoft (so far), my journey into Software Engineering was difficult to say the least. If I could start over, where would I land? Which languages would I learn and which projects would I build?\n\nDiscord: https://discord.gg/YCpQcSuVaf\n\nLinkedIn: https://www.linkedin.com/in/jasonlevigoodison\nInstagram: https://www.instagram.com/jasongoodison\nTwitter: https://twitter.com/GoodisonJason\n\nGet the secret resume templates for free: hiredfortech.com\n\nWatch these too!\nI suck at coding: https://youtu.be/fehAgOqTR44\nSecret Backdoor: https://youtu.be/kKKign_F3nI\nStandup in big tech: https://youtu.be/_qno6VbMG6E\n\nChapters:\nIntro - 0:00\nLangs I learned - 0:29\nMost useful languages to know - 1:10\nMy point - 1:45\nCoding vs programming - 2:50\nBest starting language - 3:35\nWhat to do next - 4:22\nWhat do I build - 6:10\nDunning Kruger Effect - 8:18\nAre Hackathons worth? - 8:40\n\n**DISCLAIMER**:\nThis channel was prepared or accomplished by Jason Goodison in his personal capacity. The opinions expressed in this video are the author's own and do not necessarily reflect the views of Microsoft, Waterloo, or its affiliates.",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/9s29LKfEFjQ/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/9s29LKfEFjQ/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/9s29LKfEFjQ/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/9s29LKfEFjQ/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/9s29LKfEFjQ/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "Jason Goodison",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-06-29T03:46:39Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "oymzcULG4SGTiNL3rUIGTCBayh0",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "_tE4phLuGyA"
+			},
+			"snippet": {
+				"publishedAt": "2022-04-06T12:00:21Z",
+				"channelId": "UCSgRS__nMStoaXtWlKKfLDw",
+				"title": "1 Year of Learning Game Development In 6 Minutes",
+				"description": "I spent almost 1 Year learning game development in Unity, with no prior experience, and here's the entire progress in 6 minutes!\nSubscribe for another year!\n\n● Join to get custom emojis and additional perks:\nhttps://www.youtube.com/giedzilla/join\n\nHave you ever tried liking a video? It's pretty cool.\n\n● Download my Games: https://giedzilla.itch.io/\n\n● Twitter - https://twitter.com/GiedzillaTaken\n\n● Watch my other videos\nGiedzilla - I Made Runescape, But It's First Person Shooter\nhttps://youtu.be/_aoi2abtzE0\nGiedzilla - I Made Game Using the WORST Program\nhttps://youtu.be/Rz-Sk9gJmhg\nGiedzilla - I Made an Ultimate Puzzle Game to Trick You\nhttps://youtu.be/Zdc-4SJlOi8\nGiedzilla - I Turned Them Into a Boss Battles In My Game\nhttps://youtu.be/5dK0q33_yLg\nGiedzilla - How I Made 3D RPG Open World Game in Unity\nhttps://youtu.be/AfKrhayil6k\nGiedzilla - How I Made a 2D Game with NO Experience (you can too)\nhttps://youtu.be/CQcB7TwOzWI\nGiedzilla - How I Made my First Mobile Game in Unity!\nhttps://youtu.be/xlY6PADG5GU\nGiedzilla - I Made a Game You Play with your Voice in Unity\nhttps://youtu.be/7v1b2g2tn8c\n\n● Timestamps\nComing soon\n\n● Description\nAlmost 1 year ago I started learning game development in Unity. That means I had to learn c#, how to make game assets, and a billion other things.  I've made 5 games so far: a 2d hack and slash game, a voice-controlled platformer, a tower builder for androids, a 3d RPG gladiators game, and a 3d puzzle game. How did I do all of that? Well, youtube is full of great game dev videos, and... ok ok, it was brackeys.\n\n● About\nDigging deep, huh? I am an indie game developer and self-taught(don't know much) programmer and artist. I make videos about games I make in Unity's game engine, drawing game assets, and everything related to games in general. If you are an epic gamer yourself you should join my journey and be a part of it!\n\n● Music\nIntro song : Blitz - Retro Gaming Version [Royalty Free]\nMusic provided and produced by LonePeakMusic \nLink : https://youtu.be/bn-9FFT3KZM\n\nRenaissance by Audionautix is licensed under a Creative Commons Attribution 4.0 license. https://creativecommons.org/licenses/by/4.0/\nArtist: http://audionautix.com/\n\n#gamedev #unity #giedzilla #makegames #unity3d #rpg",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/_tE4phLuGyA/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/_tE4phLuGyA/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/_tE4phLuGyA/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/_tE4phLuGyA/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/_tE4phLuGyA/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "Giedzilla",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-04-06T12:00:21Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "b5lyL_rQdv_gNZqH4i4EJbdkEQs",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "9QiE-M1LrZk"
+			},
+			"snippet": {
+				"publishedAt": "2020-02-22T15:39:11Z",
+				"channelId": "UCpExuV8qJMfCaSQNL1YG6bQ",
+				"title": "How I Tricked My Brain To Like Doing Hard Things (dopamine detox)",
+				"description": "You probably don't have a problem playing video games or browsing social media on your phone. In fact I have no doubt you could sit in front of a screen and do both of those activities for 2 hours, or even longer without breaking your concentration.\nBut what about half an hour of studying? That might be too hard.\nHow about working on your side business for another hour? Doesn't sound too appealing.\n\nEven though you logically know that studying, exercising, building a business or something equally productive, will bring you more benefits in the long run, you still prefer watching TV, playing video games and scrolling through social media.\n\nOne might argue that it's obvious why.\nOne activity is easy and doesn't require much effort, while the other activity is difficult and it requires you to apply yourself.\n\nBut some people seem to have no problem studying, exercising, or working on their side projects, regularly.\n\nWhich begs the question: Why are some people more motivated to tackle difficult things?\nAnd is there a way to make doing difficult things, easy?\n\nReferences:\nhttps://www.psychologytoday.com/intl/blog/the-athletes-way/201405/the-neuroscience-pleasure-and-addiction\nhttps://www.ncbi.nlm.nih.gov/pmc/articles/PMC2791340/\nhttps://www.cell.com/cell/fulltext/0092-8674(95)90145-0\nhttps://www.centersite.net/poc/view_doc.php?type=doc&id=48370&cn=1408\n\nImages © Piers Baker www.svgdoodlewhiteboard.com",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/9QiE-M1LrZk/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/9QiE-M1LrZk/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/9QiE-M1LrZk/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/9QiE-M1LrZk/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/9QiE-M1LrZk/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "Better Than Yesterday",
+				"liveBroadcastContent": "none",
+				"publishTime": "2020-02-22T15:39:11Z"
+			}
+		},
+		{
+			"kind": "youtube#searchResult",
+			"etag": "FYZENM3lpl5JOByTGlFZ4Po97_k",
+			"id": {
+				"kind": "youtube#video",
+				"videoId": "1t1_a1BZ04o"
+			},
+			"snippet": {
+				"publishedAt": "2022-08-01T15:14:39Z",
+				"channelId": "UCsBjURrPoezykLs9EqgamOA",
+				"title": "How to NOT Fail a Technical Interview",
+				"description": "Welcome to the software engineer's technical interview survival guide. Using a mock interview with the classic FizzBuzz question, we cover various tips and strategies for high-pressure problem solving. \n\nThanks to @ThePrimeagen  for collaborating! \n\n#programming #interview #softwareengineer \n\n🔗 Resources\n\nFizzBuzz Question https://leetcode.com/problems/fizz-buzz/\nCoding interview https://en.wikipedia.org/wiki/Coding_interview\nHow to get a Tech Job https://youtu.be/Xg9ihH15Uto\nHow to Learn to Code https://youtu.be/NtfbWkxJTHw\n\n🔥 Get More Content - Upgrade to PRO\n\nUpgrade to Fireship PRO at https://fireship.io/pro\nUse code lORhwXd2 for 25% off your first payment. \n\n🎨 My Editor Settings\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font\n\n🔖 Topics Covered\n\n- Technical interview tips\n- What are software engineer interviews like?\n- How difficult is a coding interview?\n- Failing a technical interview\n- How to prepare for programming interview",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/1t1_a1BZ04o/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/1t1_a1BZ04o/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/1t1_a1BZ04o/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/1t1_a1BZ04o/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/1t1_a1BZ04o/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "Fireship",
+				"liveBroadcastContent": "none",
+				"publishTime": "2022-08-01T15:14:39Z"
+			}
+		}
+	]
+}
