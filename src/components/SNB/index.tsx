@@ -1,7 +1,72 @@
-import React from "react";
+import styled from 'styled-components';
+import React from 'react';
+import { AiFillHome } from 'react-icons/ai';
+import { SideBarSection } from './SideBarSection';
 
-const SNB = () => {
-  return <div>SNB</div>;
+const list = {
+	section1: [
+		{
+			icon: 'AiFillHome',
+			title: 'Home',
+		},
+		{
+			icon: 'MdOutlineExplore',
+			title: 'Explore',
+		},
+		{
+			icon: 'MdSubscriptions',
+			title: 'Subscriptions',
+		},
+	],
+	section2: [
+		{
+			icon: 'MdVideoLibrary',
+			title: 'Library',
+		},
+		{
+			icon: 'MdHistory',
+			title: 'History',
+		},
+		{
+			icon: 'MdWatchLater',
+			title: 'Watch later',
+		},
+		{
+			icon: 'AiFillLike',
+			title: 'Liked videos',
+		},
+	],
+	section3: [
+		{
+			icon: 'MdSettings',
+			title: 'Settings',
+		},
+		{
+			icon: 'MdFlag',
+			title: 'Report history',
+		},
+	],
 };
 
+const SNB = () => {
+	return (
+		<Container>
+			<ul>
+				<SideBarSection info={list.section1} />
+				<SideBarSection info={list.section2} />
+				<SideBarSection info={list.section3} />
+			</ul>
+		</Container>
+	);
+};
+
+const Container = styled.nav`
+	background-color: #212529;
+	p {
+		color: white;
+	}
+`;
+const NavSection = styled.section`
+	border-bottom: 1px solid gray;
+`;
 export default SNB;
