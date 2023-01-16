@@ -1,0 +1,651 @@
+{
+	"kind": "youtube#commentThreadListResponse",
+	"etag": "gJvwFUtDAE8dAYtscnjCnu3747o",
+	"nextPageToken": "QURTSl9pM2ZHckhvMGt1NHczOUZOX2RTWFZXdkg5bC1JUjdTZEJGNUI0RU5YOXdQYlpoNlpCaFRRMWFGTDNkWlBscW1kOGJoTGlPQnBVNA==",
+	"pageInfo": {
+		"totalResults": 20,
+		"resultsPerPage": 20
+	},
+	"items": [
+		{
+			"kind": "youtube#commentThread",
+			"etag": "EXUD-dAdCVY_FIY7dBjQadi5jNM",
+			"id": "UgyuTitP8bBC2ZblAe14AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "TZXyq-91d8KBeoWDLbvq9DbZi4A",
+					"id": "UgyuTitP8bBC2ZblAe14AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "Do you think that your family and friends don’t watch yours videos?",
+						"textOriginal": "Do you think that your family and friends don’t watch yours videos?",
+						"authorDisplayName": "Carlos Garcia",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu_FOF7bZlA3l_N5KAvbkT6aCPEOYLSCXTSEdw=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCp1cKFqKjMhi6YD_rsJDvBQ",
+						"authorChannelId": {
+							"value": "UCp1cKFqKjMhi6YD_rsJDvBQ"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-16T00:52:50Z",
+						"updatedAt": "2023-01-16T00:52:50Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "P4K29gtQHbFeBUg7W8RzuMcubhA",
+			"id": "Ugyy1cBDN6Z6HAp_wMR4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "bP92slPzgxOkSlOp_uEmUqtbogo",
+					"id": "Ugyy1cBDN6Z6HAp_wMR4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "Psst motivate me I Graduate with the degree of BS- Computer Science I want to be progammer..",
+						"textOriginal": "Psst motivate me I Graduate with the degree of BS- Computer Science I want to be progammer..",
+						"authorDisplayName": "Jhonwyn TV",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu8Zi4IGfn7VH6oSAI-JxebczrOWvmNtmaVyYLI1=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCb9olj84YO3bBR80DxBnWig",
+						"authorChannelId": {
+							"value": "UCb9olj84YO3bBR80DxBnWig"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-15T10:45:25Z",
+						"updatedAt": "2023-01-15T10:45:25Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "qEztKflpy7FNM-0Howdr05sqQg8",
+			"id": "UgwX5mAAY-3o1Vn7b7h4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "7EjTETVj2koPy2CIsPbcGxeOup8",
+					"id": "UgwX5mAAY-3o1Vn7b7h4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "Wait, your family don&#39;t look at your videos? Great video by the way, thanks for sharing your personal point of view as well.",
+						"textOriginal": "Wait, your family don't look at your videos? Great video by the way, thanks for sharing your personal point of view as well.",
+						"authorDisplayName": "Susumo Fabian",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu_S5OuVkFjkoO---0OrxfIJ_co6fw3Ss8-wThzW=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCLgHAGw3NWm2Ek4aAWw6C_Q",
+						"authorChannelId": {
+							"value": "UCLgHAGw3NWm2Ek4aAWw6C_Q"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-13T15:53:58Z",
+						"updatedAt": "2023-01-13T15:55:33Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "-ZS7zlGiDF--7mk5gSQI8Xapt54",
+			"id": "UgyfYE8MbCy_PYnBD-l4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "k6Rg4DfsOkhIk6oMpRgFizAmqs4",
+					"id": "UgyfYE8MbCy_PYnBD-l4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "I guess when every company starts laying off, the skills and the credentials seem irrelevant",
+						"textOriginal": "I guess when every company starts laying off, the skills and the credentials seem irrelevant",
+						"authorDisplayName": "Dr Champ",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu-dt1kDPrE0-fEBv8HO-hUcw0iE387owIhr0DL1M1s=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCWuuZ0e-GDFAjwPqujsdYMg",
+						"authorChannelId": {
+							"value": "UCWuuZ0e-GDFAjwPqujsdYMg"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-13T05:58:58Z",
+						"updatedAt": "2023-01-13T05:58:58Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "ofkW7192d3uHRhIhvfTtghVS_f8",
+			"id": "UgwvJqTm5h6AKfmxATV4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "22b5vMs2fk8991vSNm-vYSpDecE",
+					"id": "UgwvJqTm5h6AKfmxATV4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "I don’t know what this dude is on about, it feels like he’s trying to sell something. He isn’t really saying much, he just puts together a lot of words, and it doesn’t really say anything",
+						"textOriginal": "I don’t know what this dude is on about, it feels like he’s trying to sell something. He isn’t really saying much, he just puts together a lot of words, and it doesn’t really say anything",
+						"authorDisplayName": "daniel solberg",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu-7z5yuNgNpF88I9y51r0Ic6T2XqRhj05e42Q=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCF3iFmLFcB7C1Vuyddx5SAw",
+						"authorChannelId": {
+							"value": "UCF3iFmLFcB7C1Vuyddx5SAw"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-09T23:15:57Z",
+						"updatedAt": "2023-01-09T23:16:19Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "sq5_D22Rx_yghj8kpR5tbjVwEbI",
+			"id": "UgxRHMy8d9xK-yw-xV14AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "jnoNBaS4RoCC71iByxnXgj7u7AE",
+					"id": "UgxRHMy8d9xK-yw-xV14AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "If not giving someone handouts ruins a relationship, they&#39;re not important.",
+						"textOriginal": "If not giving someone handouts ruins a relationship, they're not important.",
+						"authorDisplayName": "X",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu-dB8bngfeUecOxErdINt-kTmwd7oJGftANPzNzZ6HG16w1ATneSe6f_WlozeTi=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCN304jo6hjKPAT-xBWY5Aog",
+						"authorChannelId": {
+							"value": "UCN304jo6hjKPAT-xBWY5Aog"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-09T22:02:52Z",
+						"updatedAt": "2023-01-09T22:02:52Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "Y5HMu9a8jPa2X7ZXpf2B9D9FrFQ",
+			"id": "UgwbAefr74YTqxAmoP54AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "bSiWjG4H7m8uW6blXHRTJ3rnerc",
+					"id": "UgwbAefr74YTqxAmoP54AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "This video was all over the place and too much personal info.",
+						"textOriginal": "This video was all over the place and too much personal info.",
+						"authorDisplayName": "Bradley Eis",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu9inLW8N3OjzrsybyY1rlTQLmyRVEpEr_q0BQ=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCVRfCDEzP-5mbXf13I9u3aw",
+						"authorChannelId": {
+							"value": "UCVRfCDEzP-5mbXf13I9u3aw"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-09T06:35:51Z",
+						"updatedAt": "2023-01-09T06:35:51Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "leYDat_lHSKu0RS-0ceFqgYJnmE",
+			"id": "UgxHKRuW7Reof3huEhR4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "X3-YsVtgCYVedezyvzM1OsbnP0Q",
+					"id": "UgxHKRuW7Reof3huEhR4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "This was really reassuring, thank you!",
+						"textOriginal": "This was really reassuring, thank you!",
+						"authorDisplayName": "Notorious",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/otIQPXPK2neK75lBQyHSB1bgND13mqV2j9Kb7mj6gOAkHVe-kZKNVYS6FoVSRTHX2lU80hpvrw=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCJpWt5BiWarcmX9BD2JuBiA",
+						"authorChannelId": {
+							"value": "UCJpWt5BiWarcmX9BD2JuBiA"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-09T00:06:27Z",
+						"updatedAt": "2023-01-09T00:06:27Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "fgqQZLBFw4csc3bnYw2OQnJw1Os",
+			"id": "UgwcH7c8hL8nnzplop54AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "ECgu61dp0pGupjVqeMuXzW_YjGo",
+					"id": "UgwcH7c8hL8nnzplop54AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "Is a web developer and a soft wear engineer the same thing?",
+						"textOriginal": "Is a web developer and a soft wear engineer the same thing?",
+						"authorDisplayName": "Flip",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu8Ldzl4uVNpFqDR4VlWT-DLivf-VAi9ir4lRA=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCn7p_gnOzlvPgFrB5VN5r-A",
+						"authorChannelId": {
+							"value": "UCn7p_gnOzlvPgFrB5VN5r-A"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-06T16:01:15Z",
+						"updatedAt": "2023-01-06T16:01:15Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "k_Wih6N2Y6Gu01RXp9ImOijWbXs",
+			"id": "UgxpNt2xk6vQCr7au7d4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "Oi0NMyeq3BE9XeOBtTcPvBJpE3Q",
+					"id": "UgxpNt2xk6vQCr7au7d4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "Smoking what, you didn&#39;t mention",
+						"textOriginal": "Smoking what, you didn't mention",
+						"authorDisplayName": "TheSial561",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu_oCqPTfqdLr5b0DFvTiJcw0L1INug0rrnI9g=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCM2hzuXpEN3lTuKFuvwJDWA",
+						"authorChannelId": {
+							"value": "UCM2hzuXpEN3lTuKFuvwJDWA"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-05T15:57:43Z",
+						"updatedAt": "2023-01-05T15:57:43Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "qv_1pCcvdoUtfLduPqqRC80IKW8",
+			"id": "Ugx3fzEvtoeJ3XMFYEF4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "QfLdF4KNNZ5iHnRzMuQ6FJR-VhQ",
+					"id": "Ugx3fzEvtoeJ3XMFYEF4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "Don’t ever give anyone you know money.",
+						"textOriginal": "Don’t ever give anyone you know money.",
+						"authorDisplayName": "Michael King",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu-4lemIAIRLWeQbiKdipoFryVE2tqtS1EExjd9i_A=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCDWXzLTfG2eTD2Off5Mt5uA",
+						"authorChannelId": {
+							"value": "UCDWXzLTfG2eTD2Off5Mt5uA"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-05T06:59:51Z",
+						"updatedAt": "2023-01-05T06:59:51Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "nLiQjSmldrwqdO9i2vNqCJaj964",
+			"id": "Ugygp6C37XIZF4sow-d4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "NLRz3TNpGmkj6wMNSbGtn6-rW34",
+					"id": "Ugygp6C37XIZF4sow-d4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "bro is suffering from success 💀💀",
+						"textOriginal": "bro is suffering from success 💀💀",
+						"authorDisplayName": "Louis Hugue",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu-1e-QSFVDUQvO_1xafJL6ukSAh26ABYXhKVA=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UC0qFVIYHqpONPJoyt9pQbRg",
+						"authorChannelId": {
+							"value": "UC0qFVIYHqpONPJoyt9pQbRg"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-04T22:52:19Z",
+						"updatedAt": "2023-01-04T22:52:19Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "ldkgxDRbk9EQ9nwrIhT6HHv1SXc",
+			"id": "UgyR8Hto1QyrTCjhwqN4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "B24csldS8FwbUkUX_0bfUEn_K88",
+					"id": "UgyR8Hto1QyrTCjhwqN4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "Chris Sean rock",
+						"textOriginal": "Chris Sean rock",
+						"authorDisplayName": "CeeCee Brown",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/KkA4TNJ8vaQBkrmXDsmYFCo2fiVc8tpuHhHLjgh8tU7QXxG-BhzlR4FN3lgV0SO3hjq81RU0eA=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCKXWwDhbjvBSU9EIYm_4bZw",
+						"authorChannelId": {
+							"value": "UCKXWwDhbjvBSU9EIYm_4bZw"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-04T16:59:03Z",
+						"updatedAt": "2023-01-04T16:59:03Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "aMJVMtbLtGkNIgWUYNIJtigDXSU",
+			"id": "Ugyry03UBtfMoyAf6TF4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "a8oja9rFO04scV17zJiTNcd3Rg8",
+					"id": "Ugyry03UBtfMoyAf6TF4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "Thanks for the encouragement. Im proud of you.",
+						"textOriginal": "Thanks for the encouragement. Im proud of you.",
+						"authorDisplayName": "MICHELLE JOHNSON",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu8XMv0nMXT2hijWNv_kT_dTAc263mz8k2RwNwLvog=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UChikIEezVszSb01MEQUCU7A",
+						"authorChannelId": {
+							"value": "UChikIEezVszSb01MEQUCU7A"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-03T16:35:37Z",
+						"updatedAt": "2023-01-03T16:35:37Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "BYRh2tW5vLgwpKDPr0jbk9SZY7I",
+			"id": "UgwByiW84rbhfzlD93l4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "wXsdhHiLGHIMOYK2WTY7cgurPWw",
+					"id": "UgwByiW84rbhfzlD93l4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "So its not smart to study wen development???",
+						"textOriginal": "So its not smart to study wen development???",
+						"authorDisplayName": "Beastrader",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu_uVcL83BBTc9dEj5QX3zX8T9NnYEIKBDWFB4pObmtOJw99qm-5UaYCev6KBbLi=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCxPzjuh3IkccfFIn8-Lj8qg",
+						"authorChannelId": {
+							"value": "UCxPzjuh3IkccfFIn8-Lj8qg"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-03T12:35:27Z",
+						"updatedAt": "2023-01-03T12:35:27Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "ugCNJXf4Bw5HMzXLuLCX1M33Z9o",
+			"id": "UgwxOeug_ZFUSCxos_N4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "RPKb9gJcYSlZeg8W1q7OpqhOID0",
+					"id": "UgwxOeug_ZFUSCxos_N4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "Great video bud!! I&#39;m at a huge transition in my life and I&#39;ve stagnated for many years! Gearing up for a new job and this video is very encouraging. I wish you all the best in life and in your career! Make more videos! :)",
+						"textOriginal": "Great video bud!! I'm at a huge transition in my life and I've stagnated for many years! Gearing up for a new job and this video is very encouraging. I wish you all the best in life and in your career! Make more videos! :)",
+						"authorDisplayName": "Vaughan Marais",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AMLnZu_4M78B0fpD_G4RAiHaIE0FCSEPJmVhkpMZWeDSaQ=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCFG98Ni0q867z4Q66SQQm0w",
+						"authorChannelId": {
+							"value": "UCFG98Ni0q867z4Q66SQQm0w"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2023-01-03T09:22:31Z",
+						"updatedAt": "2023-01-03T09:22:31Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "110lxyNB3CTQ1qeiGuMFmBi-Llo",
+			"id": "UgwNYjsAMeXbs2Lhg4Z4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "3mkLifay-dBTTGuT4P1Wp1cknAg",
+					"id": "UgwNYjsAMeXbs2Lhg4Z4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "I don&#39;t think this dude makes more than 100k lol.",
+						"textOriginal": "I don't think this dude makes more than 100k lol.",
+						"authorDisplayName": "Xavier Sardinas",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/hNk9qjhCfeMYQxktWCr5FdN4SpPVjEoYWVVbLnWYX5hX95nkXgrfTCAZy1bfZCV_kH9B6qZr=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCGQMDcvjfQK4ePQ_J2ASogA",
+						"authorChannelId": {
+							"value": "UCGQMDcvjfQK4ePQ_J2ASogA"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2022-12-30T02:41:06Z",
+						"updatedAt": "2022-12-30T02:41:06Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "HqWO-TOQaEC0GXa0S8G4QppxjRQ",
+			"id": "Ugz2r16n4map5wDgk3B4AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "9BfnbuO6ao2_zwjm5-pZQfHIqFg",
+					"id": "Ugz2r16n4map5wDgk3B4AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "Grats. It took me 12 years to get over the 200k mark (that’s in Las Vegas where cost of living was low). Yeah never tell family or friends what you pay, you will never hear the end of “million dollar business” ideas.<br>I told mine that I had to go take a pay cut “because the pandemic” and now they leave me alone.",
+						"textOriginal": "Grats. It took me 12 years to get over the 200k mark (that’s in Las Vegas where cost of living was low). Yeah never tell family or friends what you pay, you will never hear the end of “million dollar business” ideas.\nI told mine that I had to go take a pay cut “because the pandemic” and now they leave me alone.",
+						"authorDisplayName": "Ogre",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/K2MQhY8VGzMRXRZ3DcgHzzF8NOGuAuModrMPM6Km7UXfba1ZnzhEo2pQdXe9s2h-FkGg7tfoQO8=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCvMvJ55tPi_t74hfDSCG4eg",
+						"authorChannelId": {
+							"value": "UCvMvJ55tPi_t74hfDSCG4eg"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2022-12-27T14:05:31Z",
+						"updatedAt": "2022-12-27T14:08:28Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "9QxQzN2QqTJGhAUZ_IMG4DydKcc",
+			"id": "Ugxd8jKb_MKlxJKlja94AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "88rmHULlDd7WAw99wiUUVBVosiM",
+					"id": "Ugxd8jKb_MKlxJKlja94AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "As a developer being able to see my own value is one of the most difficult thing",
+						"textOriginal": "As a developer being able to see my own value is one of the most difficult thing",
+						"authorDisplayName": "Vincent Rouilhac",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/abzjvbKtjf5AjCRMDKOok2nnahUU5FCuVOA2Qgl8JjDJ4X78CA3VGbJytO_5u9n2aXKx17x3Yw=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCVCe9Q9Bliz-0ndcRD4MQgQ",
+						"authorChannelId": {
+							"value": "UCVCe9Q9Bliz-0ndcRD4MQgQ"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2022-12-21T12:06:10Z",
+						"updatedAt": "2022-12-21T12:06:20Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		},
+		{
+			"kind": "youtube#commentThread",
+			"etag": "fjypQFZsLHkno8i6kd0z43vSPwI",
+			"id": "UgyntogtAzLhrT0cz954AaABAg",
+			"snippet": {
+				"videoId": "2vnliMZmwZ4",
+				"topLevelComment": {
+					"kind": "youtube#comment",
+					"etag": "U9LDxabLe-wTufcd3KllrNeAB0E",
+					"id": "UgyntogtAzLhrT0cz954AaABAg",
+					"snippet": {
+						"videoId": "2vnliMZmwZ4",
+						"textDisplay": "why whole life just jobs? why didn&#39;t you tried to be an entrepreneur?",
+						"textOriginal": "why whole life just jobs? why didn't you tried to be an entrepreneur?",
+						"authorDisplayName": "Web Unveilers",
+						"authorProfileImageUrl": "https://yt3.ggpht.com/E4bAYrGIr0lhvIs4HvItvvXGMjEXOm3bFPe0FShRtC2LcJlmuvsT0BFL3WN7nQan8ov1wtqUTA=s48-c-k-c0x00ffffff-no-rj",
+						"authorChannelUrl": "http://www.youtube.com/channel/UCMU5KS6MLSovds7PqGjZyhQ",
+						"authorChannelId": {
+							"value": "UCMU5KS6MLSovds7PqGjZyhQ"
+						},
+						"canRate": true,
+						"viewerRating": "none",
+						"likeCount": 0,
+						"publishedAt": "2022-12-18T06:52:10Z",
+						"updatedAt": "2022-12-18T06:52:10Z"
+					}
+				},
+				"canReply": true,
+				"totalReplyCount": 0,
+				"isPublic": true
+			}
+		}
+	]
+}
