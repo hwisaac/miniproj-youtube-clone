@@ -70,4 +70,5 @@ const Container = styled.nav<{ show: boolean }>`
 const NavSection = styled.section`
 	border-bottom: 1px solid gray;
 `;
+
 export default SNB;

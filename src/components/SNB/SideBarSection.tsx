@@ -60,6 +60,9 @@ const NavSection = styled.section`
 		i {
 			padding-right: 25px;
 		}
+		p {
+			color: white;
+		}
 		&:hover {
 			background-color: #343a40;
 			border-radius: 20px;
