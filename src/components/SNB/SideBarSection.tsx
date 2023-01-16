@@ -54,11 +54,16 @@ const NavSection = styled.section`
 	padding: 10px;
 	li {
 		display: flex;
-		padding: 20px;
+		padding: 10px;
+		align-items: center;
+		cursor: pointer;
 		i {
 			padding-right: 25px;
 		}
-		align-items: center;
+		&:hover {
+			background-color: #343a40;
+			border-radius: 20px;
+		}
 	}
 `;
 
