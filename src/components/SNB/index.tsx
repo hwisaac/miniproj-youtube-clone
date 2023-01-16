@@ -1,77 +1,72 @@
 import styled from 'styled-components';
 import React from 'react';
 import { AiFillHome } from 'react-icons/ai';
+import { SideBarSection } from './SideBarSection';
+
+const list = {
+	section1: [
+		{
+			icon: 'AiFillHome',
+			title: 'Home',
+		},
+		{
+			icon: 'MdOutlineExplore',
+			title: 'Explore',
+		},
+		{
+			icon: 'MdSubscriptions',
+			title: 'Subscriptions',
+		},
+	],
+	section2: [
+		{
+			icon: 'MdVideoLibrary',
+			title: 'Library',
+		},
+		{
+			icon: 'MdHistory',
+			title: 'History',
+		},
+		{
+			icon: 'MdWatchLater',
+			title: 'Watch later',
+		},
+		{
+			icon: 'AiFillLike',
+			title: 'Liked videos',
+		},
+	],
+	section3: [
+		{
+			icon: 'MdSettings',
+			title: 'Settings',
+		},
+		{
+			icon: 'MdFlag',
+			title: 'Report history',
+		},
+	],
+};
 
 const SNB = () => {
 	return (
 		<Container>
 			<ul>
-				<section>
-					<li>
-						<i>
-							<AiFillHome color="white" />
-						</i>
-						<p>Home</p>
-					</li>
-					<li>
-						<i>
-							<AiFillHome color="white" />
-						</i>
-						<p>Explore</p>
-					</li>
-					<li>
-						<i>
-							<AiFillHome color="white" />
-						</i>
-						<p>Subscriptions</p>
-					</li>
-				</section>
-				<section>
-					<li>
-						<i>
-							<AiFillHome color="white" />
-						</i>
-						<p>Library</p>
-					</li>
-					<li>
-						<i>
-							<AiFillHome color="white" />
-						</i>
-						<p>History</p>
-					</li>
-					<li>
-						<i>
-							<AiFillHome color="white" />
-						</i>
-						<p>Watch later</p>
-					</li>
-					<li>
-						<i>
-							<AiFillHome color="white" />
-						</i>
-						<p>Linked videos</p>
-					</li>
-				</section>
-				<section>
-					<li>
-						<i>
-							<AiFillHome color="white" />
-						</i>
-						<p>Settings</p>
-					</li>
-					<li>
-						<i>
-							<AiFillHome color="white" />
-						</i>
-						<p>Report history</p>
-					</li>
-				</section>
+				<SideBarSection info={list.section1} />
+				<SideBarSection info={list.section2} />
+				<SideBarSection info={list.section3} />
 			</ul>
 		</Container>
 	);
 };
 
 const Container = styled.nav`
-	background-color: black;
+	background-color: #212529;
+	p {
+		color: white;
+	}
+`;
+const NavSection = styled.section`
+	border-bottom: 1px solid gray;
 `;
 export default SNB;
