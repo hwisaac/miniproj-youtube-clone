@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import styled from 'styled-components';
+import { Icon } from './SearchBar';
 
 const LeftSection = ({ menuClicked }) => {
 	const ClickLogo = () => {
@@ -27,22 +28,4 @@ const Container = styled.div`
 	}
 `;
 
-const Icon = styled.i`
-	display: flex;
-	align-items: center;
-	padding: 10px;
-	color: white;
-
-	svg {
-		width: 20px;
-		height: 20px;
-	}
-
-	&:hover {
-		background-color: #343a40;
-		border-radius: 20px;
-	}
-`;
-
 export default LeftSection;
-export { Icon };
