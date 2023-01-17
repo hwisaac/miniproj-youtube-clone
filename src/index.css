@@ -7,3 +7,13 @@
   --color-gray: #f4f4f4;
   --color-dark: #0e0e0e;
 }
+input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
