@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { SideBarSection } from './SideBarSection';
-
+import React from 'react';
 const list = {
 	section1: [
 		{
@@ -48,7 +49,9 @@ const list = {
 };
 
 const SNB = ({ show, setShow }) => {
-	const isMain = window.location.pathname === '/' ? true : false;
+	const location = useLocation();
+	const isMain = window.location.pathname === '/' || window.location.pathname === '/search' ? true : false;
+
 	useEffect(() => {
 		isMain ? setShow(false) : setShow(true);
 	}, [isMain]);
@@ -95,4 +98,4 @@ const Container = styled.nav<{ isMain: boolean; show: boolean }>`
 			  `}
 `;
 
-export default SNB;
+export default React.memo(SNB);
