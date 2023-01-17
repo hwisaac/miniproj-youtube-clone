@@ -42,7 +42,7 @@ const Layout = styled.div`
 	left: 100px;
 `;
 const PrimaryBox = styled.div`
-	background-color: red;
+	background-color: var(--color-dark);
 	width: 80vw;
 	height: 100vh;
 `;
