@@ -15,9 +15,16 @@ export default class Youtube {
 	}
 
 	async search(input: string) {
+		const params = {
+			part: 'snippet',
+			maxResults: 25,
+			type: 'video',
+			q: input,
+		};
 		return this.client.get('search', {
 			part: 'snippet',
 			maxResults: 10,
+			type: 'video',
 			q: input,
 		});
 	}
@@ -38,9 +45,9 @@ export const searchTest = async (input) => {
 };
 
 export const axiosSearchTest = async (input: string) => {
-	const json = await axios.get(
+	const result = await axios.get(
 		baseURL + `/search?part=snippet&maxResults=10&q=${input}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
 	);
-	console.log('axiosSearchTest', json);
-	return json;
+	console.log('axiosSearchTest', result);
+	return result;
 };
