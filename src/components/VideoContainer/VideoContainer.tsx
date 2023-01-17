@@ -41,7 +41,7 @@ const VideoContainer = () => {
 
 const Container = styled.div`
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(274px, 1fr));
 	background-color: #181818;
