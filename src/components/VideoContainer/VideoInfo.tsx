@@ -1,6 +1,7 @@
 import axios from '../../api/axios';
 import requests from '../../api/requests';
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
 const VideoInfo = ({ video }) => {
 	// const [videoInfo, setVideoInfo] = useState([]);
@@ -16,21 +17,38 @@ const VideoInfo = ({ video }) => {
 	// 	setVideoInfo(response.data.items);
 	// };
 
-	let videoInfo = localStorage.getItem('response-videoInfo');
+	let videoInfo = JSON.parse(localStorage.getItem('response-videoInfo')).data.items[0];
+	let viewCount = videoInfo.statistics.viewCount;
 
 	return (
-		<div>
+		<Container>
 			<div>
-				<div className="channel-info">
+				<div className="channel">
 					<img src={video.snippet.thumbnails.medium.url} className="channel-thumbnail" />
 				</div>
 				<div className="text-info">
-					<div className="title">{video.snippet.title}</div>
-					<div>{video.snippet.channelTitle}</div>
+					<h3 className="title">{video.snippet.title}</h3>
+					<div className="detail-info">
+						<a>
+							<div className="channelName">{video.snippet.channelTitle}</div>
+						</a>
+						<div className="detail-data">
+							<span>{viewCount}</span>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+		</Container>
 	);
 };
+
+const Container = styled.div`
+	.channel-thumbnail {
+		width: 35px;
+		height: 35px;
+		margin: 1.2rem 1.2rem 0 0;
+		border-radius: 50%;
+	}
+`;
 
 export default VideoInfo;
