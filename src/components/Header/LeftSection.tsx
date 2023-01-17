@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import styled from 'styled-components';
+import { Icon } from './SearchBar/SearchBar';
 
 const LeftSection = ({ menuClicked }) => {
 	const ClickLogo = () => {
@@ -10,7 +11,7 @@ const LeftSection = ({ menuClicked }) => {
 	return (
 		<Container>
 			<Icon onClick={menuClicked}>
-				<AiOutlineMenu color="white" size={24} />
+				<AiOutlineMenu />
 			</Icon>
 			<img onClick={ClickLogo} src="/youtube-logo-dark.png" alt="로고" />
 		</Container>
@@ -22,21 +23,8 @@ const Container = styled.div`
 	align-items: center;
 
 	img {
-		margin: 0 20px;
+		margin: 0 10px;
 		width: 90px;
-	}
-`;
-
-const Icon = styled.div`
-	display: flex;
-	align-items: center;
-	width: 22px;
-	height: 22px;
-	padding: 10px;
-
-	&:hover {
-		background-color: #343a40;
-		border-radius: 20px;
 	}
 `;
 

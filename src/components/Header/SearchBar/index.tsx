@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
-import styled from 'styled-components';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { MdKeyboardVoice, MdKeyboard } from 'react-icons/md';
+import { Icon, Container } from './SearchBar';
 
 const SearchBar = () => {
 	const navigate = useNavigate();
@@ -27,50 +28,20 @@ const SearchBar = () => {
 					placeholder="검색"
 					onChange={handleInputText}
 				/>
+				<Icon className="keyboard">
+					<MdKeyboard />
+				</Icon>
 				<button type="submit" id="search-bar" className="search-button">
-					<AiOutlineSearch color="white" size={22} />
+					<Icon className="search">
+						<AiOutlineSearch />
+					</Icon>
 				</button>
 			</form>
+			<Icon className="voice">
+				<MdKeyboardVoice />
+			</Icon>
 		</Container>
 	);
 };
-
-const Container = styled.div`
-	display: flex;
-	align-items: center;
-
-	form {
-		display: flex;
-		align-items: center;
-	}
-
-	.search-box {
-		background-color: #212529;
-		width: 540px;
-		font-size: 16px;
-		color: white;
-		border: 1px solid #343a40;
-		border-top-left-radius: 20px;
-		border-bottom-left-radius: 20px;
-		padding-left: 16px;
-		height: 36px;
-	}
-	.search-box:focus {
-		outline: none;
-		border: 1px solid blue;
-	}
-
-	.search-button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #343a40;
-		border: 1px solid #343a40;
-		border-top-right-radius: 20px;
-		border-bottom-right-radius: 20px;
-		width: 64px;
-		height: 40px;
-	}
-`;
 
 export default SearchBar;
