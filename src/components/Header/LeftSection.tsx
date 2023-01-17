@@ -10,7 +10,7 @@ const LeftSection = ({ menuClicked }) => {
 	return (
 		<Container>
 			<Icon onClick={menuClicked}>
-				<AiOutlineMenu color="white" size={24} />
+				<AiOutlineMenu />
 			</Icon>
 			<img onClick={ClickLogo} src="/youtube-logo-dark.png" alt="로고" />
 		</Container>
@@ -22,17 +22,21 @@ const Container = styled.div`
 	align-items: center;
 
 	img {
-		margin: 0 20px;
+		margin: 0 10px;
 		width: 90px;
 	}
 `;
 
-const Icon = styled.div`
+const Icon = styled.i`
 	display: flex;
 	align-items: center;
-	width: 22px;
-	height: 22px;
 	padding: 10px;
+	color: white;
+
+	svg {
+		width: 20px;
+		height: 20px;
+	}
 
 	&:hover {
 		background-color: #343a40;
@@ -41,3 +45,4 @@ const Icon = styled.div`
 `;
 
 export default LeftSection;
+export { Icon };
