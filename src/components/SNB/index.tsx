@@ -48,9 +48,9 @@ const list = {
 	],
 };
 
-const SNB = () => {
+const SNB = ({ show }) => {
 	return (
-		<Container>
+		<Container show={show}>
 			<ul>
 				<SideBarSection info={list.section1} />
 				<SideBarSection info={list.section2} />
@@ -60,8 +60,9 @@ const SNB = () => {
 	);
 };
 
-const Container = styled.nav`
+const Container = styled.nav<{ show: boolean }>`
 	background-color: #212529;
+	display: ${(props) => `${props.show ? 'block' : 'none'}`};
 	p {
 		color: white;
 	}

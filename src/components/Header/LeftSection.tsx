@@ -2,14 +2,14 @@ import React from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import styled from 'styled-components';
 
-const LeftSection = () => {
+const LeftSection = ({ menuClicked }) => {
 	const ClickLogo = () => {
 		window.location.href = '/';
 	};
 
 	return (
 		<Container>
-			<Icon>
+			<Icon onClick={menuClicked}>
 				<AiOutlineMenu color="white" size={24} />
 			</Icon>
 			<img onClick={ClickLogo} src="/youtube-logo-dark.png" alt="로고" />
