@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import React from 'react';
-import { AiFillHome } from 'react-icons/ai';
 import { SideBarSection } from './SideBarSection';
 
 const list = {
@@ -50,25 +48,21 @@ const list = {
 
 const SNB = ({ show }) => {
 	return (
-		<Container show={show}>
+		<Container>
 			<ul>
-				<SideBarSection info={list.section1} />
-				<SideBarSection info={list.section2} />
-				<SideBarSection info={list.section3} />
+				<SideBarSection info={list.section1} show={show} />
+				<SideBarSection info={list.section2} show={show} />
+				<SideBarSection info={list.section3} show={show} />
 			</ul>
 		</Container>
 	);
 };
 
-const Container = styled.nav<{ show: boolean }>`
+const Container = styled.nav`
 	background-color: #212529;
-	display: ${(props) => `${props.show ? 'block' : 'none'}`};
-	p {
-		color: white;
-	}
-`;
-const NavSection = styled.section`
-	border-bottom: 1px solid gray;
+	position: fixed;
+	height: 100vh;
+	padding-right: 10px;
 `;
 
 export default SNB;
