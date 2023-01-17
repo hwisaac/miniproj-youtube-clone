@@ -55,9 +55,7 @@ const Header = styled.div`
 	display: flex;
 	border: 1px solid red;
 `;
-const TotalComments = styled.div`
-	background-color: red;
-`;
+const TotalComments = styled.div``;
 const Order = styled.div`
 	background-color: green;
 `;
