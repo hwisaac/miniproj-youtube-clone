@@ -61,8 +61,14 @@ const SNB = ({ show }) => {
 const Container = styled.nav`
 	background-color: #212529;
 	position: fixed;
-	height: 100vh;
+	padding-top: 10px;
+	top: 60px;
+	height: 100%;
+	overflow: auto;
 	padding-right: 10px;
+	@media screen and (max-width: 500px) {
+		display: none;
+	}
 `;
 
 export default SNB;
