@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import LeftSection from './LeftSection';
 import RightSection from './RightSection';
-import SearchBar from './SearchBar';
+import SearchBar from './SearchBar/index';
 
 const Header = ({ menuClicked }) => {
 	return (

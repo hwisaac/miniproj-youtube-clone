@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import styled from 'styled-components';
-import { Icon } from './SearchBar';
+import { Icon } from './SearchBar/SearchBar';
 
 const LeftSection = ({ menuClicked }) => {
 	const ClickLogo = () => {
