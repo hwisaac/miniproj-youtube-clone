@@ -4,7 +4,7 @@ import Youtube, { axiosSearchTest, searchTest } from '../../util/api/api';
 import searchData from '../../mockup/search.json';
 import videoData from '../../mockup/video.json';
 import PlayerBox from '../../components/PlayerBox';
-import DescriptionBox from '../../components/VideoInfoBox';
+import VideoInfoBox from '../../components/VideoInfoBox';
 import CommentBox from '../../components/CommentBox';
 
 // const client = new Youtube();
@@ -23,7 +23,7 @@ const Detail = () => {
 		<Layout>
 			<PrimaryBox>
 				<PlayerBox />
-				<DescriptionBox />
+				<VideoInfoBox />
 				<CommentBox />
 			</PrimaryBox>
 			<SecondaryBox />
@@ -38,6 +38,8 @@ const Layout = styled.div`
 	width: 100%;
 	height: auto;
 	border: 3px solid black;
+	position: relative;
+	left: 100px;
 `;
 const PrimaryBox = styled.div`
 	background-color: red;
@@ -45,7 +47,7 @@ const PrimaryBox = styled.div`
 	height: 100vh;
 `;
 const SecondaryBox = styled.div`
-	background-color: yellow;
+	background-color: #0e0e0e;
 	width: 20vw;
 	height: 100vh;
 `;

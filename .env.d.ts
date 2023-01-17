@@ -22,7 +22,28 @@ interface IItem {
 		channelId: string;
 		title: string;
 		description: string;
-		thumbnails: { default: IThumbnail; high: IThumbnail; standard: IThumbnail; maxres: IThumbnail };
+		thumbnails: {
+			default: {
+				url: string;
+				width: number;
+				height: number;
+			};
+			high: {
+				url: string;
+				width: number;
+				height: number;
+			};
+			standard: {
+				url: string;
+				width: number;
+				height: number;
+			};
+			maxres: {
+				url: string;
+				width: number;
+				height: number;
+			};
+		};
 		channelTitle: string;
 		tags: string[];
 		categoryId: string;
