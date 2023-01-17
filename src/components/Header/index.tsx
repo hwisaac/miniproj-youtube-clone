@@ -4,10 +4,10 @@ import LeftSection from './LeftSection';
 import RightSection from './RightSection';
 import SearchBar from './SearchBar';
 
-const Header = () => {
+const Header = ({ menuClicked }) => {
 	return (
 		<Container>
-			<LeftSection />
+			<LeftSection menuClicked={menuClicked} />
 			<SearchBar />
 			<RightSection />
 		</Container>
