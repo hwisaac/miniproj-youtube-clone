@@ -1,37 +1,5 @@
 import styled from 'styled-components';
 
-const Icon = styled.i`
-	display: flex;
-	align-items: center;
-	padding: 10px;
-	color: white;
-
-	svg {
-		color: white;
-		width: 20px;
-		height: 20px;
-	}
-
-	&:hover {
-		background-color: #343a40;
-		border-radius: 20px;
-	}
-`;
-
-const IconSearchBar = styled(Icon)`
-	svg {
-		color: gray;
-	}
-
-	&:hover {
-		background-color: transparent;
-		border-radius: 20px;
-		svg {
-			color: whitesmoke;
-		}
-	}
-`;
-
 const Container = styled.div`
 	display: flex;
 	align-items: center;
@@ -75,6 +43,46 @@ const Container = styled.div`
 	.keyboard {
 		position: absolute;
 		right: 64px;
+		svg {
+			color: gray;
+		}
+		&:hover {
+			background-color: transparent;
+			border-radius: 20px;
+			svg {
+				color: whitesmoke;
+			}
+		}
+	}
+	.search {
+		&:hover {
+			background-color: transparent;
+			border-radius: 20px;
+		}
+	}
+	.voice {
+		border-radius: 20px;
+		background-color: #121212;
+		margin-left: 10px;
 	}
 `;
-export { Icon, IconSearchBar, Container };
+
+const Icon = styled.i`
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	color: white;
+
+	svg {
+		color: white;
+		width: 20px;
+		height: 20px;
+	}
+
+	&:hover {
+		background-color: #242424;
+		border-radius: 20px;
+	}
+`;
+
+export { Container, Icon };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { MdKeyboardVoice, MdKeyboard } from 'react-icons/md';
-import { Icon, IconSearchBar, Container } from './SearchBar';
+import { Icon, Container } from './SearchBar';
 
 const SearchBar = () => {
 	const navigate = useNavigate();
@@ -28,13 +28,13 @@ const SearchBar = () => {
 					placeholder="검색"
 					onChange={handleInputText}
 				/>
-				<IconSearchBar className="keyboard">
+				<Icon className="keyboard">
 					<MdKeyboard />
-				</IconSearchBar>
+				</Icon>
 				<button type="submit" id="search-bar" className="search-button">
-					<IconSearchBar>
+					<Icon className="search">
 						<AiOutlineSearch />
-					</IconSearchBar>
+					</Icon>
 				</button>
 			</form>
 			<Icon className="voice">
