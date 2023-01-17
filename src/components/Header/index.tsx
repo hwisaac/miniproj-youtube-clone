@@ -22,6 +22,10 @@ const Container = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	font-size: 16px;
+	position: fixed;
+	width: 99vw;
+	z-index: 2;
+	border-bottom: 1px solid gray;
 `;
 
 export default Header;
