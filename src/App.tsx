@@ -5,6 +5,7 @@ import Header from './components/Header';
 import SNB from './components/SNB';
 import { Reset } from 'styled-reset';
 import Home from './pages/Home';
+import VideoContainer from './components/VideoContainer/VideoContainer';
 
 function App() {
 	const [toggle, setToggle] = useState(false);
