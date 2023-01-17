@@ -50,7 +50,7 @@ const SideBarSection = ({ info, show }) => {
 const NavSection = styled.section<{ show: boolean }>`
 	${(props) =>
 		props.show
-			? css``
+			? ''
 			: css`
 					border-bottom: 1px solid gray;
 					margin-bottom: 10px;
