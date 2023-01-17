@@ -50,7 +50,7 @@ const PrimaryBox = styled.div`
 	height: 100vh;
 `;
 const SecondaryBox = styled.div`
-	background-color: #0e0e0e;
-	width: 20vw;
-	height: 100vh;
+	background-color: black;
+	width: 30vw;
+	height: 100%;
 `;
