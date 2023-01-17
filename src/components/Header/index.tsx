@@ -16,14 +16,15 @@ const Header = ({ menuClicked }) => {
 
 const Container = styled.div`
 	background-color: #000000;
-	height: 56px;
-	padding: 2px 16px;
+	height: 60px;
+	padding: 0 14px;
+	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	font-size: 16px;
 	position: fixed;
-	width: 99vw;
+	width: 100%;
 	z-index: 2;
 	border-bottom: 1px solid gray;
 `;
