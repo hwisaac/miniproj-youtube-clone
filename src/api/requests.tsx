@@ -1,6 +1,6 @@
 const requests = {
 	fetchSearchVideo: '/search?part=snippet&maxResults=10&',
-	fetchInfoVideo: '/videos?part=snippet&part=contentDetails&part=player&part=statistics&id={videoId}',
+	fetchInfoVideo: '/videos?part=snippet&part=contentDetails&part=player&part=statistics&',
 	fetchInfoChannel: '/channels?part=snippet&part=statistics&part=contentDetails&id={channelId}',
 	fetchComment: '/commentThreads?part=snippet&videoId={videoId}',
 	fetchRelatedVideo: '/search?part=snippet&maxResults=10&relatedToVideoId=${videoId}&type=video',

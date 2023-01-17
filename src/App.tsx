@@ -1,6 +1,5 @@
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import React, { useState } from 'react';
-
 import { Outlet, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import SNB from './components/SNB';

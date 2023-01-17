@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import axios from '../../api/axios';
 import requests from '../../api/requests';
+import VideoThumbnail from './VideoThumbnail';
+import VideoInfo from './VideoInfo';
 
 const VideoContainer = () => {
 	// const [videos, setVideos] = useState([]);
@@ -21,31 +23,33 @@ const VideoContainer = () => {
 
 	// const handleClick = (video) => {};
 
-	//목업데이터 사용
+	//로컬스토리지 사용
+
 	let videos = JSON.parse(localStorage.getItem('response')).data.items;
 
 	return (
 		<Container>
 			{videos.map((video) => (
-				<div className={video.id.videoId}>
-					<img
-						key={video.id.videoId}
-						className="thumbnail"
-						src={video.snippet.thumbnails.default.url}
-						alt={video.snippet.title}
-						// onClick={() => handleClick(video)}
-					/>
-					<h3>{video.snippet.title}</h3>
-				</div>
+				<Box>
+					<VideoThumbnail video={video} />
+					<VideoInfo video={video} />
+				</Box>
 			))}
 		</Container>
 	);
 };
 
-const Container = styled.a`
+const Container = styled.div`
+	width: 100%;
+	height: 100vh;
 	display: grid;
-	background-color: #212529;
+	grid-template-columns: repeat(auto-fill, minmax(274px, 1fr));
+	background-color: #181818;
 	color: white;
+`;
+
+const Box = styled.a`
+	width: 100%;
 `;
 
 export default VideoContainer;

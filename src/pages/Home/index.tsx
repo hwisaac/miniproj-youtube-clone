@@ -1,8 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import VideoContainer from '../../components/VideoContainer/VideoContainer';
 
 const Home = () => {
-	return <div>Home</div>;
+	return (
+		<>
+			<VideoContainer />
+		</>
+	);
 };
 
 export default Home;
