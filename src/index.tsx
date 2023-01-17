@@ -5,6 +5,7 @@ import { store } from './app/store';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import router from './router';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 const GlobalStyle = createGlobalStyle`
   // reset css
@@ -17,10 +18,12 @@ const GlobalStyle = createGlobalStyle`
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
-
+const queryClient = new QueryClient();
 root.render(
 	<Provider store={store}>
-		<GlobalStyle />
-		<RouterProvider router={router} />
+		<QueryClientProvider client={queryClient}>
+			<GlobalStyle />
+			<RouterProvider router={router} />
+		</QueryClientProvider>
 	</Provider>
 );
