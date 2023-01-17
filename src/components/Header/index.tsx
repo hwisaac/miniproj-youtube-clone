@@ -15,7 +15,7 @@ const Header = ({ menuClicked }) => {
 };
 
 const Container = styled.div`
-	background-color: #212529;
+	background-color: #000000;
 	height: 56px;
 	padding: 2px 16px;
 	display: flex;
