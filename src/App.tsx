@@ -22,7 +22,7 @@ function App() {
 			<>
 				<Reset />
 				<Header menuClicked={handleMenuClicked} />
-				<SNB show={toggle} />
+				<SNB show={toggle} setShow={setToggle} />
 				<Home />
 				<Outlet />
 				<ReactQueryDevtools initialIsOpen={false} />

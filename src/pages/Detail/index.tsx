@@ -6,6 +6,7 @@ import videoData from '../../mockup/video.json';
 import PlayerBox from '../../components/PlayerBox';
 import VideoInfoBox from '../../components/VideoInfoBox';
 import CommentBox from '../../components/CommentBox';
+import Recommend from '../../components/Recommend';
 
 // const client = new Youtube();
 // const tempt = async () => {
@@ -26,7 +27,9 @@ const Detail = () => {
 				<VideoInfoBox />
 				<CommentBox />
 			</PrimaryBox>
-			<SecondaryBox />
+			<SecondaryBox>
+				<Recommend />
+			</SecondaryBox>
 		</Layout>
 	);
 };
@@ -43,11 +46,11 @@ const Layout = styled.div`
 `;
 const PrimaryBox = styled.div`
 	background-color: red;
-	width: 80vw;
+	width: 70vw;
 	height: 100vh;
 `;
 const SecondaryBox = styled.div`
 	background-color: #0e0e0e;
-	width: 20vw;
-	height: 100vh;
+	width: 30vw;
+	height: 100%;
 `;
