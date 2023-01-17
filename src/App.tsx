@@ -1,9 +1,11 @@
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import React,{ useState } from 'react';
-import { Outlet } from 'react-router-dom';
-import { Reset } from 'styled-reset';
+import React, { useState } from 'react';
+import { Outlet, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import SNB from './components/SNB';
+import { Reset } from 'styled-reset';
+import Home from './pages/Home';
+import VideoContainer from './components/VideoContainer/VideoContainer';
 
 function App() {
 	const [toggle, setToggle] = useState(false);
@@ -15,15 +17,25 @@ function App() {
 			setToggle(true);
 		}
 	};
+	const Layout = () => {
+		return (
+			<>
+				<Reset />
+				<Header menuClicked={handleMenuClicked} />
+				<SNB show={toggle} setShow={setToggle} />
+				<Home />
+				<Outlet />
+				<ReactQueryDevtools initialIsOpen={false} />
+			</>
+		);
+	};
 
 	return (
-		<>
-			<Reset />
-			<Header menuClicked={handleMenuClicked} />
-			<SNB show={toggle} />
-			<Outlet />
-			<ReactQueryDevtools initialIsOpen={false} />
-		</>
+		<Routes>
+			<Route path="*" element={<Layout />}>
+				<Route path="home" element={<Home />} />
+			</Route>
+		</Routes>
 	);
 }
 
