@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import React,{ useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Reset } from 'styled-reset';
 import Header from './components/Header';
@@ -21,6 +22,7 @@ function App() {
 			<Header menuClicked={handleMenuClicked} />
 			<SNB show={toggle} />
 			<Outlet />
+			<ReactQueryDevtools initialIsOpen={false} />
 		</>
 	);
 }
