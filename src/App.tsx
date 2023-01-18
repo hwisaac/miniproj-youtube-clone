@@ -17,25 +17,15 @@ function App() {
 			setToggle(true);
 		}
 	};
-	const Layout = () => {
-		return (
-			<>
-				<Reset />
-				<Header menuClicked={handleMenuClicked} />
-				<SNB show={toggle} setShow={setToggle} />
-				<Home />
-				<Outlet />
-				<ReactQueryDevtools initialIsOpen={false} />
-			</>
-		);
-	};
-
 	return (
-		<Routes>
-			<Route path="*" element={<Layout />}>
-				<Route path="home" element={<Home />} />
-			</Route>
-		</Routes>
+		<>
+			<Reset />
+			<Header menuClicked={handleMenuClicked} />
+			<SNB show={toggle} setShow={setToggle} />
+			<Home />
+			<Outlet />
+			<ReactQueryDevtools initialIsOpen={false} />
+		</>
 	);
 }
 
