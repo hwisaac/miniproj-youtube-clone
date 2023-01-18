@@ -54,7 +54,7 @@ const VideoDetailBox = ({ videoInfoData }) => {
 					<ThumbsBtn>
 						<div>
 							<FiThumbsUp />
-							{detail.statistics.likeCount} 명
+							{Number(detail.statistics.likeCount).toLocaleString()} 명
 						</div>
 						<div>
 							<FiThumbsDown />
@@ -216,7 +216,7 @@ const ThumbsBtn = styled.div`
 		border: none;
 		background-color: #313030;
 		color: white;
-		font-size: 16px;
+		font-size: 15px;
 		border-radius: 20px;
 		padding: 8px 15px;
 		display: flex;
