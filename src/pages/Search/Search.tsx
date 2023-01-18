@@ -5,33 +5,37 @@ import requests from '../../api/requests';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import searchJson from '../../mockup/search.json';
 
 const Search = () => {
-	const [videos, setVideos] = useState([]);
-	const useQuery = () => {
-		return new URLSearchParams(useLocation().search);
-	};
+	// const [videos, setVideos] = useState([]);
+	// const useQuery = () => {
+	// 	return new URLSearchParams(useLocation().search);
+	// };
 
-	let query = useQuery();
-	const searchTerm = query.get('q');
-	useEffect(() => {
-		if (searchTerm) {
-			searchData(searchTerm);
-		}
-	}, [searchTerm]);
+	// let query = useQuery();
+	// const searchTerm = query.get('q');
+	// useEffect(() => {
+	// 	if (searchTerm) {
+	// 		searchData(searchTerm);
+	// 	}
+	// }, [searchTerm]);
 
-	const searchData = async (searchTerm) => {
-		try {
-			const response = await axios.get(requests.fetchSearchVideo, {
-				params: {
-					q: `${searchTerm}`,
-				},
-			});
-			setVideos(response.data.items);
-		} catch (error) {
-			console.log(error);
-		}
-	};
+	// const searchData = async (searchTerm) => {
+	// 	try {
+	// 		const response = await axios.get(requests.fetchSearchVideo, {
+	// 			params: {
+	// 				q: `${searchTerm}`,
+	// 			},
+	// 		});
+	// 		setVideos(response.data.items);
+	// 	} catch (error) {
+	// 		console.log(error);
+	// 	}
+	// };
+
+	let videos = searchJson.items;
+
 	return (
 		<Main>
 			<Container>
