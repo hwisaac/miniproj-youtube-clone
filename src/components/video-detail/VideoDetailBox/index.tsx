@@ -1,3 +1,6 @@
+/**
+ * 상세설명 컴포넌트입니다.
+ */
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import videoData from '../../../mockup/video.json';
@@ -10,19 +13,33 @@ import {
 	FiAlignLeft,
 	FiMoreHorizontal,
 } from 'react-icons/fi';
+import { formatDistanceToNowStrict } from 'date-fns';
+import youtube from '../../../api/youtubeClass';
+import { useQuery } from '@tanstack/react-query';
 
 function ab(x: IVideo) {}
 
 const VideoInfoBox = ({ videoInfoData }) => {
-	const [detail, setDetail] = useState<IItem>(videoData.items[0]);
+	const [detail, setDetail] = useState<IVideoItem>(videoInfoData.items[0]);
 	const [isBrief, setIsBrief] = useState<boolean>(false);
 
+	const channelId = videoInfoData.items[0].snippet.channelId;
+	const handleDescriptionBox = () => {
+		if (isBrief) {
+			setIsBrief((prev) => !prev);
+		}
+	};
+	// useQuery: [채널 정보] fetching
+	const { isLoading: isLoadingChannelData, data: channelData } = useQuery<IChannel>(['channel', channelId], () =>
+		youtube.channel(channelId)
+	);
+	const channelThumbnail = channelData.items[0].snippet.thumbnails.default.url;
 	return (
 		<Wrapper>
 			<Title>{detail.snippet.title}</Title>
 			<Row>
 				<Channel>
-					<ChannelProfile />
+					<ChannelProfile src={channelThumbnail} />
 					<div>
 						<ChannelTitle>{detail.snippet.channelTitle}</ChannelTitle>
 						<ChannelSubscribes>구독자 48.1만명</ChannelSubscribes>
@@ -60,12 +77,12 @@ const VideoInfoBox = ({ videoInfoData }) => {
 					</Btn>
 				</Btns>
 			</Row>
-			<DescriptionBox>
+			<DescriptionBox isBrief={isBrief} onClick={handleDescriptionBox}>
 				<HeaderInfo>
-					<span>조회수 {Number(detail.statistics.viewCount).toLocaleString()}회</span>
-					<span>{detail.snippet.publishedAt}</span>
+					<Views>조회수 {Number(detail.statistics.viewCount).toLocaleString()}회</Views>
+					<PublishedAt>{formatDistanceToNowStrict(new Date(detail.snippet.publishedAt))} ago</PublishedAt>
 				</HeaderInfo>
-				<Description>{detail.snippet.description}</Description>
+				<Description isBrief={isBrief}>{detail.snippet.description}</Description>
 				<Tags>
 					{detail.snippet.tags.map((tag, index) => (
 						<li key={`${tag}-${index}`}>#{tag}</li>
@@ -73,8 +90,6 @@ const VideoInfoBox = ({ videoInfoData }) => {
 				</Tags>
 				<Brifly onClick={() => setIsBrief(!isBrief)}>{isBrief ? '더보기' : '간략히'}</Brifly>
 			</DescriptionBox>
-			<Views>View: {detail.statistics.viewCount}</Views>
-			<PublishedAt>Published: {detail.snippet.publishedAt}</PublishedAt>
 		</Wrapper>
 	);
 };
@@ -94,19 +109,28 @@ const Title = styled.h1`
 	margin: 10px 0;
 	color: white;
 `;
-const DescriptionBox = styled.div`
+const DescriptionBox = styled.div<{ isBrief: boolean }>`
 	background-color: #303030;
 	color: white;
 	padding: 20px 20px;
 	border-radius: 10px;
 	white-space: pre-wrap;
+	height: ${(props) => (props.isBrief ? '100px' : 'auto')};
+	overflow: hidden;
+	&:hover {
+		cursor: ${(props) => props.isBrief && 'pointer'};
+		background-color: ${(props) => props.isBrief && '#4a504d'};
+	}
 `;
 const HeaderInfo = styled.div`
 	display: flex;
 	gap: 10px;
 	margin-bottom: 5px;
 `;
-const Description = styled.p``;
+const Description = styled.p<{ isBrief: boolean }>`
+	height: ${(props) => (props.isBrief ? '80px' : 'auto')};
+	overflow: hidden;
+`;
 const Channel = styled.div`
 	display: flex;
 	align-items: center;
@@ -114,11 +138,11 @@ const Channel = styled.div`
 		display: flex;
 		flex-direction: column;
 	}
+	margin: 15px 0;
 `;
-const ChannelProfile = styled.div`
-	border: 1px solid red;
-	width: 30px;
-	height: 30px;
+const ChannelProfile = styled.img`
+	width: 35px;
+	height: 35px;
 	margin-right: 15px;
 	border-radius: 100%;
 `;

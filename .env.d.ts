@@ -13,7 +13,7 @@ interface IThumbnail {
 	width: number;
 	height: number;
 }
-interface IItem {
+interface IVideoItem {
 	kind: string;
 	etag: string;
 	id: string;
@@ -23,26 +23,10 @@ interface IItem {
 		title: string;
 		description: string;
 		thumbnails: {
-			default: {
-				url: string;
-				width: number;
-				height: number;
-			};
-			high: {
-				url: string;
-				width: number;
-				height: number;
-			};
-			standard: {
-				url: string;
-				width: number;
-				height: number;
-			};
-			maxres: {
-				url: string;
-				width: number;
-				height: number;
-			};
+			default: IThumbnail;
+			high: IThumbnail;
+			standard: IThumbnail;
+			maxres: IThumbnail;
 		};
 		channelTitle: string;
 		tags: string[];
@@ -71,7 +55,7 @@ interface IItem {
 interface IVideo {
 	kind: string;
 	etag: string;
-	items: IItem[];
+	items: IVideoItem[];
 	pageInfo: {
 		totalResults: number;
 		resultsPerPage: number;
@@ -118,4 +102,118 @@ interface IComments {
 		resultsPerPage: number;
 	};
 	items: ICommentItem[];
+}
+
+// channel
+interface IChannelItem {
+	kind: string;
+	etag: string;
+	id: string;
+	snippet: {
+		title: string;
+		description: string;
+		customUrl: string;
+		publishedAt: string;
+		thumbnails: {
+			default: IThumbnail;
+			high: IThumbnail;
+			medium: IThumbnail;
+		};
+		localized: {
+			title: string;
+			description: string;
+		};
+		country: string;
+	};
+	contentDetails: {
+		relatedPlaylists: {
+			likes: string;
+			uploads: string;
+		};
+	};
+	statistics: {
+		viewCount: string;
+		subscriberCount: string;
+		hiddenSubscriberCount: boolean;
+		videoCount: string;
+	};
+}
+interface IChannel {
+	kind: string;
+	etag: string;
+	pageInfo: {
+		totalResults: number;
+		resultsPerPage: number;
+	};
+	items: IChannelItem[];
+}
+
+// search
+interface ISearchItem {
+	kind: string;
+	etag: string;
+	id: {
+		kind: string;
+		channelId?: string;
+		videoId?: string;
+	};
+	snippet: {
+		publishedAt: string;
+		channelId: string;
+		title: string;
+		description: string;
+		thumbnails: {
+			default: { url: string };
+			high: { url: string };
+			medium: { url: string };
+		};
+		channelTitle: string;
+		liveBroadcastContent: string;
+		publishTime: string;
+	};
+}
+
+interface ISearch {
+	kind: string;
+	etag: string;
+	nextPageToken: string;
+	regionCode: string;
+	pageInfo: {
+		totalResults: number;
+		resultsPerPage: number;
+	};
+	items: ISearchItem[];
+}
+
+// related videos
+
+interface IRelatedVideosItem {
+	kind: string;
+	etag: string;
+	id: {
+		kind: string;
+		videoId: string;
+	};
+	snippet: {
+		publishedAt: string;
+		channelId: string;
+		title: string;
+		description: string;
+		thumbnails: {
+			default: IThumbnail;
+			medium: IThumbnail;
+			high: IThumbnail;
+			standard: IThumbnail;
+			maxres: IThumbnail;
+		};
+		channelTitle: string;
+		liveBroadcastContent: string;
+		publishTime: string;
+	};
+}
+
+interface IRelatedVideos {
+	kind: string;
+	etag: string;
+	items: IRelatedVideosItem[];
 }

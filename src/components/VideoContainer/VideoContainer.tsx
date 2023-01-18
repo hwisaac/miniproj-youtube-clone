@@ -10,7 +10,7 @@ import searchJson from '../../mockup/search-beutifulplace.json';
 const VideoContainer = () => {
 	// const [videos, setVideos] = useState([]);
 	// const [videoInfo, setVideoInfo] = useState([]);
-	//검색데이터 get
+	// 검색데이터 get
 	// useEffect(() => {
 	// 	fetchData();
 	// }, []);
@@ -23,7 +23,7 @@ const VideoContainer = () => {
 	// 	});
 	// 	setVideos(response.data.items);
 	// };
-	//비디오 상세정보 get
+	// 비디오 상세정보 get
 	// useEffect(() => {
 	// 	fetchData();
 	// }, []);

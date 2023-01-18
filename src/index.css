@@ -26,3 +26,6 @@ textarea:focus, input:focus{
   "nav nav"
   "aside main";
 }
+body{
+  background-color: var(--color-dark);
+}

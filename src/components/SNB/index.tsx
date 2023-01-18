@@ -53,6 +53,7 @@ let firstRender = window.location.pathname === '/' || window.location.pathname =
 
 const SNB = ({ show, setShow }) => {
 	let location = useLocation();
+
 	const isMain = window.location.pathname === '/' || window.location.pathname === '/search' ? true : false;
 	if (pathname !== window.location.pathname) {
 		pathname = window.location.pathname;
