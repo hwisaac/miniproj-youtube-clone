@@ -26,6 +26,22 @@ textarea:focus, input:focus{
   "nav nav"
   "aside main";
 }
+
 body{
   background-color: var(--color-dark);
+}
+
+
+body::-webkit-scrollbar {
+  width: 16px;  /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #9e9e9e; /* 스크롤바의 색상 */
+  border-radius: 10px;
+  border: 4px solid black;
+}
+
+body::-webkit-scrollbar-track {
+  background: #000000  /*스크롤바 뒷 배경 색상*/
 }
