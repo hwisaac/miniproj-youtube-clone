@@ -56,7 +56,7 @@ const SNB = ({ show, setShow }) => {
 	const isMain = window.location.pathname === '/' || window.location.pathname === '/search' ? true : false;
 	if (pathname !== window.location.pathname) {
 		pathname = window.location.pathname;
-		setShow(false);
+		isMain === false ? setShow(true) : setShow(false);
 	}
 	if (!firstRender) {
 		setShow(true);
