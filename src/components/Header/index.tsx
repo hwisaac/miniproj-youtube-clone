@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import LeftSection from './LeftSection';
 import RightSection from './RightSection';
-import SearchBar from './SearchBar';
+import SearchBar from './SearchBar/index';
 
 const Header = ({ menuClicked }) => {
 	return (
@@ -15,13 +15,18 @@ const Header = ({ menuClicked }) => {
 };
 
 const Container = styled.div`
-	background-color: #212529;
-	height: 56px;
-	padding: 2px 16px;
+	background-color: #000000;
+	height: 60px;
+	padding: 0 14px;
+	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	font-size: 16px;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	border-bottom: 1px solid gray;
 `;
 
 export default Header;

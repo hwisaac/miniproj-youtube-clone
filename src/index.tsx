@@ -6,6 +6,7 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import router from './router';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import './index.css';
 
 const GlobalStyle = createGlobalStyle`
   // reset css

@@ -50,7 +50,7 @@ const SideBarSection = ({ info, show }) => {
 const NavSection = styled.section<{ show: boolean }>`
 	${(props) =>
 		props.show
-			? css``
+			? ''
 			: css`
 					border-bottom: 1px solid gray;
 					margin-bottom: 10px;
@@ -95,6 +95,33 @@ const NavSection = styled.section<{ show: boolean }>`
 		cursor: pointer;
 		p {
 			color: white;
+		}
+	}
+
+	@media screen and (max-width: 1200px) {
+		border-bottom: 0px;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+		li {
+			padding: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 50px;
+			p {
+				width: 120%;
+				display: block;
+				text-align: center;
+
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				margin: 0;
+			}
+			&:hover {
+				background-color: #343a40;
+			}
 		}
 	}
 `;
