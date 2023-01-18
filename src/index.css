@@ -17,3 +17,12 @@ input{
 textarea:focus, input:focus{
   outline: none;
 }
+
+#root {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 55px auto;
+  grid-template-areas:
+  "nav nav"
+  "aside main";
+}
