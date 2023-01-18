@@ -1,3 +1,7 @@
+/*
+헤더의 오른편 컴포넌트입니다. 아이콘만 있으며, 기능은 없는 상태입니다.
+*/
+
 import React from 'react';
 import { BsPersonCircle } from 'react-icons/bs';
 import { AiOutlineBell } from 'react-icons/ai';

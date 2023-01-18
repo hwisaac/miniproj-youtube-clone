@@ -17,14 +17,14 @@ const Icon = styled.i`
 	}
 `;
 
-const Container = styled.div<{ focus: boolean; text: string; searchClicked: boolean }>`
+const Container = styled.div<{ focus: boolean; text: string; showBar: boolean }>`
 	width: 100%;
 	max-width: 740px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	form {
+	.form {
 		width: 100%;
 		display: flex;
 		justify-content: right;
@@ -142,13 +142,13 @@ const Container = styled.div<{ focus: boolean; text: string; searchClicked: bool
 			}
 		}
 		${(props) =>
-			props.searchClicked
+			props.showBar
 				? css`
 						width: 100%;
 						position: absolute;
 						left: 0;
 
-						form {
+						.form {
 							width: 100%;
 							margin: 0 14px;
 							background-color: #000000;
@@ -188,7 +188,7 @@ const Container = styled.div<{ focus: boolean; text: string; searchClicked: bool
 							display: none;
 						}
 
-						form {
+						.form {
 							margin-right: 0;
 						}
 
@@ -211,92 +211,6 @@ const Container = styled.div<{ focus: boolean; text: string; searchClicked: bool
 						}
 				  `}
 	}
-
-	/* @media screen and (min-width: 650px) {
-		max-width: 700px;
-		width: 100%;
-		margin: 0 50px;
-		box-sizing: border-box;
-
-		form {
-			width: 100%;
-			display: flex;
-			justify-content: right;
-			align-items: center;
-			position: relative;
-			box-sizing: border-box;
-		}
-
-		.search-box {
-			background-color: #080808;
-			width: 70%;
-			position: absolute;
-			right: 112px;
-			box-sizing: border-box;
-			max-width: 540px;
-			font-size: 16px;
-			color: white;
-			border: 1px solid #343a40;
-			border-top-left-radius: 20px;
-			border-bottom-left-radius: 20px;
-			border-right: 0px;
-			padding-left: 16px;
-			height: 40px;
-		}
-		.search-box:focus {
-			outline: none;
-			border: 1px solid royalblue;
-			width: calc(70% + 30px);
-			padding-left: 46px;
-		}
-
-		.search-button {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: #242424;
-			border: 1px solid #303030;
-			border-top-right-radius: 20px;
-			border-bottom-right-radius: 20px;
-			width: 64px;
-			height: 40px;
-		}
-
-		.keyboard {
-			position: absolute;
-			right: 116px;
-			padding: 7px;
-			border-top-left-radius: 18px;
-			border-bottom-left-radius: 18px;
-			background-color: #080808;
-			svg {
-				background-color: #080808;
-				color: gray;
-			}
-			&:hover {
-				svg {
-					color: whitesmoke;
-					border-radius: 0;
-				}
-			}
-		}
-	}
-
-	.search {
-		&:hover {
-			background-color: transparent;
-			border-radius: 20px;
-		}
-	}
-	.voice {
-		border-radius: 20px;
-		background-color: #121212;
-		margin-left: 10px;
-	}
-	.voice:hover {
-		background-color: #242424;
-		border-radius: 20px;
-	} */
 `;
 
 export { Container, Icon };
