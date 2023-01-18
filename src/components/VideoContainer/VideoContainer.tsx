@@ -4,6 +4,7 @@ import axios from '../../api/axios';
 import requests from '../../api/requests';
 import VideoThumbnail from './VideoThumbnail';
 import VideoInfo from './VideoInfo';
+import searchJson from '../../mockup/search-beutifulplace.json';
 
 const VideoContainer = () => {
 	// const [videos, setVideos] = useState([]);
@@ -24,8 +25,9 @@ const VideoContainer = () => {
 	// const handleClick = (video) => {};
 
 	//로컬스토리지 사용
+	// let videos = JSON.parse(localStorage.getItem('response')).data.items;
 
-	let videos = JSON.parse(localStorage.getItem('response')).data.items;
+	let videos = searchJson.data.items;
 
 	return (
 		<Container>

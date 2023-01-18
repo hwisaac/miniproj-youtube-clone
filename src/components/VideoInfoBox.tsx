@@ -153,6 +153,7 @@ const Tags = styled.ul`
 	li {
 		color: var(--color-light-blue);
 		font-weight: 600;
+		cursor: pointer;
 	}
 `;
 

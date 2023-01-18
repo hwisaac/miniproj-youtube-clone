@@ -45,8 +45,8 @@ const Layout = styled.div`
 	left: 100px;
 `;
 const PrimaryBox = styled.div`
-	background-color: red;
-	width: 70vw;
+	background-color: var(--color-dark);
+	width: 80vw;
 	height: 100vh;
 `;
 const SecondaryBox = styled.div`
