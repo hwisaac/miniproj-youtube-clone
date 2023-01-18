@@ -2,6 +2,7 @@ import axios from '../../api/axios';
 import requests from '../../api/requests';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import videoInfoEX from '../../mockup/videoinfo-ex.json';
 
 const VideoInfo = ({ video }) => {
 	// const [videoInfo, setVideoInfo] = useState([]);
@@ -17,7 +18,9 @@ const VideoInfo = ({ video }) => {
 	// 	setVideoInfo(response.data.items);
 	// };
 
-	let videoInfo = JSON.parse(localStorage.getItem('response-videoInfo')).data.items[0];
+	//로컬스토리지
+	// let videoInfo = JSON.parse(localStorage.getItem('response-videoInfo')).data.items[0];
+	let videoInfo = videoInfoEX.data.items[0];
 	let viewCount = videoInfo.statistics.viewCount;
 
 	return (
