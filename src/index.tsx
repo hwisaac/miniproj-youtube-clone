@@ -19,7 +19,21 @@ const GlobalStyle = createGlobalStyle`
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			staleTime: Infinity,
+			cacheTime: Infinity,
+			refetchOnWindowFocus: false,
+			retry: false,
+		},
+		mutations: {
+			cacheTime: Infinity,
+			retry: false,
+		},
+	},
+});
+
 root.render(
 	<Provider store={store}>
 		<QueryClientProvider client={queryClient}>

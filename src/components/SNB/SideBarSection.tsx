@@ -10,7 +10,7 @@ import {
 	MdFlag,
 } from 'react-icons/md';
 
-const SideBarSection = ({ info, show }) => {
+const SideBarSection = ({ info, show, setShow }) => {
 	return (
 		<>
 			<NavSection show={show}>
@@ -95,33 +95,6 @@ const NavSection = styled.section<{ show: boolean }>`
 		cursor: pointer;
 		p {
 			color: white;
-		}
-	}
-
-	@media screen and (max-width: 1200px) {
-		border-bottom: 0px;
-		margin-bottom: 0px;
-		padding-bottom: 0px;
-		li {
-			padding: 10px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			width: 50px;
-			p {
-				width: 120%;
-				display: block;
-				text-align: center;
-
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				margin: 0;
-			}
-			&:hover {
-				background-color: #343a40;
-			}
 		}
 	}
 `;
