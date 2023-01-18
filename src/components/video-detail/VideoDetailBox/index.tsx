@@ -16,12 +16,13 @@ import {
 import { formatDistanceToNowStrict } from 'date-fns';
 import youtube from '../../../api/youtubeClass';
 import { useQuery } from '@tanstack/react-query';
+import numberToKorean from '../../../util/numberToKorean';
 
 function ab(x: IVideo) {}
 
-const VideoInfoBox = ({ videoInfoData }) => {
+const VideoDetailBox = ({ videoInfoData }) => {
 	const [detail, setDetail] = useState<IVideoItem>(videoInfoData.items[0]);
-	const [isBrief, setIsBrief] = useState<boolean>(false);
+	const [isBrief, setIsBrief] = useState<boolean>(true);
 
 	const channelId = videoInfoData.items[0].snippet.channelId;
 	const handleDescriptionBox = () => {
@@ -33,7 +34,9 @@ const VideoInfoBox = ({ videoInfoData }) => {
 	const { isLoading: isLoadingChannelData, data: channelData } = useQuery<IChannel>(['channel', channelId], () =>
 		youtube.channel(channelId)
 	);
-	const channelThumbnail = channelData.items[0].snippet.thumbnails.default.url;
+	const channelThumbnail = channelData?.items[0].snippet.thumbnails.default.url;
+	const subscriberCount = channelData?.items[0].statistics.subscriberCount;
+
 	return (
 		<Wrapper>
 			<Title>{detail.snippet.title}</Title>
@@ -42,7 +45,7 @@ const VideoInfoBox = ({ videoInfoData }) => {
 					<ChannelProfile src={channelThumbnail} />
 					<div>
 						<ChannelTitle>{detail.snippet.channelTitle}</ChannelTitle>
-						<ChannelSubscribes>구독자 48.1만명</ChannelSubscribes>
+						<ChannelSubscribes>구독자 {numberToKorean(subscriberCount)}명</ChannelSubscribes>
 					</div>
 					<SubscribeBtn>구독</SubscribeBtn>
 				</Channel>
@@ -94,7 +97,7 @@ const VideoInfoBox = ({ videoInfoData }) => {
 	);
 };
 
-export default VideoInfoBox;
+export default VideoDetailBox;
 
 const Wrapper = styled.div`
 	display: flex;
