@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const VideoContainer = () => {
 	// const [videos, setVideos] = useState([]);
 	// const [videoInfo, setVideoInfo] = useState([]);
-	//검색데이터 get
+	// 검색데이터 get
 	// useEffect(() => {
 	// 	fetchData();
 	// }, []);
@@ -45,10 +45,10 @@ const VideoContainer = () => {
 		<Container className="video-container">
 			{videos.map((video) => (
 				<div className="video-element">
-					<Link to="" className={video.id.videoId}>
+					<VideoLink to="" key={video.id.videoId}>
 						<VideoThumbnail video={video} videoInfo={videoInfo} />
 						<VideoInfo video={video} videoInfo={videoInfo} />
-					</Link>
+					</VideoLink>
 				</div>
 			))}
 		</Container>
@@ -76,11 +76,13 @@ const Container = styled.div`
 		letter-spacing: 0.2px;
 		justify-items: center;
 	}
-	a {
-		width: 100%;
-		height: 100%;
-		text-decoration: none;
-	}
+`;
+
+const VideoLink = styled(Link)`
+	color: white;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
 `;
 
 export default VideoContainer;
