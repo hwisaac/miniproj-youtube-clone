@@ -3,29 +3,32 @@ import requests from '../../api/requests';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import videoInfoEX from '../../mockup/videoinfo-ex.json';
+import { formatDistanceToNowStrict } from 'date-fns';
 
-const VideoInfo = ({ video }) => {
-	// const [videoInfo, setVideoInfo] = useState([]);
-	// useEffect(() => {
-	//   fetchData();
-	// }, []);
-	// const fetchData = async () => {
-	// 	const response = await axios.get(requests.fetchInfoVideo, {
-	// 		params: {
-	// 			id: `${video.id.videoId}`,
-	// 		},
-	// 	});
-	// 	setVideoInfo(response.data.items);
-	// };
+const VideoInfo = ({ video, videoInfo }) => {
+	let date = video.snippet.publishedAt;
+	const formatDate = (date) => {
+		const today = new Date(date);
+		return formatDistanceToNowStrict(today);
+	};
 
-	//로컬스토리지
-	// let videoInfo = JSON.parse(localStorage.getItem('response-videoInfo')).data.items[0];
-	let videoInfo = videoInfoEX.data.items[0];
-	let viewCount = videoInfo.statistics.viewCount;
+	let view = videoInfo.statistics.viewCount;
+	const formatView = (view) => {
+		if (view >= 1000000000) {
+			return (view / 1000000000).toFixed(0) + 'G';
+		}
+		if (view >= 1000000) {
+			return (view / 1000000).toFixed(0) + 'M';
+		}
+		if (view >= 1000) {
+			return (view / 1000).toFixed(0) + 'K';
+		}
+		return view;
+	};
 
 	return (
 		<Container>
-			<div>
+			<div className="info-container">
 				<div className="channel">
 					<img src={video.snippet.thumbnails.medium.url} className="channel-thumbnail" />
 				</div>
@@ -36,7 +39,9 @@ const VideoInfo = ({ video }) => {
 							<div className="channelName">{video.snippet.channelTitle}</div>
 						</a>
 						<div className="detail-data">
-							<span>{viewCount}</span>
+							<span>{formatView(view)}</span>
+							<span className="dot"> • </span>
+							<span>{formatDate(date)}</span>
 						</div>
 					</div>
 				</div>
@@ -46,10 +51,16 @@ const VideoInfo = ({ video }) => {
 };
 
 const Container = styled.div`
+	.info-container {
+		display: flex;
+	}
+	.channel {
+		margin-right: 1rem;
+	}
 	.channel-thumbnail {
 		width: 35px;
 		height: 35px;
-		margin: 1.2rem 1.2rem 0 0;
+
 		border-radius: 50%;
 	}
 `;
