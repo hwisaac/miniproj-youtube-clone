@@ -27,6 +27,11 @@ textarea:focus, input:focus{
   "aside main";
 }
 
+body{
+  background-color: var(--color-dark);
+}
+
+
 body::-webkit-scrollbar {
   width: 16px;  /* 스크롤바의 너비 */
 }
