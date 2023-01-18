@@ -1,11 +1,10 @@
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import React, { useState } from 'react';
-import { Outlet, Route, Routes } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import SNB from './components/SNB';
 import { Reset } from 'styled-reset';
 import Home from './pages/Home';
-import VideoContainer from './components/VideoContainer/VideoContainer';
 
 function App() {
 	const [toggle, setToggle] = useState(false);
