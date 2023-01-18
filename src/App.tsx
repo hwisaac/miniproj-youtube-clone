@@ -21,7 +21,7 @@ function App() {
 		<>
 			<Reset />
 			<Header menuClicked={handleMenuClicked} />
-			<SNB show={toggle} setShow={setToggle} />
+			{toggle && <SNB show={toggle} setShow={setToggle} />}
 			<Outlet />
 			<ReactQueryDevtools initialIsOpen={false} />
 		</>

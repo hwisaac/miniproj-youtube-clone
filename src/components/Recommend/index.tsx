@@ -8,8 +8,8 @@ const Recommend = () => {
 	return (
 		<Container>
 			<VideosUl>
-				{data.map((item) => {
-					return <VideoItem item={item.snippet} />;
+				{data.map((item, index) => {
+					return <VideoItem key={`videoItem-${index}`} item={item.snippet} />;
 				})}
 			</VideosUl>
 		</Container>

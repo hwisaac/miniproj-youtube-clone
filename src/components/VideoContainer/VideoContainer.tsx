@@ -31,8 +31,8 @@ const VideoContainer = () => {
 
 	return (
 		<Container>
-			{videos.map((video) => (
-				<Box>
+			{videos.map((video, index) => (
+				<Box key={`video-${index}`}>
 					<VideoThumbnail video={video} />
 					<VideoInfo video={video} />
 				</Box>

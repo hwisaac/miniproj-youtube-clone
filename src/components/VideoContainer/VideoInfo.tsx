@@ -3,6 +3,7 @@ import requests from '../../api/requests';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import videoInfoEX from '../../mockup/videoinfo-ex.json';
+import { Link } from 'react-router-dom';
 
 const VideoInfo = ({ video }) => {
 	// const [videoInfo, setVideoInfo] = useState([]);
@@ -32,9 +33,9 @@ const VideoInfo = ({ video }) => {
 				<div className="text-info">
 					<h3 className="title">{video.snippet.title}</h3>
 					<div className="detail-info">
-						<a>
+						<Link to="">
 							<div className="channelName">{video.snippet.channelTitle}</div>
-						</a>
+						</Link>
 						<div className="detail-data">
 							<span>{viewCount}</span>
 						</div>

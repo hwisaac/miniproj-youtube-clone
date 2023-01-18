@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-	background-color: orange;
-	height: 400px;
+	background-color: var(--color-dark);
+	height: 500px;
 `;
 
-const PlayerBox = ({ videoId }) => {
+const PlayerBox = () => {
 	return (
 		<Wrapper>
 			<iframe
-				title={'http://www.youtube.com/embed/M7lc1UVf-VE'}
+				title={'http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com'}
 				id="player"
 				width="100%"
 				height="100%"

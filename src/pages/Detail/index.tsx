@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Youtube, { axiosSearchTest, searchTest } from '../../util/api/api';
 import searchData from '../../mockup/search.json';
 import videoData from '../../mockup/video.json';
-import PlayerBox from '../../components/PlayerBox';
+import PlayerBox from '../../components/video-detail/PlayerBox';
 import VideoInfoBox from '../../components/VideoInfoBox';
 import CommentBox from '../../components/CommentBox';
 import Recommend from '../../components/Recommend';
@@ -38,6 +38,7 @@ export default Detail;
 
 const Layout = styled.div`
 	display: flex;
+	top: 60px;
 	width: 100%;
 	height: auto;
 	border: 3px solid black;
