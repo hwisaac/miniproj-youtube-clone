@@ -20,13 +20,19 @@ const Detail = () => {
 	// URL주소에서 videoId 가져오기
 	const { videoId } = useParams();
 
-	// useQuery: [댓글] fetching
-	const { isLoading: isLoadingComment, data: commentData } = useQuery<IComments>(['comment', videoId], () =>
-		youtube.comment(videoId)
-	);
 	// useQuery: [영상 상세정보] fetching
 	const { isLoading: isLoadingVdeoInfoData, data: videoInfoData } = useQuery<IVideo>(['video', videoId], () =>
 		youtube.video(videoId)
+	);
+	// useQuery: [댓글] fetching
+	const { isLoading: isLoadingComment, data: commentData } = useQuery<IComments>(
+		['comment', videoId],
+		() => youtube.comment(videoId),
+		{
+			onSuccess: (commentData) => {
+				console.log('useQuery성공,다음토큰 ', commentData.nextPageToken, commentData);
+			},
+		}
 	);
 
 	return (
@@ -34,7 +40,14 @@ const Detail = () => {
 			<PrimaryBox>
 				<PlayerBox videoId={videoId} />
 				{!isLoadingVdeoInfoData && <VideoDetailBox videoInfoData={videoInfoData} />}
-				{!isLoadingComment && <CommentBox commentData={commentData} />}
+
+				{!isLoadingVdeoInfoData && (
+					<CommentBox
+						commentData={commentData}
+						videoId={videoId}
+						commentCount={videoInfoData.items[0].statistics.commentCount}
+					/>
+				)}
 			</PrimaryBox>
 			<SecondaryBox>
 				<Recommend />

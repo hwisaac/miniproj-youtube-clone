@@ -16,20 +16,16 @@ const Comment = ({ dataItem }) => {
 
 	return (
 		<Wrapper>
-			{/* <AuthorProfileImage src={dataItem.snippet.topLevelComment.snippet.authorProfileImageUrl} /> */}
 			<AuthorProfileImage src={authorProfileImageUrl} />
 
 			<CommentContents>
 				<div>
-					{/* <Author>{dataItem.snippet.topLevelComment.snippet.authorDisplayName}</Author> */}
 					<Author>{authorDisplayName}</Author>
 					<PublishedAt>{formatDistanceToNowStrict(publishedDate)} ago</PublishedAt>
 				</div>
-				{/* <TextOriginal>{dataItem.snippet.topLevelComment.snippet.textOriginal}</TextOriginal> */}
 				<TextOriginal>{textOriginal}</TextOriginal>
 				<Icons>
 					<FiThumbsUp size="20" />
-					{/* <span>{dataItem.snippet.topLevelComment.snippet.likeCount}</span> */}
 					<span>{likeCount}</span>
 					<FiThumbsDown size="20" />
 					<ReplyBtn onClick={() => setOpenAddSubComment(!openAddSubComment)}>답글</ReplyBtn>

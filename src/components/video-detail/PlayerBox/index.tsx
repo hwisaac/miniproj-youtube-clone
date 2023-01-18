@@ -5,7 +5,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PlayerBox = ({ videoId }) => {
-	console.log('playBox 에 들어온 비디오아이디', videoId);
+	// console.log('playBox 에 들어온 videoId', videoId);
 	return (
 		<Wrapper>
 			<iframe
