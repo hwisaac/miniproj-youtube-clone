@@ -10,6 +10,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { MdKeyboardVoice, MdKeyboard, MdClose } from 'react-icons/md';
 import { BiArrowBack } from 'react-icons/bi';
 import { Icon, Container } from './SearchBar';
+
 const SearchBar = () => {
 	const navigate = useNavigate();
 	const [inputText, setInputText] = useState('');
@@ -17,8 +18,13 @@ const SearchBar = () => {
 	const [isClicked, setIsClicked] = useState(false);
 
 	const handleSubmit = (event: any) => {
-		navigate(`/search?q=${inputText}`);
-		event.preventDefault();
+		if (event.keyCode === 13) {
+			if (inputText) {
+				navigate(`/search?q=${inputText}`);
+			}
+		} else if (event.type === 'click') {
+			inputText ? navigate(`/search?q=${inputText}`) : setIsClicked(true);
+		}
 	};
 
 	const handleInputText = (event: any) => {
@@ -43,7 +49,7 @@ const SearchBar = () => {
 
 	return (
 		<Container focus={inputFocus} text={inputText} searchClicked={isClicked}>
-			<form onSubmit={handleSubmit}>
+			<div className="form">
 				<Icon className="back" onClick={handleIsClicked}>
 					<BiArrowBack />
 				</Icon>
@@ -58,6 +64,7 @@ const SearchBar = () => {
 					onChange={handleInputText}
 					onFocus={handleInputFocus}
 					onBlur={handleInputBlur}
+					onKeyDown={handleSubmit}
 				/>
 				<Icon className="inputbox-icon keyboard">
 					<MdKeyboard />
@@ -65,7 +72,7 @@ const SearchBar = () => {
 				<Icon className="inputbox-icon close" onClick={handleDeleteText}>
 					<MdClose />
 				</Icon>
-				<button className="search-button" onClick={handleIsClicked}>
+				<button className="search-button" onClick={handleSubmit}>
 					<Icon className="search">
 						<AiOutlineSearch />
 					</Icon>
@@ -73,7 +80,7 @@ const SearchBar = () => {
 				<Icon className="voice">
 					<MdKeyboardVoice />
 				</Icon>
-			</form>
+			</div>
 		</Container>
 	);
 };
