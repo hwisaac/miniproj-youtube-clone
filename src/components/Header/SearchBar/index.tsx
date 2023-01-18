@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { MdKeyboardVoice, MdKeyboard } from 'react-icons/md';
-import { Icon, Container } from './SearchBar';
+import { Icon, Container, SearchIcon } from './SearchBar';
 
 const SearchBar = () => {
 	const navigate = useNavigate();
 	const [inputText, setInputText] = useState('');
+	const [inputFocus, setInputFocus] = useState(false);
 
 	const handleSubmit = (event: any) => {
 		navigate(`/search?q=${inputText}`);
@@ -17,9 +18,20 @@ const SearchBar = () => {
 		setInputText(event.target.value);
 	};
 
+	const handleInputFocus = (event: any) => {
+		setInputFocus(true);
+	};
+
+	const handleInputBlur = (event: any) => {
+		setInputFocus(false);
+	};
+
 	return (
 		<Container>
 			<form onSubmit={handleSubmit}>
+				<SearchIcon focus={inputFocus}>
+					<AiOutlineSearch />
+				</SearchIcon>
 				<input
 					type="text"
 					id="search-bar"
@@ -27,6 +39,8 @@ const SearchBar = () => {
 					value={inputText}
 					placeholder="검색"
 					onChange={handleInputText}
+					onFocus={handleInputFocus}
+					onBlur={handleInputBlur}
 				/>
 				<Icon className="keyboard">
 					<MdKeyboard />
@@ -36,10 +50,10 @@ const SearchBar = () => {
 						<AiOutlineSearch />
 					</Icon>
 				</button>
+				<Icon className="voice">
+					<MdKeyboardVoice />
+				</Icon>
 			</form>
-			<Icon className="voice">
-				<MdKeyboardVoice />
-			</Icon>
 		</Container>
 	);
 };
