@@ -1,0 +1,399 @@
+{
+  "data": {
+      "kind": "youtube#searchListResponse",
+      "etag": "r_CKBeXFLwpHBXuETtayjmVlpcA",
+      "nextPageToken": "CAoQAA",
+      "regionCode": "KR",
+      "pageInfo": {
+          "totalResults": 1000000,
+          "resultsPerPage": 10
+      },
+      "items": [
+          {
+              "kind": "youtube#searchResult",
+              "etag": "bb8H2NegrbaoMPgWcehE8C3AjS4",
+              "id": {
+                  "kind": "youtube#video",
+                  "videoId": "G1hKzCkywM8"
+              },
+              "snippet": {
+                  "publishedAt": "2021-05-22T06:00:05Z",
+                  "channelId": "UCb57aRZr3KsykS_wNsD5Ptw",
+                  "title": "6 Hour 4K Beautiful places Aerial Views",
+                  "description": "Please enjoy 6Hour aerial journey of beautiful places on the Earth. This tour will take you around the world's great nature.",
+                  "thumbnails": {
+                      "default": {
+                          "url": "https://i.ytimg.com/vi/G1hKzCkywM8/default.jpg",
+                          "width": 120,
+                          "height": 90
+                      },
+                      "medium": {
+                          "url": "https://i.ytimg.com/vi/G1hKzCkywM8/mqdefault.jpg",
+                          "width": 320,
+                          "height": 180
+                      },
+                      "high": {
+                          "url": "https://i.ytimg.com/vi/G1hKzCkywM8/hqdefault.jpg",
+                          "width": 480,
+                          "height": 360
+                      }
+                  },
+                  "channelTitle": "PRIMAL EARTH ",
+                  "liveBroadcastContent": "none",
+                  "publishTime": "2021-05-22T06:00:05Z"
+              }
+          },
+          {
+              "kind": "youtube#searchResult",
+              "etag": "QGKD4rb2WkQ1yzqETkuXDAnnWNc",
+              "id": {
+                  "kind": "youtube#video",
+                  "videoId": "olboi3ttUi8"
+              },
+              "snippet": {
+                  "publishedAt": "2020-08-01T23:00:07Z",
+                  "channelId": "UCRpNVpZoW56rOsV-6wFK3lg",
+                  "title": "12 Most Beautiful Places on Planet Earth",
+                  "description": "12 Most Beautiful Places on Planet Earth Subscribe To Our Channel : http://bit.ly/4EverGreen 4 Ever Green is the #1 place for all ...",
+                  "thumbnails": {
+                      "default": {
+                          "url": "https://i.ytimg.com/vi/olboi3ttUi8/default.jpg",
+                          "width": 120,
+                          "height": 90
+                      },
+                      "medium": {
+                          "url": "https://i.ytimg.com/vi/olboi3ttUi8/mqdefault.jpg",
+                          "width": 320,
+                          "height": 180
+                      },
+                      "high": {
+                          "url": "https://i.ytimg.com/vi/olboi3ttUi8/hqdefault.jpg",
+                          "width": 480,
+                          "height": 360
+                      }
+                  },
+                  "channelTitle": "4 Ever Green",
+                  "liveBroadcastContent": "none",
+                  "publishTime": "2020-08-01T23:00:07Z"
+              }
+          },
+          {
+              "kind": "youtube#searchResult",
+              "etag": "mvOKLCMftV_V1bCiKSRec3OPjHc",
+              "id": {
+                  "kind": "youtube#video",
+                  "videoId": "gig9-jO7YL4"
+              },
+              "snippet": {
+                  "publishedAt": "2021-07-17T10:00:21Z",
+                  "channelId": "UCb57aRZr3KsykS_wNsD5Ptw",
+                  "title": "Most Amazing 100 Places on The Earth 4K",
+                  "description": "Please let us know by comments, which places are your favorite places in the video! There are many beautiful places on Earth.",
+                  "thumbnails": {
+                      "default": {
+                          "url": "https://i.ytimg.com/vi/gig9-jO7YL4/default.jpg",
+                          "width": 120,
+                          "height": 90
+                      },
+                      "medium": {
+                          "url": "https://i.ytimg.com/vi/gig9-jO7YL4/mqdefault.jpg",
+                          "width": 320,
+                          "height": 180
+                      },
+                      "high": {
+                          "url": "https://i.ytimg.com/vi/gig9-jO7YL4/hqdefault.jpg",
+                          "width": 480,
+                          "height": 360
+                      }
+                  },
+                  "channelTitle": "PRIMAL EARTH ",
+                  "liveBroadcastContent": "none",
+                  "publishTime": "2021-07-17T10:00:21Z"
+              }
+          },
+          {
+              "kind": "youtube#searchResult",
+              "etag": "BnSreYYSwuzdHau1eo4PmhXgSUg",
+              "id": {
+                  "kind": "youtube#video",
+                  "videoId": "SP0BDKpKf40"
+              },
+              "snippet": {
+                  "publishedAt": "2023-01-15T11:00:13Z",
+                  "channelId": "UCHeFV2atoLtgdKH4iu29orA",
+                  "title": "Most Beautiful Place on Earth 🇹🇭 🏝 Our Thailand Life | Krabi + Railay Beach Tour",
+                  "description": "Save 33% on your first Native Plastic-Free Deodorant Pack - normally $39, you'll get it for $26! Click here ...",
+                  "thumbnails": {
+                      "default": {
+                          "url": "https://i.ytimg.com/vi/SP0BDKpKf40/default.jpg",
+                          "width": 120,
+                          "height": 90
+                      },
+                      "medium": {
+                          "url": "https://i.ytimg.com/vi/SP0BDKpKf40/mqdefault.jpg",
+                          "width": 320,
+                          "height": 180
+                      },
+                      "high": {
+                          "url": "https://i.ytimg.com/vi/SP0BDKpKf40/hqdefault.jpg",
+                          "width": 480,
+                          "height": 360
+                      }
+                  },
+                  "channelTitle": "Delightful Travellers",
+                  "liveBroadcastContent": "none",
+                  "publishTime": "2023-01-15T11:00:13Z"
+              }
+          },
+          {
+              "kind": "youtube#searchResult",
+              "etag": "C6bCvcy8MUigvJ3g4PnVuwjE1_M",
+              "id": {
+                  "kind": "youtube#video",
+                  "videoId": "0q7c3Jac56A"
+              },
+              "snippet": {
+                  "publishedAt": "2022-04-21T11:00:00Z",
+                  "channelId": "UCRpNVpZoW56rOsV-6wFK3lg",
+                  "title": "20 Most Beautiful Places On Planet Earth",
+                  "description": "In this video, we'll be showing you 20 of the Most Beautiful Places on Planet Earth. Is it the world's highest sky corridor waterfall ...",
+                  "thumbnails": {
+                      "default": {
+                          "url": "https://i.ytimg.com/vi/0q7c3Jac56A/default.jpg",
+                          "width": 120,
+                          "height": 90
+                      },
+                      "medium": {
+                          "url": "https://i.ytimg.com/vi/0q7c3Jac56A/mqdefault.jpg",
+                          "width": 320,
+                          "height": 180
+                      },
+                      "high": {
+                          "url": "https://i.ytimg.com/vi/0q7c3Jac56A/hqdefault.jpg",
+                          "width": 480,
+                          "height": 360
+                      }
+                  },
+                  "channelTitle": "4 Ever Green",
+                  "liveBroadcastContent": "none",
+                  "publishTime": "2022-04-21T11:00:00Z"
+              }
+          },
+          {
+              "kind": "youtube#searchResult",
+              "etag": "FUrMFFetRxT_j9nTZW9HXqr-Um8",
+              "id": {
+                  "kind": "youtube#video",
+                  "videoId": "aXUNExAekGo"
+              },
+              "snippet": {
+                  "publishedAt": "2021-04-19T15:00:03Z",
+                  "channelId": "UChI-cTok8fJePnryAd0mTvQ",
+                  "title": "10 Most Beautiful Towns to Visit in Switzerland 4k🇨🇭 | Switzerland 2023",
+                  "description": "10 most Beautiful Towns to Visit in Switzerland 4k. Some of the best places to visit in Switzerland are not only cities such as Bern ...",
+                  "thumbnails": {
+                      "default": {
+                          "url": "https://i.ytimg.com/vi/aXUNExAekGo/default.jpg",
+                          "width": 120,
+                          "height": 90
+                      },
+                      "medium": {
+                          "url": "https://i.ytimg.com/vi/aXUNExAekGo/mqdefault.jpg",
+                          "width": 320,
+                          "height": 180
+                      },
+                      "high": {
+                          "url": "https://i.ytimg.com/vi/aXUNExAekGo/hqdefault.jpg",
+                          "width": 480,
+                          "height": 360
+                      }
+                  },
+                  "channelTitle": "Lifestyle Hal",
+                  "liveBroadcastContent": "none",
+                  "publishTime": "2021-04-19T15:00:03Z"
+              }
+          },
+          {
+              "kind": "youtube#searchResult",
+              "etag": "JMa-GjMYEYBq0nz2xQvua_4wCLA",
+              "id": {
+                  "kind": "youtube#video",
+                  "videoId": "YFhwEJosUsU"
+              },
+              "snippet": {
+                  "publishedAt": "2022-09-02T13:00:15Z",
+                  "channelId": "UC8D_NXFBh8A9KSwo7x-wFdQ",
+                  "title": "TOP 50 • Most Beautiful Places in the World 8K ULTRA HD",
+                  "description": "TOP 50 - In this video you will find a TOP 50 of the Most Beautiful Places in the World 8K. You will take a tour around the world to ...",
+                  "thumbnails": {
+                      "default": {
+                          "url": "https://i.ytimg.com/vi/YFhwEJosUsU/default.jpg",
+                          "width": 120,
+                          "height": 90
+                      },
+                      "medium": {
+                          "url": "https://i.ytimg.com/vi/YFhwEJosUsU/mqdefault.jpg",
+                          "width": 320,
+                          "height": 180
+                      },
+                      "high": {
+                          "url": "https://i.ytimg.com/vi/YFhwEJosUsU/hqdefault.jpg",
+                          "width": 480,
+                          "height": 360
+                      }
+                  },
+                  "channelTitle": "8K VIDEOS ULTRA HD",
+                  "liveBroadcastContent": "none",
+                  "publishTime": "2022-09-02T13:00:15Z"
+              }
+          },
+          {
+              "kind": "youtube#searchResult",
+              "etag": "UEbVZ2_Jq9RJSRRrJbrBmk1ofFs",
+              "id": {
+                  "kind": "youtube#video",
+                  "videoId": "-H3eoFOi7AE"
+              },
+              "snippet": {
+                  "publishedAt": "2007-06-24T13:23:05Z",
+                  "channelId": "UCS7KM-_7mP7rkSEYRFyoGxg",
+                  "title": "Good Charlotte - Beautiful Place",
+                  "description": "",
+                  "thumbnails": {
+                      "default": {
+                          "url": "https://i.ytimg.com/vi/-H3eoFOi7AE/default.jpg",
+                          "width": 120,
+                          "height": 90
+                      },
+                      "medium": {
+                          "url": "https://i.ytimg.com/vi/-H3eoFOi7AE/mqdefault.jpg",
+                          "width": 320,
+                          "height": 180
+                      },
+                      "high": {
+                          "url": "https://i.ytimg.com/vi/-H3eoFOi7AE/hqdefault.jpg",
+                          "width": 480,
+                          "height": 360
+                      }
+                  },
+                  "channelTitle": "Hafizam Osman",
+                  "liveBroadcastContent": "none",
+                  "publishTime": "2007-06-24T13:23:05Z"
+              }
+          },
+          {
+              "kind": "youtube#searchResult",
+              "etag": "xUmCbLSSqVqrArF5To3fsQbAi40",
+              "id": {
+                  "kind": "youtube#video",
+                  "videoId": "3SsK-cxlj_w"
+              },
+              "snippet": {
+                  "publishedAt": "2021-07-14T13:11:57Z",
+                  "channelId": "UCh3Rpsdv1fxefE0ZcKBaNcQ",
+                  "title": "25 Greatest Natural Wonders of the World - Travel Video",
+                  "description": "Massive glaciers, staggering mountains, plains dotted with wild animals: We sure live in a big, beautiful world. And while ...",
+                  "thumbnails": {
+                      "default": {
+                          "url": "https://i.ytimg.com/vi/3SsK-cxlj_w/default.jpg",
+                          "width": 120,
+                          "height": 90
+                      },
+                      "medium": {
+                          "url": "https://i.ytimg.com/vi/3SsK-cxlj_w/mqdefault.jpg",
+                          "width": 320,
+                          "height": 180
+                      },
+                      "high": {
+                          "url": "https://i.ytimg.com/vi/3SsK-cxlj_w/hqdefault.jpg",
+                          "width": 480,
+                          "height": 360
+                      }
+                  },
+                  "channelTitle": "touropia",
+                  "liveBroadcastContent": "none",
+                  "publishTime": "2021-07-14T13:11:57Z"
+              }
+          },
+          {
+              "kind": "youtube#searchResult",
+              "etag": "WbCdKc2OqMBw4piwMoDGW6SiKNE",
+              "id": {
+                  "kind": "youtube#video",
+                  "videoId": "9f0FOoNlrEY"
+              },
+              "snippet": {
+                  "publishedAt": "2021-02-24T13:47:13Z",
+                  "channelId": "UCPotnGNahFjLWjfsq4KYvuQ",
+                  "title": "Italy 4K Nature Relaxation Film | Beautiful Places in Europe with Beautiful Relaxing Music",
+                  "description": "Beautiful Places In Italy: Amalfi Coast, Rome, Venice, Tuscany... Enjoy Relaxation Film of Italy in 4K with Beautiful Scenery & Sad ...",
+                  "thumbnails": {
+                      "default": {
+                          "url": "https://i.ytimg.com/vi/9f0FOoNlrEY/default.jpg",
+                          "width": 120,
+                          "height": 90
+                      },
+                      "medium": {
+                          "url": "https://i.ytimg.com/vi/9f0FOoNlrEY/mqdefault.jpg",
+                          "width": 320,
+                          "height": 180
+                      },
+                      "high": {
+                          "url": "https://i.ytimg.com/vi/9f0FOoNlrEY/hqdefault.jpg",
+                          "width": 480,
+                          "height": 360
+                      }
+                  },
+                  "channelTitle": "Relaxation Film",
+                  "liveBroadcastContent": "none",
+                  "publishTime": "2021-02-24T13:47:13Z"
+              }
+          }
+      ]
+  },
+  "status": 200,
+  "statusText": "",
+  "headers": {
+      "cache-control": "private",
+      "content-encoding": "gzip",
+      "content-length": "2269",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 16 Jan 2023 12:41:39 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "vary": "Origin, X-Origin, Referer"
+  },
+  "config": {
+      "transitional": {
+          "silentJSONParsing": true,
+          "forcedJSONParsing": true,
+          "clarifyTimeoutError": false
+      },
+      "adapter": [
+          "xhr",
+          "http"
+      ],
+      "transformRequest": [
+          null
+      ],
+      "transformResponse": [
+          null
+      ],
+      "timeout": 0,
+      "xsrfCookieName": "XSRF-TOKEN",
+      "xsrfHeaderName": "X-XSRF-TOKEN",
+      "maxContentLength": -1,
+      "maxBodyLength": -1,
+      "env": {},
+      "headers": {
+          "Accept": "application/json, text/plain, */*"
+      },
+      "baseURL": "https://youtube.googleapis.com/youtube/v3",
+      "params": {
+          "key": "AIzaSyDVsgPTbRUTMIgSu96k9UKlR7sbreRs0CQ",
+          "q": "beautiful place"
+      },
+      "method": "get",
+      "url": "/search?part=snippet&maxResults=10&"
+  },
+  "request": {}
+}
