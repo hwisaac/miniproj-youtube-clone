@@ -1,3 +1,7 @@
+/*
+헤더 컴포넌트입니다. 하위 세 개의 컴포넌트를 묶는 용도입니다.
+*/
+
 import React from 'react';
 import styled from 'styled-components';
 import LeftSection from './LeftSection';

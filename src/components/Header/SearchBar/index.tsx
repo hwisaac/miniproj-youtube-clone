@@ -1,3 +1,9 @@
+/*
+헤더의 가운데 섹션인 검색바 컴포넌트입니다.
+검색창에 검색 시, "http://localhost:3000/search?q=검색어"로 이동하게 됩니다.
+[아이콘 동작]구현: 뒤로가기, 검색, 텍스트 삭제 / 미구현: 보이스, 키보드
+*/
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { AiOutlineSearch } from 'react-icons/ai';
