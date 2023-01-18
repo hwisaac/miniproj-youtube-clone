@@ -8,6 +8,7 @@ const VideoItem = ({ item }) => {
 			<Linker to={'/' + item.channelId}>
 				<ImgWrap>
 					<img src={item.thumbnails.medium.url} alt="thumb-img" />
+					<p>1:02:03</p>
 				</ImgWrap>
 				<DetailWrap>
 					<Title>{item.title}</Title>
@@ -28,11 +29,23 @@ const Linker = styled(Link)`
 
 const ImgWrap = styled.div`
 	width: 40%;
+	position: relative;
 	img {
 		display: block;
 		width: 100%;
 		overflow: hidden;
 		border-radius: 10px;
+	}
+	p {
+		color: white;
+		font-size: 12px;
+		padding: 3px 4px;
+		background-color: #000c;
+		position: absolute;
+		bottom: 2px;
+		right: 2px;
+		font-weight: 600;
+		border-radius: 5px;
 	}
 `;
 
