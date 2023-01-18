@@ -1,20 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { formatDuration } from './VideoFunction';
 
 const VideoThumbnail = ({ video, videoInfo }) => {
 	let time = videoInfo.contentDetails.duration;
-	const formatDuration = (duration) => {
-		let arr = duration.split('');
-		let output = '';
-		for (let i = 0; i < arr.length; i++) {
-			if (!isNaN(arr[i])) {
-				output += arr[i];
-			} else if (isNaN(arr[i]) && !isNaN(arr[i + 1]) && !isNaN(arr[i - 1])) {
-				output += ':';
-			}
-		}
-		return output;
-	};
 
 	return (
 		<Wrap className="video-thumbnail">

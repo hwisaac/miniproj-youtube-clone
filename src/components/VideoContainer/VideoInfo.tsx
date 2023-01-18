@@ -1,44 +1,23 @@
-import axios from '../../api/axios';
-import requests from '../../api/requests';
-import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import videoInfoEX from '../../mockup/videoinfo-ex.json';
-import { formatDistanceToNowStrict } from 'date-fns';
-import { Link } from 'react-router-dom';
+import { formatView } from './VideoFunction';
+import { formatDate } from './VideoFunction';
 
 const VideoInfo = ({ video, videoInfo }) => {
 	let date = video.snippet.publishedAt;
-	const formatDate = (date) => {
-		const today = new Date(date);
-		return formatDistanceToNowStrict(today);
-	};
-
 	let view = videoInfo.statistics.viewCount;
-	const formatView = (view) => {
-		if (view >= 1000000000) {
-			return (view / 1000000000).toFixed(0) + 'G';
-		}
-		if (view >= 1000000) {
-			return (view / 1000000).toFixed(0) + 'M';
-		}
-		if (view >= 1000) {
-			return (view / 1000).toFixed(0) + 'K';
-		}
-		return view;
-	};
 
 	return (
 		<Container>
 			<div className="info-container">
 				<div className="channel">
-					<img src={video.snippet.thumbnails.medium.url} className="channel-thumbnail" />
+					<img src={video.snippet.thumbnails.medium.url} className="channel-thumbnail" alt={video.snippet.title} />
 				</div>
 				<div className="text-info">
 					<h3 className="title">{video.snippet.title}</h3>
 					<div className="detail-info">
-						<Link to="">
+						<div className="channel">
 							<div className="channelName">{video.snippet.channelTitle}</div>
-						</Link>
+						</div>
 						<div className="detail-data">
 							<span>{formatView(view)}</span>
 							<span className="dot"> • </span>
