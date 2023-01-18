@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Icon = styled.i`
 	display: flex;
@@ -17,7 +17,7 @@ const Icon = styled.i`
 	}
 `;
 
-const Container = styled.div<{ focus: boolean; text: string }>`
+const Container = styled.div<{ focus: boolean; text: string; searchClicked: boolean }>`
 	width: 100%;
 	max-width: 740px;
 	display: flex;
@@ -72,6 +72,11 @@ const Container = styled.div<{ focus: boolean; text: string }>`
 		height: 40px;
 	}
 
+	.search {
+		width: 18px;
+		height: 18px;
+	}
+
 	.inputbox-icon {
 		position: absolute;
 		padding: 7px;
@@ -124,45 +129,87 @@ const Container = styled.div<{ focus: boolean; text: string }>`
 		border-radius: 20px;
 	}
 
+	.back {
+		display: none;
+	}
+
 	@media screen and (max-width: 674px) {
-		input,
-		.keyboard,
-		.inputbox-icon {
-			display: none;
-		}
-
-		form {
-			margin-right: 0;
-		}
-
-		.search-button {
-			display: flex;
-			background-color: #000000;
-			border: 0px;
-
-			.search {
-				display: flex;
-			}
-			svg {
-				display: flex;
-				color: white;
-			}
-		}
-
 		.voice {
 			display: flex;
-			margin-left: -6px;
-			margin-right: 4px;
 			border-radius: 0;
 			&:hover {
 				border-radius: 0;
 			}
-
-			svg {
-				display: flex;
-				color: white;
-			}
 		}
+		${(props) =>
+			props.searchClicked
+				? css`
+						width: 100%;
+						position: absolute;
+						left: 0;
+
+						form {
+							width: 100%;
+							margin: 0 14px;
+							background-color: #000000;
+							gap: 10px;
+						}
+
+						.search-box {
+							width: calc(100% - 200px);
+							margin-left: 46px;
+							max-width: 500px;
+							position: relative;
+							right: -14px;
+						}
+
+						.search-box:focus {
+							width: calc(100% - 170px);
+							max-width: 530px;
+						}
+
+						.search-icon {
+							left: 68px;
+						}
+						.voice {
+							margin-left: 0;
+						}
+
+						.back {
+							display: flex;
+							position: absolute;
+							left: 0;
+						}
+				  `
+				: css`
+						input,
+						.keyboard,
+						.inputbox-icon {
+							display: none;
+						}
+
+						form {
+							margin-right: 0;
+						}
+
+						.search-button {
+							display: flex;
+							background-color: #000000;
+							border: 0px;
+
+							.search {
+								display: flex;
+							}
+							svg {
+								display: flex;
+								color: white;
+							}
+						}
+						.voice {
+							margin-left: -6px;
+							margin-right: 4px;
+						}
+				  `}
 	}
 
 	/* @media screen and (min-width: 650px) {
