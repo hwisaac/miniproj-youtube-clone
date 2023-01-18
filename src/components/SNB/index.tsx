@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { SideBarSection } from './SideBarSection';
@@ -48,14 +48,20 @@ const list = {
 	],
 };
 
+let pathname = window.location.pathname;
+let firstRender = window.location.pathname === '/' || window.location.pathname === '/search' ? true : false;
+
 const SNB = ({ show, setShow }) => {
-	const location = useLocation();
+	let location = useLocation();
 	const isMain = window.location.pathname === '/' || window.location.pathname === '/search' ? true : false;
-
-	useEffect(() => {
-		isMain ? setShow(false) : setShow(true);
-	}, [isMain]);
-
+	if (pathname !== window.location.pathname) {
+		pathname = window.location.pathname;
+		setShow(false);
+	}
+	if (!firstRender) {
+		setShow(true);
+		firstRender = !firstRender;
+	}
 	return (
 		<Container show={show} isMain={isMain}>
 			<ul>
@@ -98,4 +104,4 @@ const Container = styled.nav<{ isMain: boolean; show: boolean }>`
 			  `}
 `;
 
-export default React.memo(SNB);
+export default SNB;
