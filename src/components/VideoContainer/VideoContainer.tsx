@@ -6,6 +6,7 @@ import VideoThumbnail from './VideoThumbnail';
 import VideoInfo from './VideoInfo';
 import videoInfoJson from '../../mockup/videoinfo-ex.json';
 import searchJson from '../../mockup/search-beutifulplace.json';
+import { Link } from 'react-router-dom';
 
 const VideoContainer = () => {
 	// const [videos, setVideos] = useState([]);
@@ -44,10 +45,10 @@ const VideoContainer = () => {
 		<Container className="video-container">
 			{videos.map((video) => (
 				<div className="video-element">
-					<a className={video.id.videoId}>
+					<Link to="" className={video.id.videoId}>
 						<VideoThumbnail video={video} videoInfo={videoInfo} />
 						<VideoInfo video={video} videoInfo={videoInfo} />
-					</a>
+					</Link>
 				</div>
 			))}
 		</Container>
