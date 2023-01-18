@@ -4,10 +4,14 @@ import VideoContainer from '../../components/VideoContainer/VideoContainer';
 
 const Home = () => {
 	return (
-		<>
+		<Main>
 			<VideoContainer />
-		</>
+		</Main>
 	);
 };
+
+const Main = styled.main`
+	grid-area: main;
+`;
 
 export default Home;
