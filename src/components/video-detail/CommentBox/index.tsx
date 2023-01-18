@@ -10,15 +10,11 @@ import Comment from './Comment';
 import ReactLoading from 'react-loading';
 
 const CommentBox = ({ videoId, commentCount, commentData }) => {
-	const [commentsPack, setCommentsPack] = useState(commentData.items);
-	const [nextPageToken, setNextPageToken] = useState<string>(commentData.nextPageToken);
+	const [commentsPack, setCommentsPack] = useState(commentData?.items);
+	const [nextPageToken, setNextPageToken] = useState<string>(commentData?.nextPageToken);
 
 	// 리패칭 뮤테이션
-	const {
-		data,
-		isLoading,
-		mutate: fetchComments,
-	} = useMutation({
+	const { isLoading, mutate: fetchComments } = useMutation({
 		mutationFn: () => youtube.commentByToken({ pageToken: nextPageToken, videoId }),
 		onSuccess: (data: IComments) => {
 			console.log('뮤테이션 데이터', data);

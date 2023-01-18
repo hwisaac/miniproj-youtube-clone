@@ -6,12 +6,10 @@
 
 import React from 'react';
 import styled from 'styled-components';
-
 import PlayerBox from '../../components/video-detail/PlayerBox';
 import VideoDetailBox from '../../components/video-detail/VideoDetailBox';
 import CommentBox from '../../components/video-detail/CommentBox';
 import Recommend from '../../components/Recommend';
-
 import youtube from '../../api/youtubeClass';
 import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
@@ -41,7 +39,7 @@ const Detail = () => {
 				<PlayerBox videoId={videoId} />
 				{!isLoadingVdeoInfoData && <VideoDetailBox videoInfoData={videoInfoData} />}
 
-				{!isLoadingVdeoInfoData && (
+				{!isLoadingVdeoInfoData && !isLoadingComment && (
 					<CommentBox
 						commentData={commentData}
 						videoId={videoId}

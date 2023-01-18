@@ -18,8 +18,6 @@ import youtube from '../../../api/youtubeClass';
 import { useQuery } from '@tanstack/react-query';
 import numberToKorean from '../../../util/numberToKorean';
 
-function ab(x: IVideo) {}
-
 const VideoDetailBox = ({ videoInfoData }) => {
 	const [detail, setDetail] = useState<IVideoItem>(videoInfoData.items[0]);
 	const [isBrief, setIsBrief] = useState<boolean>(true);
