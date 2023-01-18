@@ -6,26 +6,26 @@ import VideoThumbnail from './VideoThumbnail';
 import VideoInfo from './VideoInfo';
 
 const VideoContainer = () => {
-	// const [videos, setVideos] = useState([]);
-	// useEffect(() => {
-	// 	fetchData();
-	// }, []);
+	const [videos, setVideos] = useState([]);
+	useEffect(() => {
+		fetchData();
+	}, []);
 
-	// const fetchData = async () => {
-	// 	const response = await axios.get(requests.fetchSearchVideo, {
-	// 		params: {
-	// 			q: 'beautiful place',
-	// 		},
-	// 	});
-	// 	console.log(response);
-	// 	setVideos(response.data.items);
-	// };
+	const fetchData = async () => {
+		const response = await axios.get(requests.fetchSearchVideo, {
+			params: {
+				q: 'beautiful place',
+			},
+		});
+		console.log(response);
+		setVideos(response.data.items);
+	};
 
-	// const handleClick = (video) => {};
+	const handleClick = (video) => {};
 
 	//로컬스토리지 사용
 
-	let videos = JSON.parse(localStorage.getItem('response')).data.items;
+	// let videos = JSON.parse(localStorage.getItem('response')).data.items;
 
 	return (
 		<Container>
