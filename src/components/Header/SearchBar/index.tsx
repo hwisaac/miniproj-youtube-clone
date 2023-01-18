@@ -15,15 +15,13 @@ const SearchBar = () => {
 	const navigate = useNavigate();
 	const [inputText, setInputText] = useState('');
 	const [inputFocus, setInputFocus] = useState(false);
-	const [isClicked, setIsClicked] = useState(false);
+	const [bar, setBar] = useState(false);
 
 	const handleSubmit = (event: any) => {
-		if (event.keyCode === 13) {
+		if (event.keyCode === 13 || event.type === 'click') {
 			if (inputText) {
 				navigate(`/search?q=${inputText}`);
 			}
-		} else if (event.type === 'click') {
-			inputText ? navigate(`/search?q=${inputText}`) : setIsClicked(true);
 		}
 	};
 
@@ -43,14 +41,19 @@ const SearchBar = () => {
 		setInputText('');
 	};
 
-	const handleIsClicked = () => {
-		isClicked ? setIsClicked(false) : setIsClicked(true);
+	const handleShowBar = (event: any) => {
+		const smallScreen = window.matchMedia('screen and (max-width: 674px)');
+		smallScreen.matches ? (bar ? handleSubmit(event) : setBar(true)) : handleSubmit(event);
+	};
+
+	const handleHideBar = (event: any) => {
+		setBar(false);
 	};
 
 	return (
-		<Container focus={inputFocus} text={inputText} searchClicked={isClicked}>
+		<Container focus={inputFocus} text={inputText} showBar={bar}>
 			<div className="form">
-				<Icon className="back" onClick={handleIsClicked}>
+				<Icon className="back" onClick={handleHideBar}>
 					<BiArrowBack />
 				</Icon>
 				<Icon className="search-icon">
@@ -72,7 +75,7 @@ const SearchBar = () => {
 				<Icon className="inputbox-icon close" onClick={handleDeleteText}>
 					<MdClose />
 				</Icon>
-				<button className="search-button" onClick={handleSubmit}>
+				<button className="search-button" onClick={handleShowBar}>
 					<Icon className="search">
 						<AiOutlineSearch />
 					</Icon>

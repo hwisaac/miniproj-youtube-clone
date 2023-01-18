@@ -17,7 +17,7 @@ const Icon = styled.i`
 	}
 `;
 
-const Container = styled.div<{ focus: boolean; text: string; searchClicked: boolean }>`
+const Container = styled.div<{ focus: boolean; text: string; showBar: boolean }>`
 	width: 100%;
 	max-width: 740px;
 	display: flex;
@@ -142,7 +142,7 @@ const Container = styled.div<{ focus: boolean; text: string; searchClicked: bool
 			}
 		}
 		${(props) =>
-			props.searchClicked
+			props.showBar
 				? css`
 						width: 100%;
 						position: absolute;
