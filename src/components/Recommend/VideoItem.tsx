@@ -1,3 +1,8 @@
+/*
+ * 연관 동영상 하나의 요소를 렌더링
+ * 동영상의 세부 사항 API를 호출 후 알맞은 요소들을 렌더링합니다.
+ */
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';

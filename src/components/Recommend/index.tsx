@@ -1,4 +1,8 @@
-import { useQuery } from '@tanstack/react-query';
+/*
+ *	연관 동영상 렌더링
+ * 연관 동영상 API를 호출 후, map을 사용하여 VideoItem 컴포넌트를 렌더링합니다.
+ */
+
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
