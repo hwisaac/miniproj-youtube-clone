@@ -3,10 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
-import relatedVideo from '../../mockup/relatedVideo.json';
 import VideoItem from './VideoItem';
 
-const data = relatedVideo.items;
 const Recommend = () => {
 	const location = useLocation();
 	const [videoId, setVideoId] = useState(location.pathname.replace('/', ''));
@@ -29,7 +27,7 @@ const Recommend = () => {
 			<VideosUl>
 				{data.length > 0
 					? data.map((item, index) => {
-							return <VideoItem key={`videoItem-${index}`} item={item} itemDetail={item} />;
+							return <VideoItem key={`videoItem-${index}`} item={item} />;
 					  })
 					: ''}
 			</VideosUl>

@@ -2,19 +2,22 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
+import { getDuration } from '../../util/getDuration';
+import { formatDate, formatView } from '../VideoContainer/VideoFunction';
 
-const VideoItem = ({ item, itemDetail }) => {
+const VideoItem = ({ item }) => {
 	const [details, setDetails] = useState({
 		duration: '',
 		views: '',
 		publishedAt: '',
 	});
+
 	const fetchStaticsData = async (id) => {
 		const newData = await youtube.video(id);
 		setDetails({
-			duration: newData.items[0].contentDetails.duration,
-			views: newData.items[0].statistics.viewCount,
-			publishedAt: newData.items[0].snippet.publishedAt,
+			duration: getDuration(newData.items[0].contentDetails.duration),
+			views: formatView(newData.items[0].statistics.viewCount),
+			publishedAt: formatDate(newData.items[0].snippet.publishedAt),
 		});
 	};
 
