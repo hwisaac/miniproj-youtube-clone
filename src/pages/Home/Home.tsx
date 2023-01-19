@@ -1,34 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import youtube from '../../api/youtubeClass';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
 import searchJson from '../../mockup/search-beutifulplace.json';
 
 const Home = () => {
-	// const [videos, setVideos] = useState([]);
-	// 검색데이터 get
-	// useEffect(() => {
-	// 	searchData();
-	// }, []);
+	const [videos, setVideos] = useState([]);
 
-	// const searchData = async () => {
-	// 	const response = await axios.get(requests.fetchSearchVideo, {
-	// 		params: {
-	// 			q: 'beautiful place',
-	// 		},
-	// 	});
-	// 	setVideos(response.data.items);
-	// };
+	useEffect(() => {
+		searchData();
+	}, []);
 
-	let videos = searchJson.data.items;
-
+	const searchData = async () => {
+		let result = await youtube.search('beautiful');
+		const items = result.items;
+		setVideos(items);
+	};
 	return (
 		<Main>
 			<Container className="video-container">
 				{videos.map((video) => (
-					<div className="video-element">
+					<div className="video-element" key={video.id.videoId}>
 						<VideoLink to={'/' + video.id.videoId} key={video.id.videoId} className="video-element">
-							<VideoContainer video={video} />
+							{video ? <VideoContainer video={video} /> : null}
 						</VideoLink>
 					</div>
 				))}

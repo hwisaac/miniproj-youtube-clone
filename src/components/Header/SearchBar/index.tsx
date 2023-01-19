@@ -10,6 +10,9 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { MdKeyboardVoice, MdKeyboard, MdClose } from 'react-icons/md';
 import { BiArrowBack } from 'react-icons/bi';
 import { Icon, Container } from './SearchBar';
+import { useSearchParams } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import youtube from '../../../api/youtubeClass';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 

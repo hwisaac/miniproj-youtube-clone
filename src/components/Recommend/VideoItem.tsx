@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
 import { getDuration } from '../../util/getDuration';
-import { formatDate, formatView } from '../VideoContainer/VideoFunction';
+import { formatDate, formatView } from '../../util/VideoFunction';
 
 const VideoItem = ({ item }) => {
 	const [details, setDetails] = useState({

@@ -1,37 +1,35 @@
 import React, { useState, useEffect } from 'react';
-// import videoInfoJson from '../../mockup/videoinfo-ex.json';
-import axios from '../../api/axios';
-import requests from '../../api/requests';
 import videoInfoJson from '../../mockup/videoinfo-ex.json';
 import VideoThumbnail from './VideoThumbnail';
 import VideoInfo from './VideoInfo';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import youtube from '../../api/youtubeClass';
 
 const VideoContainer = ({ video }) => {
-	// const [videoInfo, setVideoInfo] = useState([]);
-	// let id = video.id.videoId;
+	// let videoInfo = videoInfoJson.data.items[0];
+	const [videoInfo, setVideoInfo] = useState([]);
 
 	// 비디오 상세정보 get
-	// useEffect(() => {
-	// 	videoInfoData(id);
-	// }, [id]);
+	useEffect(() => {
+		videoInfoData(video.id.videoId);
+	}, [video.id.videoId]);
 
-	// const videoInfoData = async (id) => {
-	// 	const response = await axios.get(requests.fetchInfoVideo, {
-	// 		params: {
-	// 			id: `${id}`,
-	// 		},
-	// 	});
-	// 	setVideoInfo(response.data.items[0]);
-	// };
+	const videoInfoData = async (Id) => {
+		const data = await youtube.video(Id);
+		const item = data.items[0];
+		setVideoInfo(item);
+	};
 
-	let videoInfo = videoInfoJson.data.items[0];
 	if (video.id.kind === 'youtube#video') {
 		return (
 			<>
-				<VideoThumbnail video={video} videoInfo={videoInfo} />
-				<VideoInfo video={video} videoInfo={videoInfo} />
+				{video ? (
+					<>
+						<VideoThumbnail video={video} />
+						<VideoInfo video={video} />
+					</>
+				) : null}
 			</>
 		);
 	} else if (video.id.kind === 'youtube#channel') {

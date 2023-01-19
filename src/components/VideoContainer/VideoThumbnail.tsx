@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { formatDuration } from './VideoFunction';
+import youtube from '../../api/youtubeClass';
+import { getDuration } from '../../util/getDuration';
 
-const VideoThumbnail = ({ video, videoInfo }) => {
-	let time = videoInfo.contentDetails.duration;
+const VideoThumbnail = ({ video }) => {
+	const [details, setDetails] = useState({
+		duration: '',
+	});
+
+	const fetchStaticsData = async (id) => {
+		const newData = await youtube.video(id);
+		setDetails({
+			duration: getDuration(newData.items[0].statistics.duration),
+		});
+	};
+
+	useEffect(() => {
+		fetchStaticsData(video.id.videoId);
+	}, []);
 
 	return (
 		<Wrap className="video-thumbnail">
@@ -12,10 +26,9 @@ const VideoThumbnail = ({ video, videoInfo }) => {
 				className="thumbnail"
 				src={video.snippet.thumbnails.medium.url}
 				alt={video.snippet.title}
-				// onClick={() => handleClick(video)}
 			/>
 			<div className="duration">
-				<span>{formatDuration(time)}</span>
+				<span>{details.duration}</span>
 			</div>
 		</Wrap>
 	);
