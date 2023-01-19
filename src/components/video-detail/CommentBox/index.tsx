@@ -54,7 +54,7 @@ const Wrapper = styled.div`
 	margin-top: 50px;
 	background-color: var(--color-dark);
 	color: white;
-	height: 600px;
+	height: auto;
 `;
 
 const Header = styled.div`
