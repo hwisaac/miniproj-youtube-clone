@@ -17,8 +17,6 @@ const CommentBox = ({ videoId, commentCount, commentData }) => {
 	const { isLoading, mutate: fetchComments } = useMutation({
 		mutationFn: () => youtube.commentByToken({ pageToken: nextPageToken, videoId }),
 		onSuccess: (data: IComments) => {
-			console.log('뮤테이션 데이터', data);
-			console.log('뮤테이션후 nextToken:', data.nextPageToken);
 			setNextPageToken(data.nextPageToken);
 			setCommentsPack((prev) => [...prev, ...data.items]);
 		},

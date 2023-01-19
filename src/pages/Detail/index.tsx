@@ -23,14 +23,9 @@ const Detail = () => {
 		youtube.video(videoId)
 	);
 	// useQuery: [댓글] fetching
-	const { isLoading: isLoadingComment, data: commentData } = useQuery<IComments>(
-		['comment', videoId],
-		() => youtube.comment(videoId),
-		{
-			onSuccess: (commentData) => {
-				console.log('useQuery성공,다음토큰 ', commentData.nextPageToken, commentData);
-			},
-		}
+	// useQuery(이름, asyncFnt, 옵션)
+	const { isLoading: isLoadingComment, data: commentData } = useQuery<IComments>(['comment', videoId], () =>
+		youtube.comment(videoId)
 	);
 
 	return (
@@ -38,7 +33,6 @@ const Detail = () => {
 			<PrimaryBox>
 				<PlayerBox videoId={videoId} />
 				{!isLoadingVdeoInfoData && <VideoDetailBox videoInfoData={videoInfoData} />}
-
 				{!isLoadingVdeoInfoData && !isLoadingComment && (
 					<CommentBox
 						commentData={commentData}
