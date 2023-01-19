@@ -52,8 +52,6 @@ const SearchBar = () => {
 		setBar(false);
 	};
 
-	console.log(Tooltip);
-
 	return (
 		<Container focus={inputFocus} text={inputText} showBar={bar}>
 			<div className="form">
