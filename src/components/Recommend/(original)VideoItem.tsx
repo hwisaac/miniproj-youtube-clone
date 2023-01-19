@@ -17,8 +17,8 @@ const VideoItem = ({ item }) => {
 		publishedAt: '',
 	});
 
-	const fetchStaticsData = async (videoId) => {
-		const newData = await youtube.video(videoId);
+	const fetchStaticsData = async (id) => {
+		const newData = await youtube.video(id);
 		setDetails({
 			duration: getDuration(newData.items[0].contentDetails.duration),
 			views: formatView(newData.items[0].statistics.viewCount),
@@ -32,7 +32,7 @@ const VideoItem = ({ item }) => {
 
 	return (
 		<li key={item.id.videoId}>
-			<Linker to={`/${item.id.videoId}`}>
+			<Linker to={'/' + item.id.videoId}>
 				<ImgWrap>
 					<img src={item.snippet.thumbnails.medium.url} alt="thumb-img" />
 					<p>{details.duration}</p>
@@ -48,26 +48,16 @@ const VideoItem = ({ item }) => {
 		</li>
 	);
 };
-export default VideoItem;
 
 const Linker = styled(Link)`
 	display: flex;
 	align-items: flex-start;
 	text-decoration: none;
 	margin: 10px 0;
-	@media ${(props) => props.theme.lg} {
-		flex-direction: column;
-	}
-	@media ${(props) => props.theme.md} {
-		flex-direction: row;
-	}
-	@media ${(props) => props.theme.sm} {
-		flex-direction: column;
-	}
 `;
 
 const ImgWrap = styled.div`
-	width: 45%;
+	width: 40%;
 	position: relative;
 	img {
 		display: block;
@@ -86,17 +76,11 @@ const ImgWrap = styled.div`
 		font-weight: 600;
 		border-radius: 5px;
 	}
-	@media ${(props) => props.theme.lg} {
-		width: 100%;
-	}
 `;
 
 const DetailWrap = styled.div`
-	width: 55%;
+	width: 60%;
 	padding: 3px 10px;
-	@media ${(props) => props.theme.lg} {
-		width: 90%;
-	}
 `;
 
 const Title = styled.p`
@@ -119,3 +103,4 @@ const SubSpan = styled.span`
 	color: #aaaaaa;
 	font-size: 12px;
 `;
+export default VideoItem;
