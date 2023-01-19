@@ -10,6 +10,8 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { MdKeyboardVoice, MdKeyboard, MdClose } from 'react-icons/md';
 import { BiArrowBack } from 'react-icons/bi';
 import { Icon, Container } from './SearchBar';
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 
 const SearchBar = () => {
 	const navigate = useNavigate();
@@ -63,7 +65,7 @@ const SearchBar = () => {
 					type="text"
 					className="search-box"
 					value={inputText}
-					placeholder="검색"
+					placeholder="Search"
 					onChange={handleInputText}
 					onFocus={handleInputFocus}
 					onBlur={handleInputBlur}
@@ -76,14 +78,16 @@ const SearchBar = () => {
 					<MdClose />
 				</Icon>
 				<button className="search-button" onClick={handleShowBar}>
-					<Icon className="search">
+					<Icon className="search" id="search">
 						<AiOutlineSearch />
 					</Icon>
 				</button>
-				<Icon className="voice">
+				<Icon className="voice" id="voice">
 					<MdKeyboardVoice />
 				</Icon>
 			</div>
+			<Tooltip anchorId="search" content="Search" />
+			<Tooltip anchorId="voice" content="Search with your voice" />
 		</Container>
 	);
 };
