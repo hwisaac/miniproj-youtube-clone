@@ -52,26 +52,27 @@ const VideoDetailBox = ({ videoInfoData }) => {
 					<ThumbsBtn>
 						<div>
 							<FiThumbsUp />
-							{Number(detail.statistics.likeCount).toLocaleString()} 명
+							<span>{Number(detail.statistics.likeCount).toLocaleString()} 명</span>
 						</div>
 						<div>
 							<FiThumbsDown />
 						</div>
 					</ThumbsBtn>
 					<Btn>
-						<FiShare2 /> 공유
+						<FiShare2 />
+						<span>공유</span>
 					</Btn>
 					<Btn>
 						<FiDownload />
-						오프라인 저장
+						<span>오프라인 저장</span>
 					</Btn>
 					<Btn>
 						<FiScissors />
-						클립
+						<span>클립</span>
 					</Btn>
 					<Btn>
 						<FiAlignLeft />
-						저장
+						<span>저장</span>
 					</Btn>
 					<Btn>
 						<FiMoreHorizontal />
@@ -81,7 +82,16 @@ const VideoDetailBox = ({ videoInfoData }) => {
 			<DescriptionBox isBrief={isBrief} onClick={handleDescriptionBox}>
 				<HeaderInfo>
 					<Views>조회수 {Number(detail.statistics.viewCount).toLocaleString()}회</Views>
+
 					<PublishedAt>{formatDistanceToNowStrict(new Date(detail.snippet.publishedAt))} ago</PublishedAt>
+
+					{isBrief && (
+						<BriefTags>
+							{detail.snippet.tags.map((tag, index) => (
+								<span key={`${tag}-${index}`}>#{tag}</span>
+							))}
+						</BriefTags>
+					)}
 				</HeaderInfo>
 				<Description isBrief={isBrief}>{detail.snippet.description}</Description>
 				<Tags>
@@ -125,6 +135,7 @@ const DescriptionBox = styled.div<{ isBrief: boolean }>`
 `;
 const HeaderInfo = styled.div`
 	display: flex;
+	align-items: center;
 	gap: 10px;
 	margin-bottom: 5px;
 `;
@@ -181,19 +192,37 @@ const Tags = styled.ul`
 		cursor: pointer;
 	}
 `;
+const BriefTags = styled.div`
+	display: flex;
+	gap: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
 
+	span {
+		white-space: nowrap;
+		color: var(--color-light-blue);
+		font-weight: 600;
+		cursor: pointer;
+	}
+`;
 const Views = styled.span``;
-const PublishedAt = styled.span``;
+const PublishedAt = styled.span`
+	white-space: nowrap;
+`;
 
 const Btns = styled.div`
 	display: flex;
 	align-items: center;
+	@media ${(props) => props.theme.sm} {
+		flex-wrap: wrap;
+	}
 `;
 const Btn = styled.button`
 	border: none;
 	background-color: #313030;
 	color: white;
-	font-size: 16px;
+	font-size: 15px;
 	margin: 0 3px;
 	border-radius: 20px;
 	padding: 8px 15px;
@@ -201,10 +230,24 @@ const Btn = styled.button`
 	align-items: center;
 	justify-content: center;
 	gap: 5px;
+	box-sizing: border-box;
 
 	cursor: pointer;
 	&:hover {
 		background-color: #484949;
+	}
+	span {
+		overflow: hidden;
+		white-space: nowrap;
+
+		@media ${(props) => props.theme.lg} {
+			display: none;
+		}
+	}
+	svg {
+		@media ${(props) => props.theme.sm} {
+			margin-top: 5px;
+		}
 	}
 `;
 const ThumbsBtn = styled.div`
@@ -245,6 +288,11 @@ const ThumbsBtn = styled.div`
 			bottom: 0;
 			margin: auto 0;
 		}
+		span {
+			@media ${(props) => props.theme.lg} {
+				display: none;
+			}
+		}
 	}
 
 	cursor: pointer;
@@ -255,6 +303,10 @@ const Row = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 10px;
+	@media ${(props) => props.theme.md} {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 `;
 
 const Thumbnail = styled.img``;

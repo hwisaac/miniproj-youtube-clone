@@ -23,22 +23,15 @@ const Detail = () => {
 		youtube.video(videoId)
 	);
 	// useQuery: [댓글] fetching
-	const { isLoading: isLoadingComment, data: commentData } = useQuery<IComments>(
-		['comment', videoId],
-		() => youtube.comment(videoId),
-		{
-			onSuccess: (commentData) => {
-				console.log('useQuery성공,다음토큰 ', commentData.nextPageToken, commentData);
-			},
-		}
+	// useQuery(이름, asyncFnt, 옵션)
+	const { isLoading: isLoadingComment, data: commentData } = useQuery<IComments>(['comment', videoId], () =>
+		youtube.comment(videoId)
 	);
-
 	return (
-		<Layout>
+		<Wrapper>
 			<PrimaryBox>
 				<PlayerBox videoId={videoId} />
 				{!isLoadingVdeoInfoData && <VideoDetailBox videoInfoData={videoInfoData} />}
-
 				{!isLoadingVdeoInfoData && !isLoadingComment && (
 					<CommentBox
 						commentData={commentData}
@@ -50,29 +43,49 @@ const Detail = () => {
 			<SecondaryBox>
 				<Recommend />
 			</SecondaryBox>
-		</Layout>
+		</Wrapper>
 	);
 };
 
 export default Detail;
 
-const Layout = styled.div`
+const Wrapper = styled.div`
 	display: flex;
+	justify-content: center;
 	top: 60px;
-	width: 100%;
-	height: auto;
-	border: 3px solid black;
+	margin: 0 20px;
 	position: relative;
-	left: 100px;
 	background-color: var(--color-dark);
+	@media ${(prop) => prop.theme.md} {
+		flex-direction: column;
+		align-items: center;
+	}
+	@media ${(prop) => prop.theme.sm} {
+	}
 `;
 const PrimaryBox = styled.div`
+	display: flex;
+	flex-direction: column;
 	background-color: var(--color-dark);
-	width: 80vw;
+	width: 60vw;
+	max-width: 1100px;
 	height: auto;
+	box-sizing: border-box;
+	@media ${(prop) => prop.theme.md} {
+		width: 100%;
+		padding: 0 10px;
+	}
 `;
 const SecondaryBox = styled.div`
 	background-color: #0e0e0e;
-	width: 30vw;
+	max-width: 500px;
+	width: 25vw;
 	height: auto;
+	@media ${(prop) => prop.theme.md} {
+		width: 100%;
+	}
+`;
+
+const TestBox = styled.div`
+	height: 2000px;
 `;

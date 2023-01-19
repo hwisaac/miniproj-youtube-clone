@@ -40,8 +40,7 @@ class Youtube {
 	}
 
 	async commentByToken({ videoId, pageToken }) {
-		console.log(`패칭: commentByToken({${videoId},${pageToken}})`);
-
+		// console.log(`패칭: commentByToken({${videoId},${pageToken}})`);
 		return this.axiosClient
 			.get(`/commentThreads?part=snippet&pageToken=${pageToken}&videoId=${videoId}&`)
 			.then((result) => result.data);
