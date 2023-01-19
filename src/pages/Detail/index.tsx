@@ -17,6 +17,7 @@ import { useParams } from 'react-router-dom';
 const Detail = () => {
 	// URL주소에서 videoId 가져오기
 	const { videoId } = useParams();
+	console.log(videoId);
 
 	// useQuery: [영상 상세정보] fetching
 	const { isLoading: isLoadingVdeoInfoData, data: videoInfoData } = useQuery<IVideo>(['video', videoId], () =>

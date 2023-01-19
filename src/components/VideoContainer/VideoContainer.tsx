@@ -1,30 +1,29 @@
 import React, { useState, useEffect } from 'react';
-// import videoInfoJson from '../../mockup/videoinfo-ex.json';
-import axios from '../../api/axios';
-import requests from '../../api/requests';
 import videoInfoJson from '../../mockup/videoinfo-ex.json';
 import VideoThumbnail from './VideoThumbnail';
 import VideoInfo from './VideoInfo';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import youtube from '../../api/youtubeClass';
 
 const VideoContainer = ({ video }) => {
 	// const [videoInfo, setVideoInfo] = useState([]);
-	// let id = video.id.videoId;
 
 	// 비디오 상세정보 get
 	// useEffect(() => {
-	// 	videoInfoData(id);
-	// }, [id]);
+	// 	videoInfoData();
+	// }, []);
 
-	// const videoInfoData = async (id) => {
+	// const videoInfoData = async () => {
 	// 	const response = await axios.get(requests.fetchInfoVideo, {
 	// 		params: {
-	// 			id: `${id}`,
+	// 			id: `${video.id.videoId}`,
 	// 		},
 	// 	});
 	// 	setVideoInfo(response.data.items[0]);
 	// };
+
+	// youtube()
 
 	let videoInfo = videoInfoJson.data.items[0];
 	if (video.id.kind === 'youtube#video') {

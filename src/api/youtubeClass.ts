@@ -19,6 +19,7 @@ class Youtube {
 		console.log('Fetching: search: ', query);
 		return this.axiosClient.get('/search?part=snippet&maxResults=10&q=' + query).then((result) => result.data);
 	}
+
 	async video(videoId: string) {
 		// console.log('Fetching: videoId', videoId);
 		return this.axiosClient
@@ -32,10 +33,12 @@ class Youtube {
 			.get('/channels?part=snippet&part=statistics&part=contentDetails&id=' + channelId)
 			.then((result) => result.data);
 	}
+
 	async comment(videoId: string) {
 		// console.log(`패칭: comment(${videoId})`);
 		return this.axiosClient.get('/commentThreads?part=snippet&videoId=' + videoId).then((result) => result.data);
 	}
+
 	async commentByToken({ videoId, pageToken }) {
 		console.log(`패칭: commentByToken({${videoId},${pageToken}})`);
 

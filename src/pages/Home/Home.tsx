@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
@@ -26,7 +26,7 @@ const Home = () => {
 		<Main>
 			<Container className="video-container">
 				{videos.map((video) => (
-					<div className="video-element">
+					<div className="video-element" key={video.id.videoId}>
 						<VideoLink to={'/' + video.id.videoId} key={video.id.videoId} className="video-element">
 							<VideoContainer video={video} />
 						</VideoLink>

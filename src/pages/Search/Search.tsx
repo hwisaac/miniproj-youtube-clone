@@ -1,46 +1,32 @@
-import axios from '../../api/axios';
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import requests from '../../api/requests';
+import { useParams } from 'react-router-dom';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import searchJson from '../../mockup/search.json';
+import youtube from '../../api/youtubeClass';
+import { useQuery } from '@tanstack/react-query';
 
 const Search = () => {
-	// const [videos, setVideos] = useState([]);
-	// const useQuery = () => {
-	// 	return new URLSearchParams(useLocation().search);
-	// };
+	const { searchTerm } = useParams();
+	console.log(searchTerm);
+	const { isLoading, isError, data, error } = useQuery(['search', searchTerm], () => youtube.search(searchTerm), {
+		refetchOnWindowFocus: false,
+		retry: 0,
+		onSuccess: (data) => {
+			console.log(data.items);
+		},
+		onError: (e) => {
+			console.log(e);
+		},
+	});
 
-	// let query = useQuery();
-	// const searchTerm = query.get('q');
-	// useEffect(() => {
-	// 	if (searchTerm) {
-	// 		searchData(searchTerm);
-	// 	}
-	// }, [searchTerm]);
-
-	// const searchData = async (searchTerm) => {
-	// 	try {
-	// 		const response = await axios.get(requests.fetchSearchVideo, {
-	// 			params: {
-	// 				q: `${searchTerm}`,
-	// 			},
-	// 		});
-	// 		setVideos(response.data.items);
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-	// };
-
-	let videos = searchJson.items;
+	// let data = searchJson.items;
 
 	return (
 		<Main>
 			<Container>
-				{videos.map((video) => (
-					<div className="search-element">
+				{data.items.map((video) => (
+					<div className="search-element" key={video.id.videoId}>
 						<VideoLink
 							to={'/' + (video.id.videoId && video.snippet.channelTitle)}
 							key={video.id.videoId}
