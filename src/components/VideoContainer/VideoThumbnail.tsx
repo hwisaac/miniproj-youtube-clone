@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
-import { formatDuration } from './VideoFunction';
+import { getDuration } from '../../util/getDuration';
 
 const VideoThumbnail = ({ video }) => {
 	const [details, setDetails] = useState({
@@ -11,7 +11,7 @@ const VideoThumbnail = ({ video }) => {
 	const fetchStaticsData = async (id) => {
 		const newData = await youtube.video(id);
 		setDetails({
-			duration: formatDuration(newData.items[0].statistics.duration),
+			duration: getDuration(newData.items[0].statistics.duration),
 		});
 	};
 

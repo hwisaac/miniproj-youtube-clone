@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
-import { formatView } from './VideoFunction';
-import { formatDate } from './VideoFunction';
+import { formatView } from '../../util/VideoFunction';
+import { formatDate } from '../../util/VideoFunction';
 
 const VideoInfo = ({ video }) => {
 	const [details, setDetails] = useState({
