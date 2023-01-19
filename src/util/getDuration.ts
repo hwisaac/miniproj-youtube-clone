@@ -16,7 +16,7 @@ export const getDuration = (text) => {
 				if (parseInt(text[i - 2])) {
 					m = text[i - 2] + text[i - 1] + ':';
 				} else {
-					m = '0' + text[i - 1] + ':';
+					text[i - 2] === 'H' ? (m = '0' + text[i - 1] + ':') : (m = text[i - 1] + ':');
 				}
 				break;
 			case 'S':

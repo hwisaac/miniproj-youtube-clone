@@ -54,13 +54,13 @@ const list = {
 	],
 };
 
-let firstRender = window.location.pathname === '/' || window.location.pathname === '/search' ? true : false;
-
 const SNB = ({ show, setShow }) => {
 	let location = useLocation();
 	const [isMain, setIsMain] = useState(location.pathname === '/' || location.pathname === '/search' ? true : false);
+
 	useEffect(() => {
 		setIsMain(location.pathname === '/' || location.pathname === '/search' ? true : false);
+		setShow(false);
 	}, [location.pathname]);
 	const size = useWindowSize();
 
@@ -78,11 +78,6 @@ const SNB = ({ show, setShow }) => {
 			setIsMain(location.pathname === '/' || location.pathname === '/search' ? true : false);
 		}
 	}, [size.width]);
-
-	if (!firstRender) {
-		setShow(true);
-		firstRender = !firstRender;
-	}
 
 	return (
 		<Container show={show} isMain={isMain}>
