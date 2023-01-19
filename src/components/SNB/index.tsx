@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import styled, { css } from 'styled-components';
 import { SideBarSection } from './SideBarSection';
 import React from 'react';
 import { useWindowSize } from '../../hooks/useWindowSize';
+import { Container } from './SideBarStyle';
+
 const list = {
 	section1: [
 		{
@@ -49,35 +50,28 @@ const list = {
 	],
 };
 
-let pathname = window.location.pathname;
 let firstRender = window.location.pathname === '/' || window.location.pathname === '/search' ? true : false;
 
 const SNB = ({ show, setShow }) => {
 	let location = useLocation();
-	const [isMain, setIsMain] = useState(
-		window.location.pathname === '/' || window.location.pathname === '/search' ? true : false
-	);
-
+	const [isMain, setIsMain] = useState(location.pathname === '/' || location.pathname === '/search' ? true : false);
+	useEffect(() => {
+		setIsMain(location.pathname === '/' || location.pathname === '/search' ? true : false);
+	}, [location.pathname]);
 	const size = useWindowSize();
 
 	useEffect(() => {
-		if (size.width <= 500) {
-			setIsMain(false);
-		} else if (size.width > 500) {
-			setIsMain(window.location.pathname === '/' || window.location.pathname === '/search' ? true : false);
-			if (pathname !== window.location.pathname) {
-				pathname = window.location.pathname;
-				isMain === false ? setShow(true) : setShow(false);
-			}
-			isMain === false ? setShow(true) : setShow(false);
-		}
-
-		if (size.width < 1200) {
-			setShow(true);
-		} else if (size.width > 1200) {
-			if (isMain === true) {
+		if (isMain) {
+			if (size.width >= 1200) {
 				setShow(false);
+			} else if (size.width < 1200 && size.width > 500) {
+				setShow(true);
+			} else if (size.width <= 500) {
+				setShow(false);
+				setIsMain(false);
 			}
+		} else {
+			setIsMain(location.pathname === '/' || location.pathname === '/search' ? true : false);
 		}
 	}, [size.width]);
 
@@ -89,37 +83,12 @@ const SNB = ({ show, setShow }) => {
 	return (
 		<Container show={show} isMain={isMain}>
 			<ul>
-				<SideBarSection info={list.section1} show={show} setShow={setShow} />
-				<SideBarSection info={list.section2} show={show} setShow={setShow} />
-				<SideBarSection info={list.section3} show={show} setShow={setShow} />
+				<SideBarSection info={list.section1} show={show} isMain={isMain} />
+				<SideBarSection info={list.section2} show={show} isMain={isMain} />
+				<SideBarSection info={list.section3} show={show} isMain={isMain} />
 			</ul>
 		</Container>
 	);
 };
-
-const Container = styled.nav<{ isMain: boolean; show: boolean }>`
-	background-color: #212529;
-	position: fixed;
-	${(props) =>
-		props.isMain
-			? css`
-					padding-top: 10px;
-					top: 60px;
-					height: 100%;
-					overflow: auto;
-					padding-right: 10px;
-			  `
-			: props.show
-			? css`
-					display: none;
-			  `
-			: css`
-					padding-top: 10px;
-					top: 60px;
-					height: 100%;
-					overflow: auto;
-					padding-right: 10px;
-			  `}
-`;
 
 export default SNB;

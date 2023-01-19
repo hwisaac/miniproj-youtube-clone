@@ -9,11 +9,12 @@ import {
 	MdSettings,
 	MdFlag,
 } from 'react-icons/md';
+import { NavSection } from './SideBarStyle';
 
-const SideBarSection = ({ info, show, setShow }) => {
+const SideBarSection = ({ info, show, isMain }) => {
 	return (
 		<>
-			<NavSection show={show}>
+			<NavSection show={show} isMain={isMain}>
 				{info.map((ele) => {
 					return (
 						<li key={ele.title}>
@@ -46,57 +47,5 @@ const SideBarSection = ({ info, show, setShow }) => {
 		</>
 	);
 };
-
-const NavSection = styled.section<{ show: boolean }>`
-	${(props) =>
-		props.show
-			? ''
-			: css`
-					border-bottom: 1px solid gray;
-					margin-bottom: 10px;
-					padding-bottom: 10px;
-			  `}
-	li {
-		padding: 10px;
-		display: flex;
-		${(props) =>
-			props.show
-				? css`
-						flex-direction: column;
-						justify-content: center;
-						align-items: center;
-						width: 50px;
-						p {
-							width: 120%;
-							text-align: center;
-							display: block;
-							white-space: nowrap;
-							overflow: hidden;
-							text-overflow: ellipsis;
-						}
-						&:hover {
-							background-color: #343a40;
-						}
-				  `
-				: css`
-						align-items: center;
-						padding: 10px;
-						padding-right: 30px;
-						padding-left: 20px;
-						p {
-							margin-left: 25px;
-						}
-						&:hover {
-							background-color: #343a40;
-							border-radius: 20px;
-						}
-				  `}
-
-		cursor: pointer;
-		p {
-			color: white;
-		}
-	}
-`;
 
 export { SideBarSection };
