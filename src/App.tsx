@@ -1,6 +1,6 @@
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useSearchParams } from 'react-router-dom';
 import Header from './components/Header';
 import SNB from './components/SNB';
 import { Reset } from 'styled-reset';

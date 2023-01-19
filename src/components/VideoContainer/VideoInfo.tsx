@@ -1,10 +1,26 @@
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import youtube from '../../api/youtubeClass';
 import { formatView } from './VideoFunction';
 import { formatDate } from './VideoFunction';
 
-const VideoInfo = ({ video, videoInfo }) => {
-	let date = video.snippet.publishedAt;
-	let view = videoInfo.statistics.viewCount;
+const VideoInfo = ({ video }) => {
+	const [details, setDetails] = useState({
+		views: '',
+		publishedAt: '',
+	});
+
+	const fetchStaticsData = async (id) => {
+		const newData = await youtube.video(id);
+		setDetails({
+			views: formatView(newData.items[0].statistics.viewCount),
+			publishedAt: formatDate(newData.items[0].snippet.publishedAt),
+		});
+	};
+
+	useEffect(() => {
+		fetchStaticsData(video.id.videoId);
+	}, []);
 
 	return (
 		<Container>
@@ -19,9 +35,9 @@ const VideoInfo = ({ video, videoInfo }) => {
 							<div className="channelName">{video.snippet.channelTitle}</div>
 						</div>
 						<div className="detail-data">
-							<span>{formatView(view)}</span>
+							<span>{details.views}</span>
 							<span className="dot"> • </span>
-							<span>{formatDate(date)}</span>
+							<span>{details.publishedAt}</span>
 						</div>
 					</div>
 				</div>
