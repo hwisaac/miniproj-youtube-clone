@@ -1,4 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
+/*
+ * 사이드바 컴포넌트의 총 화면을 렌더링합니다.
+ */
+
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { SideBarSection } from './SideBarSection';
 import React from 'react';

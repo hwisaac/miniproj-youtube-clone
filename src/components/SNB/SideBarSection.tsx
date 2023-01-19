@@ -1,3 +1,8 @@
+/*
+ * 사이드바 섹션 컴포넌트
+ * props에 따라 화면에 렌더링 되는 사이드바 섹션이 달라집니다.
+ */
+
 import styled, { css } from 'styled-components';
 import { AiFillHome, AiFillLike } from 'react-icons/ai';
 import {
