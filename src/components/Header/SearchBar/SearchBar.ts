@@ -156,20 +156,20 @@ const Container = styled.div<{ focus: boolean; text: string; showBar: boolean }>
 						}
 
 						.search-box {
-							width: calc(100% - 200px);
-							margin-left: 46px;
-							max-width: 500px;
+							width: calc(100% - 190px);
+							margin-left: 36px;
+							max-width: 510px;
 							position: relative;
 							right: -14px;
 						}
 
 						.search-box:focus {
-							width: calc(100% - 170px);
-							max-width: 530px;
+							width: calc(100% - 160px);
+							max-width: 540px;
 						}
 
 						.search-icon {
-							left: 68px;
+							left: 58px;
 						}
 						.voice {
 							margin-left: 0;
