@@ -1,3 +1,8 @@
+/*
+ * 사이드바 스타일 코드
+ * 페이지 여부에 따라 화면 렌더가 달라짐
+ */
+
 import styled, { css } from 'styled-components';
 
 export const NavSection = styled.section<{ isMain: boolean; show: boolean }>`
