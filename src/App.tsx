@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import SNB from './components/SNB';
 import { Reset } from 'styled-reset';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 
 function App() {
 	const [toggle, setToggle] = useState(false);
@@ -20,7 +20,7 @@ function App() {
 		<>
 			<Reset />
 			<Header menuClicked={handleMenuClicked} />
-			{toggle && <SNB show={toggle} setShow={setToggle} />}
+			<SNB show={toggle} setShow={setToggle} />
 			<Outlet />
 			<ReactQueryDevtools initialIsOpen={false} />
 		</>
