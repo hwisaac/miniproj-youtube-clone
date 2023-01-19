@@ -44,36 +44,27 @@ const Search = () => {
 };
 
 const Main = styled.main`
-	grid-area: main;
+	width: 100%;
 `;
 const Container = styled.div`
-	background-color: #181818;
 	width: 100%;
-	top: 60px;
-	left: 80px;
-	position: absolute;
-	padding: 0 2rem;
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-	color: white;
-	z-index: -1;
+	padding: 1.5rem 2rem;
 
 	.search-element {
-		max-height: 360px;
+		max-width: 1000px;
+		height: 100%;
 		padding: 1rem;
 		color: #fff;
-		font-size: 14px;
+		font-size: 15px;
 		letter-spacing: 0.2px;
-		justify-items: center;
 	}
 `;
 const VideoLink = styled(Link)`
-	display: flex;
-	color: white;
+	min-width: 0px
 	text-decoration: none;
-	width: 100%;
-	height: 100%;
+	color: inherit;
+	display: grid;
+	gap: 2rem;
 `;
 
 export default Search;

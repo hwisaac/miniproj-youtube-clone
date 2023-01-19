@@ -34,16 +34,25 @@ const VideoContainer = ({ video }) => {
 		);
 	} else if (video.id.kind === 'youtube#channel') {
 		return (
-			<div className="channel-element">
+			<Channel className="channel-element">
 				<div className="channel-thumbnail">
 					<img src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} />
 				</div>
 				<div className="channel-textInfo">
 					<h5 className="channel">{video.snippet.title}</h5>
 				</div>
-			</div>
+			</Channel>
 		);
 	}
 };
+
+const Channel = styled.div`
+	display: flex;
+	justify-content: space-between;
+	img {
+		border-radius: 50%;
+		margin-right: 50px;
+	}
+`;
 
 export default VideoContainer;

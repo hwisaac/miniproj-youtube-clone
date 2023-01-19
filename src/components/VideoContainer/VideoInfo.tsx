@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
 import { formatView } from '../../util/VideoFunction';
 import { formatDate } from '../../util/VideoFunction';
+import { BsThreeDotsVertical } from 'react-icons/bs';
 
 const VideoInfo = ({ video }) => {
 	const [details, setDetails] = useState({
@@ -35,29 +36,55 @@ const VideoInfo = ({ video }) => {
 							<div className="channelName">{video.snippet.channelTitle}</div>
 						</div>
 						<div className="detail-data">
-							<span>{details.views}</span>
-							<span className="dot"> • </span>
-							<span>{details.publishedAt}</span>
+							<span>
+								{details.views} views • {details.publishedAt}
+							</span>
 						</div>
 					</div>
 				</div>
+				<BsThreeDotsVertical className="dots" />
 			</div>
 		</Container>
 	);
 };
 
 const Container = styled.div`
+	width: 100%;
+	height: 38%;
+	display: grid;
+	grid-template-columns: auto 1fr 15px;
 	.info-container {
 		display: flex;
 	}
 	.channel {
 		margin-right: 1rem;
+		width: fit-content;
 	}
+
 	.channel-thumbnail {
 		width: 35px;
 		height: 35px;
-
 		border-radius: 50%;
+	}
+	.channel-info {
+		padding-right: 2rem;
+	}
+	.title {
+		margin: 1.2rem 0 0.6rem;
+		line-height: 150%;
+	}
+	.detail-info {
+		color: #aaa;
+	}
+	.channel-name {
+		line-height: 130%;
+	}
+	.detail-data {
+		display: flex;
+	}
+	.dots {
+		height: 50px;
+		width: 25px;
 	}
 `;
 

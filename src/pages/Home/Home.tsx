@@ -44,9 +44,7 @@ const Container = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(274px, 1fr));
 	gap: 1rem;
-	background-color: #181818;
 	color: white;
-	z-index: -1;
 
 	.video-element {
 		max-height: 360px;
@@ -58,10 +56,8 @@ const Container = styled.div`
 	}
 `;
 const VideoLink = styled(Link)`
-	color: white;
+	color: inherit;
 	text-decoration: none;
-	width: 100%;
-	height: 100%;
 `;
 
 export default Home;
