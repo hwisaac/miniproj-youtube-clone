@@ -8,19 +8,24 @@ import { AiOutlineBell } from 'react-icons/ai';
 import { MdOutlineVideoCall } from 'react-icons/md';
 import styled from 'styled-components';
 import { Icon } from './SearchBar/SearchBar';
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 
 const RightSection = () => {
 	return (
 		<Container>
-			<Icon>
+			<Icon id="create">
 				<MdOutlineVideoCall />
 			</Icon>
-			<Icon>
+			<Icon id="notifications">
 				<AiOutlineBell />
-			</Icon>{' '}
-			<Icon>
+			</Icon>
+			<Icon id="user">
 				<BsPersonCircle />
 			</Icon>
+			<Tooltip anchorId="create" content="Create" />
+			<Tooltip anchorId="notifications" content="Notifications" />
+			<Tooltip anchorId="user" content="User" />
 		</Container>
 	);
 };

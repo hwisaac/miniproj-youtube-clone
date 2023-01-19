@@ -1,19 +1,48 @@
-import React from 'react';
+/*
+ * 연관 동영상 하나의 요소를 렌더링
+ * 동영상의 세부 사항 API를 호출 후 알맞은 요소들을 렌더링합니다.
+ */
+
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import youtube from '../../api/youtubeClass';
+import { getDuration } from '../../util/getDuration';
+import { formatDate, formatView } from '../VideoContainer/VideoFunction';
 
 const VideoItem = ({ item }) => {
+	const [details, setDetails] = useState({
+		duration: '',
+		views: '',
+		publishedAt: '',
+	});
+
+	const fetchStaticsData = async (id) => {
+		const newData = await youtube.video(id);
+		setDetails({
+			duration: getDuration(newData.items[0].contentDetails.duration),
+			views: formatView(newData.items[0].statistics.viewCount),
+			publishedAt: formatDate(newData.items[0].snippet.publishedAt),
+		});
+	};
+
+	useEffect(() => {
+		fetchStaticsData(item.id.videoId);
+	}, []);
+
 	return (
-		<li key={item.channelId}>
-			<Linker to={'/' + item.channelId}>
+		<li key={item.id.videoId}>
+			<Linker to={'/' + item.id.videoId}>
 				<ImgWrap>
-					<img src={item.thumbnails.medium.url} alt="thumb-img" />
-					<p>1:02:03</p>
+					<img src={item.snippet.thumbnails.medium.url} alt="thumb-img" />
+					<p>{details.duration}</p>
 				</ImgWrap>
 				<DetailWrap>
-					<Title>{item.title}</Title>
-					<ChannelTitle>{item.channelTitle}</ChannelTitle>
-					<SubSpan>1M views • 8 months</SubSpan>
+					<Title>{item.snippet.title}</Title>
+					<ChannelTitle>{item.snippet.channelTitle}</ChannelTitle>
+					<SubSpan>
+						{details.views} • {details.publishedAt} ago
+					</SubSpan>
 				</DetailWrap>
 			</Linker>
 		</li>

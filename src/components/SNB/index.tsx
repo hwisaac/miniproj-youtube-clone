@@ -1,4 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
+/*
+ * 사이드바 컴포넌트의 총 화면을 렌더링합니다.
+ */
+
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { SideBarSection } from './SideBarSection';
 import React from 'react';
@@ -50,13 +54,13 @@ const list = {
 	],
 };
 
-let firstRender = window.location.pathname === '/' || window.location.pathname === '/search' ? true : false;
-
 const SNB = ({ show, setShow }) => {
 	let location = useLocation();
 	const [isMain, setIsMain] = useState(location.pathname === '/' || location.pathname === '/search' ? true : false);
+
 	useEffect(() => {
 		setIsMain(location.pathname === '/' || location.pathname === '/search' ? true : false);
+		setShow(false);
 	}, [location.pathname]);
 	const size = useWindowSize();
 
@@ -74,11 +78,6 @@ const SNB = ({ show, setShow }) => {
 			setIsMain(location.pathname === '/' || location.pathname === '/search' ? true : false);
 		}
 	}, [size.width]);
-
-	if (!firstRender) {
-		setShow(true);
-		firstRender = !firstRender;
-	}
 
 	return (
 		<Container show={show} isMain={isMain}>
