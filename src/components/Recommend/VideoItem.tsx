@@ -1,19 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import youtube from '../../api/youtubeClass';
 
-const VideoItem = ({ item }) => {
+const VideoItem = ({ item, itemDetail }) => {
+	const [details, setDetails] = useState({
+		duration: '',
+		views: '',
+		publishedAt: '',
+	});
+	const fetchStaticsData = async (id) => {
+		const newData = await youtube.video(id);
+		setDetails({
+			duration: newData.items[0].contentDetails.duration,
+			views: newData.items[0].statistics.viewCount,
+			publishedAt: newData.items[0].snippet.publishedAt,
+		});
+	};
+
+	useEffect(() => {
+		fetchStaticsData(item.id.videoId);
+	}, []);
+
 	return (
-		<li key={item.channelId}>
-			<Linker to={'/' + item.channelId}>
+		<li key={item.id.videoId}>
+			<Linker to={'/' + item.id.videoId}>
 				<ImgWrap>
-					<img src={item.thumbnails.medium.url} alt="thumb-img" />
-					<p>1:02:03</p>
+					<img src={item.snippet.thumbnails.medium.url} alt="thumb-img" />
+					<p>{details.duration}</p>
 				</ImgWrap>
 				<DetailWrap>
-					<Title>{item.title}</Title>
-					<ChannelTitle>{item.channelTitle}</ChannelTitle>
-					<SubSpan>1M views • 8 months</SubSpan>
+					<Title>{item.snippet.title}</Title>
+					<ChannelTitle>{item.snippet.channelTitle}</ChannelTitle>
+					<SubSpan>
+						{details.views} • {details.publishedAt} ago
+					</SubSpan>
 				</DetailWrap>
 			</Linker>
 		</li>
