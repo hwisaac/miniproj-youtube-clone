@@ -5,7 +5,7 @@ import { formatView } from '../../util/VideoFunction';
 import { formatDate } from '../../util/VideoFunction';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 
-const VideoInfo = ({ video }) => {
+const VideoInfo = ({ video, channelInfo }) => {
 	const [details, setDetails] = useState({
 		views: '',
 		publishedAt: '',

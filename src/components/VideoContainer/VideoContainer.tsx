@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import youtube from '../../api/youtubeClass';
 import { formatView } from '../../util/VideoFunction';
+import ChannelContainer from './ChannelContainer';
 
 const VideoContainer = ({ video }) => {
 	//채널 상세정보 get
@@ -17,7 +18,8 @@ const VideoContainer = ({ video }) => {
 
 	const channelInfoData = async (Id) => {
 		const data = await youtube.channel(Id);
-		const item = data.item[0];
+
+		const item = data.items[0];
 		setChannelInfo({
 			customUrl: item.snippet.customUrl,
 			subscriber: formatView(item.statistics.subscriberCount),
@@ -32,29 +34,18 @@ const VideoContainer = ({ video }) => {
 	if (video.id.kind === 'youtube#video') {
 		return (
 			<>
-				{video ? (
+				{video && channelInfo && (
 					<>
 						<VideoThumbnail video={video} />
-						<VideoInfo video={video} />
+						<VideoInfo video={video} channelInfo={channelInfo} />
 					</>
-				) : null}
+				)}
 			</>
 		);
 	} else if (video.id.kind === 'youtube#channel') {
 		return (
 			<Channel className="channel-element">
-				<div className="channel-thumbnail">
-					<img src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} />
-				</div>
-				<div className="channel-textInfo">
-					<h5 className="channel">{video.snippet.title}</h5>
-					{channelInfo ? (
-						<span>
-							{channelInfo.customUrl} • {channelInfo.subscriber}
-						</span>
-					) : null}
-					<span>{channelInfo.description}</span>
-				</div>
+				{channelInfo ? <ChannelContainer video={video} channelInfo={channelInfo} /> : null}
 			</Channel>
 		);
 	}
