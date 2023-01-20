@@ -20,7 +20,7 @@
 - 1차: 2023.1.16 ~ 2023.1.20(총 5일)
 
 ### 링크 모음
-<a href="">
+<a href="https://react-youtube-clone1.netlify.app/">
   <img src="https://img.shields.io/badge/배포사이트-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
 </a>&nbsp;&nbsp;
 <a href="http://moviedb-7.s3-website.ap-northeast-2.amazonaws.com/">
@@ -53,8 +53,8 @@
 <br><br>
 
 # 3. 프로젝트 목표 🚩
-- **공혜지**: 
-
+- **공혜지**:
+React로 api를 사용하고 구현하면서 익숙해지는게 목표입니다!
 
 - **황이삭**: 
 
@@ -148,6 +148,8 @@
    - 업로드 후 지난 시간
       - 영상 업로드 날짜와 오늘 날짜를 비교하여 지난 시간 표기
       - date-fns 모듈 사용
+   - 영상 길이
+      - 함수를 사용해서 ISO_8601기준 duration데이터 처리
 </details>
 
 <details>
@@ -162,6 +164,8 @@
       - 위 검색 API 응답에서 video id 종류가 channel인 경우 요청
 2. 검색 리스트
    - 채널과 영상을 다른 구조로 렌더링
+      - 메인페이지의 동영상 컴포넌트를 활용해서 구현
+      - if문을 이용해 channel, video종류를 구분해서 컴포넌트를 만들었습니다.
 </details>
 
 <details>
