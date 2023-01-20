@@ -14,7 +14,7 @@ import youtube from '../../api/youtubeClass';
 import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
 
-const Detail = ({ setToggleSNB }) => {
+const Detail = () => {
 	// URL주소에서 videoId 가져오기
 	const { videoId } = useParams();
 

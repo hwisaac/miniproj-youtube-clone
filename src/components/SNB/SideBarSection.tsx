@@ -9,7 +9,7 @@ const SideBarSection = ({ toggleSNB, section }) => {
 	return (
 		<SideBarSectionUL toggleSNB={toggleSNB}>
 			{section.map((ele) => (
-				<li>
+				<li key={ele.title}>
 					{ele.icon}
 					<span>{ele.title}</span>
 				</li>
