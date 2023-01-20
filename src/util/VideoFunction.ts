@@ -7,7 +7,7 @@ export const formatDate = (date) => {
 
 export const formatView = (view) => {
 	if (view >= 1000000000) {
-		return (view / 1000000000).toFixed(0) + 'G';
+		return (view / 1000000000).toFixed(0) + 'B';
 	}
 	if (view >= 1000000) {
 		return (view / 1000000).toFixed(0) + 'M';

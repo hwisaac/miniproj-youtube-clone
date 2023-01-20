@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
-import searchJson from '../../mockup/search-beutifulplace.json';
 
 const Home = () => {
 	const [videos, setVideos] = useState([]);
@@ -17,6 +16,7 @@ const Home = () => {
 		const items = result.items;
 		setVideos(items);
 	};
+
 	return (
 		<Main>
 			<Container className="video-container">
@@ -33,7 +33,8 @@ const Home = () => {
 };
 
 const Main = styled.main`
-	grid-area: main;
+	width: 100vw;
+	height: 100vh;
 `;
 const Container = styled.div`
 	width: 100%;

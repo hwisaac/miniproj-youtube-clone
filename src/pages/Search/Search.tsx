@@ -68,6 +68,9 @@ const Main = styled.main`
 `;
 const Container = styled.div`
 	width: 100%;
+	position: relative;
+	top: 60px;
+	left: 90px;
 	padding: 1.5rem 2rem;
 	.search-element {
 		max-width: 1000px;
@@ -83,6 +86,8 @@ const VideoLink = styled(Link)`
 	text-decoration: none;
 	color: inherit;
 	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: 1fr;
 	gap: 2rem;
 `;
 
