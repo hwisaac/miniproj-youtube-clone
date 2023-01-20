@@ -39,15 +39,7 @@
   <img src="https://img.shields.io/badge/팀노션-fc9847?style=for-the-badge&logo=notion&logoColor=white" />
 </a>
 
-- 배포 사이트: 
-- 데모 사이트: http://moviedb-7.s3-website.ap-northeast-2.amazonaws.com/
-- 원본 레포: https://github.com/React-Team-Project/Youtube-Clone
-- 팀 위키: https://github.com/React-Team-Project/Youtube-Clone/wiki
-- 노션: https://www.notion.so/Youtube-Clone-Project-2992e54002d1479181071cf8e0f3f51d
-
-
 >배포 링크 추가必
-><br>링크 모음이 좀 지저분해서 아이콘으로 만들었는데, 어떤게 나은지 몰라서 둘다넣고 비교중입니다.
 ><br>리팩토링 예정이면 개발기간 추가하겠습니다.
     
 <br><br>
@@ -139,16 +131,18 @@
 1. UI
    - 기본형: 아이콘 + 메뉴 이름
    - 축약형: 아이콘
-2. 반응형 CSS
-   - ❓❓❓❓❓❓❓❓❓❓
 </details>
 
 <details>
 <summary>메인 페이지</summary>
 
-1. 영상 썸네일
-   - 영상 시간: 시간 환산한 방법(단위 등)
-2. 영상 정보
+1. API
+   - 검색(search)
+      - 'beautiful' 키워드로 영상 데이터 요청
+   - 특정 동영상(video)
+      - 위 검색 API 응답의 videoId 값으로 상세 데이터 요청
+2. 영상 썸네일
+3. 영상 정보
    - 조회수 표기 단위
       - K(Kilo): 1천 이상
       - M(Million): 1백만 이상
@@ -156,32 +150,47 @@
    - 업로드 후 지난 시간
       - 영상 업로드 날짜와 오늘 날짜를 비교하여 지난 시간 표기
       - date-fns 모듈 사용
-3. 반응형 CSS
-   - ❓❓❓❓❓❓❓❓❓❓
 </details>
 
 <details>
 <summary>검색 페이지</summary>
 
-1. 영상 썸네일
-   - 영상 시간: 시간 환산한 방법(단위 등)
+1. API
+   - 검색(search)
+      - URL주소의 q값으로 데이터 요청. useLocation과 URLSearchParams 사용
+   - 특정 동영상(video)
+      - 위 검색 API 응답에서 video id 종류가 video인 경우 요청
+   - 특정 채널(channel)
+      - 위 검색 API 응답에서 video id 종류가 channel인 경우 요청
+2. 검색 리스트
+   - 채널과 영상을 다른 구조로 렌더링
 </details>
 
 <details>
 <summary>상세 페이지</summary>
 
-1. 영상 썸네일
-   - 영상 시간: 시간 환산한 방법(단위 등)
-2. 영상 정보
-   - 조회수 표기 단위
-      - K(Kilo): 1천 이상
-      - M(Million): 1백만 이상
-      - B(Billion): 10억 이상
-   - 업로드 후 지난 시간
-      - 영상 업로드 날짜와 오늘 날짜를 비교하여 지난 시간 표기
-      - date-fns 모듈 사용 
-3. 반응형 CSS
-   - ❓❓❓❓❓❓❓❓❓❓
+1. API
+   - 특정 동영상(video)
+      - URL주소에서 videoId로 요청
+   - 연관 동영상(related)
+      - 메인 동영상 videoId 값으로 관련 영상 데이터 요청
+   - 댓글 데이터(comment)
+      - 메인 동영상 videoId 값으로 댓글 데이터 요청
+2. 메인 동영상(왼쪽)
+   - 영상 설명란
+      - 기본: height 값이 100px로 설명 일부만 노출
+      - 클릭: height 값이 auto로 모든 내용 노출
+   - 댓글
+      - 답글 클릭: 대댓글용 input 박스 생성
+      - 댓글 더 보기: 추가 댓글 20개 로딩
+3. 관련 동영상(오른쪽)
+   - 캐싱: 쿼리키['related', videoId]로 캐싱
+4. 반응형 CSS
+   - width 1140px 이하
+      - 관련 동영상 상단: 썸네일 / 하단: 영상 정보
+   - width 830px 이하
+      - 상단: 메인 동영상
+      - 하단: 관련 동영상
 </details>
 
 >~~컴포넌트~~-> 구역별로 나눠서 설명했습니다. 그리고 우리가 열심히 한 반응형 CSS에 대한 설명도 마지막에 추가했습니다!
