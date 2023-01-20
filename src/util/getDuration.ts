@@ -1,8 +1,8 @@
 export const getDuration = (text) => {
+	if (!text) return;
 	let h = '';
 	let m = '00:';
 	let s = '00';
-
 	for (let i = 0; i < text.length; i++) {
 		switch (text[i]) {
 			case 'H':

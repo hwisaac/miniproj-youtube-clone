@@ -5,26 +5,22 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import searchJson from '../../mockup/search.json';
 import youtube from '../../api/youtubeClass';
-import { useMutation, useQuery } from '@tanstack/react-query';
-
-const getTitles = (data) => {
-	const result = [];
-
-	for (const item of data.items) {
-		result.push(item.snippet.description);
-	}
-	return result;
-};
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 const Search = () => {
-	const [searchResults, setSearchResults] = useState([]);
-	const [nextPageToken, setNextPageToken] = useState('');
-
 	const keyword = new URLSearchParams(useLocation().search).get('q');
+	const queryClient = useQueryClient();
+	const queryData = queryClient.getQueryData<ISearch>(['search', keyword]);
+	const [searchResults, setSearchResults] = useState([]);
+
+	useEffect(() => {
+		if (queryData) setSearchResults(queryData.items);
+	}, [keyword]);
+
+	const [nextPageToken, setNextPageToken] = useState('');
 
 	const { isLoading, data } = useQuery<ISearch>(['search', keyword], () => youtube.search(keyword), {
 		onSuccess: (data) => {
-			// console.log('INIT 쿼리 성공! :', getTitles(data), data.nextPageToken);
 			setSearchResults([...data.items]);
 			setNextPageToken(data.nextPageToken);
 		},
@@ -34,10 +30,8 @@ const Search = () => {
 	const { isLoading: fetchingMore, mutate: fetchMore } = useMutation({
 		mutationFn: () => youtube.searchByToken({ pageToken: nextPageToken, query: keyword }),
 		onSuccess: (data) => {
-			console.log('추가로 가져옴:', getTitles(data.items));
 			setSearchResults((prev) => [...prev, ...data.items]);
 			setNextPageToken(data.nextPageToken);
-			console.log('현재 searchedResults배열: ', getTitles(searchResults));
 		},
 		retry: false,
 	});
@@ -49,14 +43,13 @@ const Search = () => {
 	return (
 		<Main>
 			<Container>
-				{!isLoading &&
-					searchResults.map((video, index) => (
-						<div key={`video-${video.id.videoId}-${index}`} className="search-element">
-							<VideoLink to={`/${video.id.videoId}`} className="video-element">
-								<VideoContainer video={video} />
-							</VideoLink>
-						</div>
-					))}
+				{searchResults?.map((item, index) => (
+					<div key={`video-${item.id.videoId}-${index}`} className="search-element">
+						<VideoLink to={`/${item.id.videoId}`} className="video-element">
+							<VideoContainer video={item} />
+						</VideoLink>
+					</div>
+				))}
 			</Container>
 			<MoreBtn onClick={handleMoreBtn}>검색결과 더 보기</MoreBtn>
 		</Main>
