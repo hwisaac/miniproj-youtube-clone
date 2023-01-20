@@ -22,7 +22,13 @@ const ChannelContainer = ({ video, channelInfo }) => {
 };
 
 const Channel = styled.div`
+	width: 900px;
 	display: flex;
+	justify-content: space-around;
+	.channel-thumbnail img {
+		width: 150px;
+		height: 150px;
+	}
 	.channel-textInfo {
 		display: flex;
 		flex-direction: column;
@@ -36,8 +42,8 @@ const Channel = styled.div`
 	.sub-button {
 		background-color: white;
 		color: black;
-		width: 100px;
-		height: 30px;
+		width: 55px;
+		height: 35px;
 		border-radius: 10px;
 		margin: auto;
 	}
