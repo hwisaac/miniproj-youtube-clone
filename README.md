@@ -29,15 +29,10 @@
 <a href="https://github.com/React-Team-Project/Youtube-Clone">
   <img src="https://img.shields.io/badge/팀레포-181717?style=for-the-badge&logo=github&logoColor=white" />
 </a>&nbsp;&nbsp;
-<a href="https://github.com/React-Team-Project/Youtube-Clone/wiki">
-  <img src="https://img.shields.io/badge/팀위키-008275?style=for-the-badge&logo=github&logoColor=white" />
-</a>&nbsp;&nbsp;
 <a href="https://www.notion.so/Youtube-Clone-Project-2992e54002d1479181071cf8e0f3f51d">
   <img src="https://img.shields.io/badge/팀노션-fc9847?style=for-the-badge&logo=notion&logoColor=white" />
 </a>
 
->배포 링크 추가必
-    
 <br><br>
 
 # 2. 팀원 소개 & 역할 분담 👥
@@ -45,44 +40,13 @@
 |공혜지👑|황이삭|이승윤|김효진|
 |:---:|:---:|:---:|:---:|
 |<a href="https://github.com/hayden365"><img src="https://avatars.githubusercontent.com/u/109419531?v=4" width=160/></a>|<a href="https://github.com/hwisaac"><img src="https://avatars.githubusercontent.com/u/54179672?v=4" width=160/></a>|<a href="https://github.com/syoon0624"><img src="https://avatars.githubusercontent.com/u/77139957?v=4" width=160/></a>|<a href="https://github.com/Hyojina"><img src="https://avatars.githubusercontent.com/u/107975281?v=4" width=160/></a>|
-|메인 페이지<br>검색 페이지|초기 세팅<br>상세 페이지<br>깃허브 Wiki<br>리팩토링|사이드 바<br>추천 동영상|네비게이션 바<br>README(...)|
-
->혹시 제가 놓친 부분 있더라도 이해해주시고 추가해주시면 감사하겠슴다!
-><br>그리고 별건아닌데.. github 사용자 썸넬 추가해주시면 더욱 보기 좋을 것 같아용ㅎㅎㅎ
-
-<br><br>
-
-# 3. 프로젝트 목표 🚩
-- **공혜지**: 
-
-
-- **황이삭**: 
-
-
-- **이승윤**: 
-
-
-- **김효진**
-  - React 코드 사용 익숙해지기
-  - 팀 단위 프로젝트, 협업에 익숙해지기
-  - README 작성하여 정리하는 법 익히기
-
->각자 이번 프로젝트로 인해 얻고자했던 부분을 적어주세요.
+|메인 페이지<br>검색 페이지|초기 세팅<br>상세 페이지<br>리팩토링|사이드 바<br>추천 동영상|네비게이션 바<br>README(...)|
 
 <br><br>
 
 # 4. 기술 스택 ⚙️
-### 프로그래밍
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
-### 디자인
-<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"> <img src="https://img.shields.io/badge/reacticons-e91e63?style=for-the-badge&logo=react&logoColor=white">
-### 세팅
-<img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"> <img src="https://img.shields.io/badge/json-616161?style=for-the-badge&logo=json&logoColor=white"> <img src="https://img.shields.io/badge/Axios-671ddf?style=for-the-badge&logo=Axios&logoColor=white"> <img src="https://img.shields.io/badge/prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black">
-### 버전 관리
-<img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
-
->사용한 기술을 어떻게 분류해야 할 지 잘 모르겠어요..
-<br>놓친 부분 or 빼도 괜찮겠다 싶은 부분 알려주세요!
+<br><img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"> <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=node.js&logoColor=white">  <img src="https://img.shields.io/badge/Axios-671ddf?style=for-the-badge&logo=Axios&logoColor=white"> <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 
 <br><br>
 
@@ -190,7 +154,3 @@
       - 상단: 메인 동영상
       - 하단: 관련 동영상
 </details>
-
->~~컴포넌트~~-> 구역별로 나눠서 설명했습니다. 일단 지금 작동하는 부분만 적었습니다. 
-<br>그리고 토큰 부분 쓰고싶은데 제가 설명을 못쓰겠더라구요 ㅠㅠ 엉엉.. 
-
