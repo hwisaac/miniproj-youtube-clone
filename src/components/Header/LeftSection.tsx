@@ -10,10 +10,14 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Icon } from './SearchBar/SearchBar';
 
-const LeftSection = ({ menuClicked }) => {
+const LeftSection = ({ setToggleSNB }) => {
+	const handleSNB = () => {
+		setToggleSNB((prev) => !prev);
+	};
+
 	return (
 		<Container>
-			<Icon onClick={menuClicked}>
+			<Icon onClick={handleSNB}>
 				<AiOutlineMenu />
 			</Icon>
 			<Link to="/">
@@ -35,6 +39,9 @@ const Container = styled.div`
 	img {
 		margin: 0 10px;
 		width: 90px;
+	}
+	svg {
+		cursor: pointer;
 	}
 `;
 

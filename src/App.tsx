@@ -7,20 +7,13 @@ import { Reset } from 'styled-reset';
 import Home from './pages/Home/Home';
 
 function App() {
-	const [toggle, setToggle] = useState(false);
+	const [toggleSNB, setToggleSNB] = useState(true);
 
-	const handleMenuClicked = () => {
-		if (toggle) {
-			setToggle(false);
-		} else {
-			setToggle(true);
-		}
-	};
 	return (
 		<>
 			<Reset />
-			<Header menuClicked={handleMenuClicked} />
-			<SNB show={toggle} setShow={setToggle} />
+			<Header setToggleSNB={setToggleSNB} />
+			<SNB toggleSNB={toggleSNB} />
 			<Outlet />
 			<ReactQueryDevtools initialIsOpen={false} />
 		</>

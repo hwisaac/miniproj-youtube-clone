@@ -5,40 +5,53 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import searchJson from '../../mockup/search.json';
 import youtube from '../../api/youtubeClass';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 const Search = () => {
+	const keyword = new URLSearchParams(useLocation().search).get('q');
+	const queryClient = useQueryClient();
+	const queryData = queryClient.getQueryData<ISearch>(['search', keyword]);
 	const [searchResults, setSearchResults] = useState([]);
-	const useQuery = () => {
-		return new URLSearchParams(useLocation().search);
-	};
-	let query = useQuery();
-	const searchTerm = query.get('q');
 
 	useEffect(() => {
-		if (searchTerm) {
-			searchData(searchTerm);
-		}
-	}, [searchTerm]);
+		if (queryData) setSearchResults(queryData.items);
+	}, [keyword]);
 
-	const searchData = async (searchTerm) => {
-		const data = await youtube.search(searchTerm);
-		const items = data.items;
-		setSearchResults(items);
+	const [nextPageToken, setNextPageToken] = useState('');
+
+	const { isLoading, data } = useQuery<ISearch>(['search', keyword], () => youtube.search(keyword), {
+		onSuccess: (data) => {
+			setSearchResults([...data.items]);
+			setNextPageToken(data.nextPageToken);
+		},
+	});
+
+	// useMutation: 검색결과 추가로 가져오기
+	const { isLoading: fetchingMore, mutate: fetchMore } = useMutation({
+		mutationFn: () => youtube.searchByToken({ pageToken: nextPageToken, query: keyword }),
+		onSuccess: (data) => {
+			setSearchResults((prev) => [...prev, ...data.items]);
+			setNextPageToken(data.nextPageToken);
+		},
+		retry: false,
+	});
+	// 버튼 누르면 패칭 시작
+	const handleMoreBtn = () => {
+		if (!fetchingMore) fetchMore();
 	};
-
-	// let data = searchJson.items;
 
 	return (
 		<Main>
 			<Container>
-				{searchResults.map((video) => (
-					<div className="search-element" key={video.id.videoId}>
-						<VideoLink to={'/' + (video.id.videoId && video.snippet.channelTitle)} className="video-element">
-							<VideoContainer video={video} />
+				{searchResults?.map((item, index) => (
+					<div key={`video-${item.id.videoId}-${index}`} className="search-element">
+						<VideoLink to={`/${item.id.videoId}`} className="video-element">
+							<VideoContainer video={item} />
 						</VideoLink>
 					</div>
 				))}
 			</Container>
+			<MoreBtn onClick={handleMoreBtn}>검색결과 더 보기</MoreBtn>
 		</Main>
 	);
 };
@@ -49,7 +62,6 @@ const Main = styled.main`
 const Container = styled.div`
 	width: 100%;
 	padding: 1.5rem 2rem;
-
 	.search-element {
 		max-width: 1000px;
 		height: 100%;
@@ -60,11 +72,29 @@ const Container = styled.div`
 	}
 `;
 const VideoLink = styled(Link)`
-	min-width: 0px
+	min-width: 0px;
 	text-decoration: none;
 	color: inherit;
 	display: grid;
 	gap: 2rem;
+`;
+
+const MoreBtn = styled.button`
+	align-self: flex-end;
+	border: none;
+	background-color: #333;
+	color: white;
+	border-radius: 15px;
+	padding: 0 20px;
+	height: 30px;
+	/* width: auto; */
+	width: 100%;
+	margin: 50px 0;
+	margin-bottom: 100px;
+	cursor: pointer;
+	&:hover {
+		background-color: #555;
+	}
 `;
 
 export default Search;
