@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import searchJson from '../../mockup/search.json';
 import youtube from '../../api/youtubeClass';
 
 const Search = () => {
@@ -25,8 +24,6 @@ const Search = () => {
 		const items = data.items;
 		setSearchResults(items);
 	};
-
-	// let data = searchJson.items;
 
 	return (
 		<Main>
