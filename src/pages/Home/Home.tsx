@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
+<<<<<<< HEAD
 import { useQuery } from '@tanstack/react-query';
 import { resourceLimits } from 'worker_threads';
+=======
+>>>>>>> 061d8612f045945e6be2f53fde3b8542890a766e
 
 const Home = () => {
 	const { isLoading, data: result } = useQuery<ISearch>(['search', 'beautiful'], () => youtube.search('beautiful'));
 
+<<<<<<< HEAD
 	return (
 		<main>
 			<Container>
@@ -20,6 +24,28 @@ const Home = () => {
 							</VideoLink>
 						</div>
 					))}
+=======
+	useEffect(() => {
+		searchData();
+	}, []);
+
+	const searchData = async () => {
+		let result = await youtube.search('beautiful');
+		const items = result.items;
+		setVideos(items);
+	};
+
+	return (
+		<main>
+			<Container className="video-container">
+				{videos.map((video, index) => (
+					<div className="video-element" key={`${index}${video.id.videoId}`}>
+						<VideoLink to={'/' + video.id.videoId} key={video.id.videoId} className="video-element">
+							{video ? <VideoContainer video={video} /> : null}
+						</VideoLink>
+					</div>
+				))}
+>>>>>>> 061d8612f045945e6be2f53fde3b8542890a766e
 			</Container>
 		</main>
 	);

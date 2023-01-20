@@ -28,6 +28,7 @@ const VideoInfo = ({ videoBrief }) => {
 					</div>
 				</div>
 				{window.location.pathname === '/' && <BsThreeDotsVertical className="dots" />}
+				{window.location.pathname === '/' && <BsThreeDotsVertical className="dots" />}
 			</div>
 		</Container>
 	);

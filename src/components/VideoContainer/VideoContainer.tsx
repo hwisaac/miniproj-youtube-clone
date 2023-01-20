@@ -5,6 +5,7 @@ import VideoInfo from './VideoInfo';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import youtube from '../../api/youtubeClass';
+<<<<<<< HEAD
 import { formatDate, formatView } from '../../util/VideoFunction';
 import ChannelContainer from './ChannelContainer';
 import { getDuration } from '../../util/getDuration';
@@ -40,6 +41,27 @@ const VideoContainer = ({ video }) => {
 			thumbnail: video.snippet.thumbnails.medium.url,
 			title: video.snippet.title,
 			isLoading: true,
+=======
+import { formatView } from '../../util/VideoFunction';
+import ChannelContainer from './ChannelContainer';
+
+const VideoContainer = ({ video }) => {
+	//채널 상세정보 get
+	const [channelInfo, setChannelInfo] = useState({
+		customUrl: '',
+		subscriber: '',
+		description: '',
+	});
+
+	const channelInfoData = async (Id) => {
+		const data = await youtube.channel(Id);
+
+		const item = data.items[0];
+		setChannelInfo({
+			customUrl: item.snippet.customUrl,
+			subscriber: formatView(item.statistics.subscriberCount),
+			description: item.snippet.description,
+>>>>>>> 061d8612f045945e6be2f53fde3b8542890a766e
 		});
 	};
 	// 비디오 정보 처리
@@ -72,15 +94,36 @@ const VideoContainer = ({ video }) => {
 		}
 	}, [video]);
 
+	useEffect(() => {
+		channelInfoData(video.id.channelId);
+	}, [video.id.channelId]);
+
 	if (video.id.kind === 'youtube#video') {
 		return (
 			<>
+<<<<<<< HEAD
 				{videoBrief.isLoading && <VideoThumbnail videoBrief={videoBrief} />}
 				{videoBrief.isLoading && <VideoInfo videoBrief={videoBrief} />}
 			</>
 		);
 	} else if (video.id.kind === 'youtube#channel') {
 		return <Channel>{channelBrief.isLoading && <ChannelContainer channelBrief={channelBrief} />}</Channel>;
+=======
+				{video && channelInfo && (
+					<>
+						<VideoThumbnail video={video} />
+						<VideoInfo video={video} channelInfo={channelInfo} />
+					</>
+				)}
+			</>
+		);
+	} else if (video.id.kind === 'youtube#channel') {
+		return (
+			<Channel className="channel-element">
+				{channelInfo ? <ChannelContainer video={video} channelInfo={channelInfo} /> : null}
+			</Channel>
+		);
+>>>>>>> 061d8612f045945e6be2f53fde3b8542890a766e
 	}
 };
 
