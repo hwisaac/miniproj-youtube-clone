@@ -6,8 +6,11 @@ import { Link } from 'react-router-dom';
 import searchJson from '../../mockup/search.json';
 import youtube from '../../api/youtubeClass';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useOutletContext } from 'react-router-dom';
 
 const Search = () => {
+	const { toggleSNB } = useOutletContext<any>();
+
 	const keyword = new URLSearchParams(useLocation().search).get('q');
 	const queryClient = useQueryClient();
 	const queryData = queryClient.getQueryData<ISearch>(['search', keyword]);
@@ -42,7 +45,7 @@ const Search = () => {
 
 	return (
 		<Main>
-			<Container>
+			<Container toggleSNB={toggleSNB}>
 				{searchResults?.map((item, index) => (
 					<div key={`video-${item.id.videoId}-${index}`} className="search-element">
 						<VideoLink to={`/${item.id.videoId}`} className="video-element">
@@ -59,11 +62,11 @@ const Search = () => {
 const Main = styled.main`
 	width: 100%;
 `;
-const Container = styled.div`
+const Container = styled.div<{ toggleSNB: boolean }>`
 	width: 100%;
 	position: relative;
 	top: 60px;
-	left: 90px;
+	left: ${(props) => (props.toggleSNB ? '250px' : '90px')};
 	padding: 1.5rem 2rem;
 	.search-element {
 		max-width: 1000px;

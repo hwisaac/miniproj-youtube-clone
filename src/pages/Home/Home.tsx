@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
+import { useOutletContext } from 'react-router-dom';
 
 const Home = () => {
 	const [videos, setVideos] = useState([]);
-
+	const { toggleSNB } = useOutletContext<any>();
 	useEffect(() => {
 		searchData();
 	}, []);
@@ -19,7 +20,7 @@ const Home = () => {
 
 	return (
 		<main>
-			<Container className="video-container">
+			<Container className="video-container" toggleSNB={toggleSNB}>
 				{videos.map((video, index) => (
 					<div className="video-element" key={`${index}${video.id.videoId}`}>
 						<VideoLink to={'/' + video.id.videoId} key={video.id.videoId} className="video-element">
@@ -32,10 +33,10 @@ const Home = () => {
 	);
 };
 
-const Container = styled.div`
+const Container = styled.div<{ toggleSNB: boolean }>`
 	min-width: 800px;
 	top: 60px;
-	left: 80px;
+	left: ${(props) => (props.toggleSNB ? '250px' : '90px')};
 	position: absolute;
 	padding: 0 2rem;
 	display: grid;
