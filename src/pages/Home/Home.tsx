@@ -18,7 +18,7 @@ const Home = () => {
 	};
 
 	return (
-		<Main>
+		<main>
 			<Container className="video-container">
 				{videos.map((video, index) => (
 					<div className="video-element" key={`${index}${video.id.videoId}`}>
@@ -28,16 +28,12 @@ const Home = () => {
 					</div>
 				))}
 			</Container>
-		</Main>
+		</main>
 	);
 };
 
-const Main = styled.main`
-	width: 100vw;
-	height: 100vh;
-`;
 const Container = styled.div`
-	width: 100%;
+	min-width: 800px;
 	top: 60px;
 	left: 80px;
 	position: absolute;
