@@ -20,8 +20,8 @@ const Home = () => {
 	return (
 		<Main>
 			<Container className="video-container">
-				{videos.map((video) => (
-					<div className="video-element" key={video.id.videoId}>
+				{videos.map((video, index) => (
+					<div className="video-element" key={`${index}${video.id.videoId}`}>
 						<VideoLink to={'/' + video.id.videoId} key={video.id.videoId} className="video-element">
 							{video ? <VideoContainer video={video} /> : null}
 						</VideoLink>

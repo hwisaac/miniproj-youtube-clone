@@ -1,93 +1,97 @@
 /*
  * 사이드바 컴포넌트의 총 화면을 렌더링합니다.
  */
-
-import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { SideBarSection } from './SideBarSection';
+import { AiFillHome, AiFillLike } from 'react-icons/ai';
+import {
+	MdOutlineExplore,
+	MdSubscriptions,
+	MdVideoLibrary,
+	MdHistory,
+	MdWatchLater,
+	MdSettings,
+	MdFlag,
+} from 'react-icons/md';
+import { useMatch } from 'react-router-dom';
 import React from 'react';
 import { useWindowSize } from '../../hooks/useWindowSize';
-import { Container } from './SideBarStyle';
+import styled from 'styled-components';
+import SideBarSection from './SideBarSection';
+import { useNavigate } from 'react-router';
+import { useLocation } from 'react-router-dom';
 
+const iconSize = 24;
 const list = {
 	section1: [
 		{
-			icon: 'AiFillHome',
+			icon: <AiFillHome size={iconSize} />,
 			title: 'Home',
 		},
 		{
-			icon: 'MdOutlineExplore',
+			icon: <MdOutlineExplore size={iconSize} />,
 			title: 'Explore',
 		},
 		{
-			icon: 'MdSubscriptions',
+			icon: <MdSubscriptions size={iconSize} />,
 			title: 'Subscriptions',
 		},
 	],
 	section2: [
 		{
-			icon: 'MdVideoLibrary',
+			icon: <MdVideoLibrary size={iconSize} />,
 			title: 'Library',
 		},
 		{
-			icon: 'MdHistory',
+			icon: <MdHistory size={iconSize} />,
 			title: 'History',
 		},
 		{
-			icon: 'MdWatchLater',
+			icon: <MdWatchLater size={iconSize} />,
 			title: 'Watch later',
 		},
 		{
-			icon: 'AiFillLike',
+			icon: <AiFillLike size={iconSize} />,
 			title: 'Liked videos',
 		},
 	],
 	section3: [
 		{
-			icon: 'MdSettings',
+			icon: <MdSettings size={iconSize} />,
 			title: 'Settings',
 		},
 		{
-			icon: 'MdFlag',
+			icon: <MdFlag size={iconSize} />,
 			title: 'Report history',
 		},
 	],
 };
 
-const SNB = ({ show, setShow }) => {
-	let location = useLocation();
-	const [isMain, setIsMain] = useState(location.pathname === '/' || location.pathname === '/search' ? true : false);
-
-	useEffect(() => {
-		setIsMain(location.pathname === '/' || location.pathname === '/search' ? true : false);
-		setShow(false);
-	}, [location.pathname]);
+const SNB = ({ toggleSNB }) => {
 	const size = useWindowSize();
-
-	useEffect(() => {
-		if (isMain) {
-			if (size.width >= 1200) {
-				setShow(false);
-			} else if (size.width < 1200 && size.width > 500) {
-				setShow(true);
-			} else if (size.width <= 500) {
-				setShow(false);
-				setIsMain(false);
-			}
-		} else {
-			setIsMain(location.pathname === '/' || location.pathname === '/search' ? true : false);
-		}
-	}, [size.width]);
+	const location = useLocation();
+	const notDetailPage = location.pathname === '/' || location.pathname === '/search';
+	console.log('notDetailPage', notDetailPage);
 
 	return (
-		<Container show={show} isMain={isMain}>
-			<ul>
-				<SideBarSection info={list.section1} show={show} isMain={isMain} />
-				<SideBarSection info={list.section2} show={show} isMain={isMain} />
-				<SideBarSection info={list.section3} show={show} isMain={isMain} />
-			</ul>
+		<Container toggleSNB={toggleSNB} notDetailPage={notDetailPage}>
+			<SideBarSection toggleSNB={toggleSNB} section={list.section1} />
+			<SideBarSection toggleSNB={toggleSNB} section={list.section2} />
+			<SideBarSection toggleSNB={toggleSNB} section={list.section3} />
 		</Container>
 	);
 };
 
 export default SNB;
+
+const Container = styled.nav<{ toggleSNB: boolean; notDetailPage: boolean }>`
+	background-color: #212529;
+	position: fixed;
+	top: 60px;
+	height: 100%;
+	overflow: auto;
+	color: white;
+	width: ${(props) => {
+		if (props.toggleSNB) return '250px';
+		return props.notDetailPage ? '90px' : '0px';
+	}};
+	z-index: 1;
+`;

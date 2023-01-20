@@ -26,7 +26,7 @@ class Youtube {
 			.get(`/search?part=snippet&maxResults=10&q=${query}`)
 			.then((result) => result.data)
 			.catch((error) => {
-				console.log('search에러발생', error);
+				// console.log('search에러발생', error);
 				return mockupSearch;
 			});
 	}
@@ -47,7 +47,7 @@ class Youtube {
 			.get('/videos?part=snippet&part=contentDetails&part=player&part=statistics&id=' + videoId)
 			.then((result) => result.data)
 			.catch((error) => {
-				console.log('video에러발생', error);
+				// console.log('video에러발생', error);
 				return mockupVideo;
 			});
 	}
@@ -58,7 +58,7 @@ class Youtube {
 			.get(`/channels?part=snippet&part=statistics&part=contentDetails&id=${channelId}`)
 			.then((result) => result.data)
 			.catch((error) => {
-				console.log('channel에러발생', error);
+				// console.log('channel에러발생', error);
 				return mockupChannel;
 			});
 	}
@@ -69,7 +69,7 @@ class Youtube {
 			.get(`/commentThreads?part=snippet&videoId=${videoId}`)
 			.then((result) => result.data)
 			.catch((error) => {
-				console.log('에러발생', error);
+				console.log('comment에러발생', error);
 				return mockupComment;
 			});
 	}

@@ -24,7 +24,7 @@ const Search = () => {
 
 	const { isLoading, data } = useQuery<ISearch>(['search', keyword], () => youtube.search(keyword), {
 		onSuccess: (data) => {
-			console.log('INIT 쿼리 성공! :', getTitles(data), data.nextPageToken);
+			// console.log('INIT 쿼리 성공! :', getTitles(data), data.nextPageToken);
 			setSearchResults([...data.items]);
 			setNextPageToken(data.nextPageToken);
 		},
