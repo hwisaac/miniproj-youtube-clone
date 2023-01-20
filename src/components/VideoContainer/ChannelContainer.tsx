@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ChannelContainer = ({ video, channelInfo }) => {
+const ChannelContainer = ({ channelBrief }) => {
 	return (
 		<Channel>
 			<div className="channel-thumbnail">
-				<img src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} />
+				<img src={channelBrief.thumbnail} alt={channelBrief.title} />
 			</div>
 			<div className="channel-textInfo">
-				<h5 className="channel">{video.snippet.title}</h5>
+				<h5 className="channel">{channelBrief.title}</h5>
 				<div className="channel-info">
 					<span>
-						{channelInfo.customUrl} • {channelInfo.subscriber}
+						{channelBrief.customUrl} • {channelBrief.subscriber}
 					</span>
-					<span>{channelInfo.description}</span>
+					<span>{channelBrief.description}</span>
 				</div>
 			</div>
 			<button className="sub-button">구독</button>
@@ -22,22 +22,34 @@ const ChannelContainer = ({ video, channelInfo }) => {
 };
 
 const Channel = styled.div`
-	width: 900px;
+	width: 950px;
 	display: flex;
-	justify-content: space-around;
-	.channel-thumbnail img {
-		width: 150px;
-		height: 150px;
+	justify-content: space-between;
+	position: relative;
+	.channel-thumbnail {
+		width: 25%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			width: 150px;
+			height: 150px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
 	}
 	.channel-textInfo {
+		width: 70%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-	}
-	.channel-info {
-		display: flex;
-		flex-direction: column;
-		margin: 10px;
+		margin-left: 40px;
+		.channel-info {
+			display: flex;
+			flex-direction: column;
+			margin: 10px;
+		}
 	}
 	.sub-button {
 		background-color: white;
@@ -46,6 +58,7 @@ const Channel = styled.div`
 		height: 35px;
 		border-radius: 10px;
 		margin: auto;
+		right: 0;
 	}
 `;
 

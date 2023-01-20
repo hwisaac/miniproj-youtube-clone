@@ -7,7 +7,7 @@ import { Reset } from 'styled-reset';
 import Home from './pages/Home/Home';
 
 function App() {
-	const [toggleSNB, setToggleSNB] = useState(true);
+	const [toggleSNB, setToggleSNB] = useState(false);
 
 	return (
 		<>

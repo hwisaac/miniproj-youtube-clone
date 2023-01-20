@@ -58,6 +58,7 @@ const Search = () => {
 
 const Main = styled.main`
 	width: 100%;
+	position: relative;
 `;
 const Container = styled.div`
 	width: 100%;
@@ -85,7 +86,11 @@ const VideoLink = styled(Link)`
 `;
 
 const MoreBtn = styled.button`
-	align-self: flex-end;
+	position: relative;
+
+	left: 50vw;
+	right: 0;
+	margin: 0 auto;
 	border: none;
 	background-color: #333;
 	color: white;
@@ -93,7 +98,7 @@ const MoreBtn = styled.button`
 	padding: 0 20px;
 	height: 30px;
 	/* width: auto; */
-	width: 100%;
+	width: 150px;
 	margin: 50px 0;
 	margin-bottom: 100px;
 	cursor: pointer;
