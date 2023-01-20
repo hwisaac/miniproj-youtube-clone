@@ -1,46 +1,42 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/107975281/213498490-3155cbb3-76c9-4729-a316-164cd0d74073.png" width=500 />
-  <h3>
-    Youtube 클론 코딩
-  </h3>
+  <h1>Youtube 클론 코딩</h1>
+  <h4>
+    토이 프로젝트 1조: 공혜지, 황이삭, 이승윤, 김효진
+  </h4>
   <h5>
-    Made by 1조
-  </h5>
-  <a href="/">
-    📌배포 링크
-  </a>
 </div>
 
->이 부분은 아직 구상중입니다,,
+***
 
 # 1. 프로젝트 소개 💁
 ### 프로젝트 설명
-- Youtube 클론 코딩 - 1조
-- Youtube입니다. 검색, 
-- 동영상 시청까지 모두 가능합니다!
+- Youtube를 클론 코딩한 프로젝트입니다.
+- 페이지는 메인페이지, 검색페이지, 상세페이지로 나뉩니다.
+- 검색 기능은 물론, 동영상, 댓글까지 모두 볼 수 있고 연관 동영상도 추천해줍니다😎
+- 창 크기를 조절해보세요! 크기에 맞춰 반응하는 ✨반응형 사이트✨입니다.
 
 ### 개발 기간
-- 2023.1.16 ~ 2023.1.20(총 5일)
+- 1차: 2023.1.16 ~ 2023.1.20(총 5일)
 
 ### 링크 모음
 <a href="">
   <img src="https://img.shields.io/badge/배포사이트-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
-</a>
+</a>&nbsp;&nbsp;
 <a href="http://moviedb-7.s3-website.ap-northeast-2.amazonaws.com/">
   <img src="https://img.shields.io/badge/데모사이트-ff3636?style=for-the-badge&logo=youtube&logoColor=white" />
-</a>
+</a>&nbsp;&nbsp;
 <a href="https://github.com/React-Team-Project/Youtube-Clone">
   <img src="https://img.shields.io/badge/팀레포-181717?style=for-the-badge&logo=github&logoColor=white" />
-</a>
+</a>&nbsp;&nbsp;
 <a href="https://github.com/React-Team-Project/Youtube-Clone/wiki">
   <img src="https://img.shields.io/badge/팀위키-008275?style=for-the-badge&logo=github&logoColor=white" />
-</a>
+</a>&nbsp;&nbsp;
 <a href="https://www.notion.so/Youtube-Clone-Project-2992e54002d1479181071cf8e0f3f51d">
   <img src="https://img.shields.io/badge/팀노션-fc9847?style=for-the-badge&logo=notion&logoColor=white" />
 </a>
 
 >배포 링크 추가必
-><br>리팩토링 예정이면 개발기간 추가하겠습니다.
     
 <br><br>
 
@@ -193,7 +189,8 @@
       - 하단: 관련 동영상
 </details>
 
->~~컴포넌트~~-> 구역별로 나눠서 설명했습니다. 그리고 우리가 열심히 한 반응형 CSS에 대한 설명도 마지막에 추가했습니다!
+>~~컴포넌트~~-> 구역별로 나눠서 설명했습니다. 일단 지금 작동하는 부분만 적었습니다. 
+<br>그리고 토큰 부분 쓰고싶은데 제가 설명을 못쓰겠더라구요 ㅠㅠ 엉엉.. 
 
 <br><br>
 
