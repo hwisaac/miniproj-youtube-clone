@@ -5,7 +5,7 @@
   </h3>
   <h5>
     Made by 1조
-  <h5>
+  </h5>
   <a href="/">
     📌배포 링크
   </a>
@@ -23,15 +23,33 @@
 - 2023.1.16 ~ 2023.1.20(총 5일)
 
 ### 링크 모음
+<a href="">
+  <img src="https://img.shields.io/badge/배포사이트-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
+</a>
+<a href="http://moviedb-7.s3-website.ap-northeast-2.amazonaws.com/">
+  <img src="https://img.shields.io/badge/데모사이트-ff3636?style=for-the-badge&logo=youtube&logoColor=white" />
+</a>
+<a href="https://github.com/React-Team-Project/Youtube-Clone">
+  <img src="https://img.shields.io/badge/팀레포-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+<a href="https://github.com/React-Team-Project/Youtube-Clone/wiki">
+  <img src="https://img.shields.io/badge/팀위키-008275?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+<a href="https://www.notion.so/Youtube-Clone-Project-2992e54002d1479181071cf8e0f3f51d">
+  <img src="https://img.shields.io/badge/팀노션-fc9847?style=for-the-badge&logo=notion&logoColor=white" />
+</a>
+
 - 배포 사이트: 
 - 데모 사이트: http://moviedb-7.s3-website.ap-northeast-2.amazonaws.com/
 - 원본 레포: https://github.com/React-Team-Project/Youtube-Clone
 - 팀 위키: https://github.com/React-Team-Project/Youtube-Clone/wiki
 - 노션: https://www.notion.so/Youtube-Clone-Project-2992e54002d1479181071cf8e0f3f51d
 
->배포 링크 추가必
-><br>링크 모음이 좀 지저분하다 싶으면 기술 스택처럼 이모지로 만들 예정입니다.
 
+>배포 링크 추가必
+><br>링크 모음이 좀 지저분해서 아이콘으로 만들었는데, 어떤게 나은지 몰라서 둘다넣고 비교중입니다.
+><br>리팩토링 예정이면 개발기간 추가하겠습니다.
+    
 <br><br>
 
 # 2. 팀원 소개 & 역할 분담 👥
@@ -63,7 +81,7 @@
 
 <br><br>
 
-# ⚙️ 기술 스택 
+# 4. 기술 스택 ⚙️
 ### 프로그래밍
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
 ### 디자인
@@ -78,31 +96,41 @@
 
 <br><br>
 
-# 🤝 협업 방식
+# 5. 협업 방식 🤝
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/notion-fc9847?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"> <img src="https://img.shields.io/badge/slack-4A154B?style=for-the-badge&logo=slack&logoColor=white">
-- **Github**: develop하기 위한
-- **Notion**: 팀원별 진행 과정, 회의록 등을 기록하였습니다.
-- **Discord**: 많은 대화와 화면공유가 필요한 회의를 할 때 사용했습니다.
-- **Slack**: 간단한 질의/응답/요청 채팅을 사용했습니다.
+- **Github**
+<br>팀 레포지토리를 만들었습니다.
+<br>develop 브랜치와 각자의 이름으로 브랜치를 생성하고,
+<br>작업이 끝나면 각자의 브랜치로 push 후 pull request를 남기면 팀장님이 merge 했습니다.
+- **Notion**
+<br>팀원별 진행 과정을 공유하고 회의록을 작성할 때 사용했습니다.
+- **Discord**
+<br>회의할 때 주로 사용했고, 설명이 필요한 부분들은 화면도 종종 공유했습니다.
+- **Slack**
+<br>간단한 질의/응답/요청 등을 위한 메신저, 혹은 pull request 알리미로 사용했습니다.
 
 <br><br>
 
-# 🛠︎ 구현 기능
+# 6. 구현 내용 🛠︎
 <details>
-<summary>네비게이션 바</summary>
+<summary>헤더</summary>
 
-1. 오른쪽 컴포넌트
-   - 로고 이미지: 클릭 시 메인 페이지로 이동
-   - 메뉴 아이콘: 클릭 시 사이드 바 크기 조절
-2. 가운데 컴포넌트
-   - 검색 바: 검색어를 입력하고 Enter 또는 검색 아이콘 클릭 시 Search 페이지로 이동 
-   - 검색 아이콘: 검색바 옆의 돋보기 모양 아이콘으로, 클릭 시 
-   - 검색중(Searching Now) 아이콘: 
-3. 왼쪽 컴포넌트
-   - 영상 제작 아이콘, 알림 아이콘, 사용자 아이콘
+1. 왼쪽
+   - 로고 클릭: 메인 페이지로 이동
+   - 메뉴 클릭: 시 사이드 바 크기 조절
+2. 중앙
+   - 검색
+      - Enter와 🔍︎ 클릭으로 동작
+      - 검색: 검색 페이지로 "메인주소+search?q=검색어"로 링크 변경 / 검색어 없을 경우 미동작
+      - 검색창 focus: 창 크기 변화 및 아이콘 추가
+      - 검색어 입력: 🗙 버튼 생성, 클릭 시 검색어 모두 삭제 
+   - 툴팁: 검색, 음성검색
+3. 오른쪽
+   - 툴팁: 영상 제작, 알림, 사용자
 4. 반응형 CSS
-   - ㄹㅇㄴㅁ
-  
+   - width 674px 이하
+      - 🔍︎ 한 번 클릭: 검색창 열림
+      - ⬅ 클릭: 검색창 닫힘
 </details>
 
 <details>
@@ -125,62 +153,64 @@
 <div>😎숨겨진 내용😎</div>
 </details>
 
->컴포넌트별로 나눠서 설명했습니다. 그리고 우리가 열심히 한 반응형 CSS에 대한 설명도 마지막에 추가했습니다!
+>~~컴포넌트~~-> 구역별로 나눠서 설명했습니다. 그리고 우리가 열심히 한 반응형 CSS에 대한 설명도 마지막에 추가했습니다!
 
 <br><br>
 
-# 💻 주요 기능 설명
-### 1. 메인 페이지
-### 2. 검색 페이지
-### 3. 상세 페이지
-### 4. 반응형 CSS
-> 프로젝트 완성 후 gif나 이미를 추가하고 간단한 설명을 덧붙일 예정이에요.
+# 7. 주요 기능 동작 예시 💻
+1. 메인페이지 > (사이드 바 한번 꺼내기) > (검색) > 검색페이지
+2. 검색페이지 > (영상 클릭) > (사이드 바 한번 더꺼내기) > 상세페이지
+3. 상세페이지 > (재생) > 잘 나오는거 확인 > (설명 더보기) > 잘 나오는거 확인
+4. 상세페이지 > (댓글 더보기) > 잘 나오는거 확인 > (한번 더 댓글 더보기) > 잘 나오는거 확인
+5. 추천영상 > (아무거나 클릭) > 상세페이지 > (홈 로고 클릭) > 메인 페이지
+
+> 프로젝트 완성 후 gif나 이미지를 추가하고 간단한 설명을 덧붙일 예정이에요.
+> 만든 페이지 전체를 볼 수 있도록 예시 동작을 짜봤습니다.
 
 <br><br>
 
-# ✍ 프로젝트 회고
+# 8. 프로젝트 회고 ✍
 ### 공혜지
-- 👍 Good
+- **👍 Good**
   - 내용을 적어주세요.
-- 👎 Bad
+- **👎 Bad**
   - 내용을 적어주세요.
-- 📖 총평
+- **📖 총평**
   - 내용을 적어주세요.
 
-<br />
+<br>
 
 ### 황이삭
-- 👍 Good
+- **👍 Good**
   - 내용을 적어주세요.
-- 👎 Bad
+- **👎 Bad**
   - 내용을 적어주세요.
-- 📖 총평
+- **📖 총평**
   - 내용을 적어주세요.
 
-<br />
+<br>
 
 ### 이승윤
-- 👍 Good
+- **👍 Good**
   - 내용을 적어주세요.
-- 👎 Bad
+- **👎 Bad**
   - 내용을 적어주세요.
-- 📖 총평
+- **📖 총평**
   - 내용을 적어주세요.
 
-</br>
+<br>
 
 ### 김효진
-- 👍 Good
+- **👍 Good**
   - 내용을 적어주세요.
-- 👎 Bad
+- **👎 Bad**
   - 내용을 적어주세요.
-- 📖 총평
+- **📖 총평**
   - 내용을 적어주세요.
-
 
 >좋았던 점, 아쉬운점, 총평(아쉬운 점에 대한 개선방향도OK) 등을 적어주세요.
-><br>완전 자유 형식으로 쓸까 하다가, 그렇게 하면 너무 제각기 기록될 것 같고, 좋은 점만 적거나 아쉬운 점만 적는 일(제가 좋은점만 적어요)도 생길 것 같아서 위처럼 나누었습니다.
->총평 항목은 애매하면 빼겠습니다.
+><br>완전 자유 형식으로 쓸까 하다가, 그렇게 하면 너무 제각기 기록될 것 같고, 좋은 점만 적거나 아쉬운 점만 적을 수도 있을 것 같아서 위처럼 나누었습니다.
+><br>총평 항목은 애매하면 빼겠습니다.
 
 <br><br>
 
