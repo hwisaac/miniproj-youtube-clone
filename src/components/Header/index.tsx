@@ -8,10 +8,10 @@ import LeftSection from './LeftSection';
 import RightSection from './RightSection';
 import SearchBar from './SearchBar/index';
 
-const Header = ({ menuClicked }) => {
+const Header = ({ setToggleSNB }) => {
 	return (
 		<Container>
-			<LeftSection menuClicked={menuClicked} />
+			<LeftSection setToggleSNB={setToggleSNB} />
 			<SearchBar />
 			<RightSection />
 		</Container>

@@ -41,7 +41,7 @@ const Detail = () => {
 				)}
 			</PrimaryBox>
 			<SecondaryBox>
-				<Recommend />
+				<Recommend videoId={videoId} />
 			</SecondaryBox>
 		</Wrapper>
 	);
