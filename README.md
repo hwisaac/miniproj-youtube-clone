@@ -45,7 +45,7 @@
 |공혜지👑|황이삭|이승윤|김효진|
 |:---:|:---:|:---:|:---:|
 |<a href="https://github.com/hayden365"><img src="https://avatars.githubusercontent.com/u/109419531?v=4" width=160/></a>|<a href="https://github.com/hwisaac"><img src="https://avatars.githubusercontent.com/u/54179672?v=4" width=160/></a>|<a href="https://github.com/syoon0624"><img src="https://avatars.githubusercontent.com/u/77139957?v=4" width=160/></a>|<a href="https://github.com/Hyojina"><img src="https://avatars.githubusercontent.com/u/107975281?v=4" width=160/></a>|
-|메인 페이지<br>검색 페이지<br>레포 관리|초기 세팅<br>상세 페이지<br>깃허브 Wiki|사이드 바<br>추천 동영상<br>노션 관리|네비게이션 바<br>README(...)|
+|메인 페이지<br>검색 페이지|초기 세팅<br>상세 페이지<br>깃허브 Wiki<br>리팩토링|사이드 바<br>추천 동영상|네비게이션 바<br>README(...)|
 
 >혹시 제가 놓친 부분 있더라도 이해해주시고 추가해주시면 감사하겠슴다!
 ><br>그리고 별건아닌데.. github 사용자 썸넬 추가해주시면 더욱 보기 좋을 것 같아용ㅎㅎㅎ
