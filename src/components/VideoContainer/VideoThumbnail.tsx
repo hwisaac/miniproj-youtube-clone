@@ -11,7 +11,7 @@ const VideoThumbnail = ({ video }) => {
 	const fetchStaticsData = async (id) => {
 		const newData = await youtube.video(id);
 		setDetails({
-			duration: getDuration(newData.items[0].statistics.duration),
+			duration: getDuration(newData.items[0].contentDetails.duration),
 		});
 	};
 
