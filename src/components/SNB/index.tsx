@@ -12,12 +12,13 @@ import {
 	MdFlag,
 } from 'react-icons/md';
 import { useMatch } from 'react-router-dom';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useWindowSize } from '../../hooks/useWindowSize';
 import styled from 'styled-components';
 import SideBarSection from './SideBarSection';
 import { useNavigate } from 'react-router';
 import { useLocation } from 'react-router-dom';
+import theme from '../../theme';
 
 const iconSize = 24;
 const list = {
@@ -65,11 +66,33 @@ const list = {
 	],
 };
 
-const SNB = ({ toggleSNB }) => {
+const SNB = ({ toggleSNB, setToggleSNB }) => {
 	const size = useWindowSize();
 	const location = useLocation();
-	const notDetailPage = location.pathname === '/' || location.pathname === '/search';
-	console.log('notDetailPage', notDetailPage);
+	const [notDetailPage, setNotDetailPage] = useState(location.pathname === '/' || location.pathname === '/search');
+
+	useEffect(() => {
+		// lg:1140 md:830 sm:576
+		if (location.pathname === '/' || location.pathname === '/search') {
+			if (size.width > 1140) {
+				setNotDetailPage(true);
+				setToggleSNB(true);
+			} else if (size.width > 830) {
+				setNotDetailPage(true);
+				setToggleSNB(false);
+			} else if (size.width <= 576) {
+				setNotDetailPage(false);
+				setToggleSNB(false);
+			}
+		} else {
+			setNotDetailPage(false);
+		}
+	}, [size.width, location]);
+
+	useEffect(() => {
+		setNotDetailPage(location.pathname === '/' || location.pathname === '/search');
+		location.pathname === '/' || location.pathname === '/search' ? setToggleSNB(true) : setToggleSNB(false);
+	}, [location]);
 
 	return (
 		<Container toggleSNB={toggleSNB} notDetailPage={notDetailPage}>
