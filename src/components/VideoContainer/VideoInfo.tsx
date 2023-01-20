@@ -51,12 +51,11 @@ const VideoInfo = ({ video, channelInfo }) => {
 const Container = styled.div`
 	width: 100%;
 	height: 38%;
-	display: grid;
-	grid-template-columns: auto 1fr 15px;
 	.info-container {
 		display: flex;
 	}
 	.channel {
+		margin-top: 1rem;
 		margin-right: 1rem;
 		width: fit-content;
 	}
@@ -69,9 +68,18 @@ const Container = styled.div`
 	.channel-info {
 		padding-right: 2rem;
 	}
+	.text-info {
+		width: 90%;
+	}
 	.title {
 		margin: 1.2rem 0 0.6rem;
 		line-height: 150%;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		word-break: break-word;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
 	}
 	.detail-info {
 		color: #aaa;

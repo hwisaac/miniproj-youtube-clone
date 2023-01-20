@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
-import searchJson from '../../mockup/search-beutifulplace.json';
 
 const Home = () => {
 	const [videos, setVideos] = useState([]);
