@@ -16,9 +16,8 @@ const Home = () => {
 		const items = result.items;
 		setVideos(items);
 	};
-
 	return (
-		<main>
+		<Main>
 			<Container className="video-container">
 				{videos.map((video, index) => (
 					<div className="video-element" key={`${index}${video.id.videoId}`}>
@@ -28,12 +27,15 @@ const Home = () => {
 					</div>
 				))}
 			</Container>
-		</main>
+		</Main>
 	);
 };
 
+const Main = styled.main`
+	grid-area: main;
+`;
 const Container = styled.div`
-	min-width: 800px;
+	width: 100%;
 	top: 60px;
 	left: 80px;
 	position: absolute;

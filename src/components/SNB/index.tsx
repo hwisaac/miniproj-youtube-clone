@@ -89,9 +89,6 @@ const Container = styled.nav<{ toggleSNB: boolean; notDetailPage: boolean }>`
 	height: 100%;
 	overflow: auto;
 	color: white;
-	width: ${(props) => {
-		if (props.toggleSNB) return '250px';
-		return props.notDetailPage ? '90px' : '0px';
-	}};
+	width: ${(props) => (props.toggleSNB ? '250px' : props.notDetailPage ? '90px' : '0px')};
 	z-index: 1;
 `;
