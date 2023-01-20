@@ -1,4 +1,5 @@
 import mockupSearch from '../mockup/search.json';
+import mockupSearchMain from '../mockup/search-beautifulPlace.json';
 import mockupComment from '../mockup/comment.json';
 import mockupVideo from '../mockup/video.json';
 import mockupChannel from '../mockup/channel.json';
@@ -27,6 +28,9 @@ class Youtube {
 			.then((result) => result.data)
 			.catch((error) => {
 				// console.log('search에러발생', error);
+				if (window.location.pathname === '/') {
+					return mockupSearchMain;
+				}
 				return mockupSearch;
 			});
 	}
@@ -36,7 +40,7 @@ class Youtube {
 			.get(`/search?part=snippet&maxResults=10&pageToken=${pageToken}&q=${query}`)
 			.then((result) => result.data)
 			.catch((error) => {
-				console.log('searchByTOken에러발생', error);
+				console.log('searchByToken에러발생', error);
 				return mockupSearch;
 			});
 	}

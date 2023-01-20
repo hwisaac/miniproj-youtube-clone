@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
-import searchJson from '../../mockup/search-beutifulplace.json';
 
 const Home = () => {
 	const [videos, setVideos] = useState([]);
@@ -17,8 +16,9 @@ const Home = () => {
 		const items = result.items;
 		setVideos(items);
 	};
+
 	return (
-		<Main>
+		<main>
 			<Container className="video-container">
 				{videos.map((video, index) => (
 					<div className="video-element" key={`${index}${video.id.videoId}`}>
@@ -28,15 +28,12 @@ const Home = () => {
 					</div>
 				))}
 			</Container>
-		</Main>
+		</main>
 	);
 };
 
-const Main = styled.main`
-	grid-area: main;
-`;
 const Container = styled.div`
-	width: 100%;
+	min-width: 800px;
 	top: 60px;
 	left: 80px;
 	position: absolute;
