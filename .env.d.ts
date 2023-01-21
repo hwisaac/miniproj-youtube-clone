@@ -217,3 +217,23 @@ interface IRelatedVideos {
 	etag: string;
 	items: IRelatedVideosItem[];
 }
+
+// VideoContainer
+interface IVideoBrief {
+	title: string;
+	views: string;
+	publishedAt: string;
+	duration: string;
+	thumbnail: string;
+	channelTitle: string;
+	isLoading: boolean;
+}
+
+interface IChannelBrief {
+	customUrl: string;
+	subscriber: string;
+	description: string;
+	thumbnail: string;
+	title: string;
+	isLoading: boolean;
+}

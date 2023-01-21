@@ -3,12 +3,32 @@ import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
 import { getDuration } from '../../util/getDuration';
 
-const VideoThumbnail = ({ videoBrief }) => {
+const VideoThumbnail = ({ video }) => {
+	const [details, setDetails] = useState({
+		duration: '',
+	});
+
+	const fetchStaticsData = async (id) => {
+		const newData = await youtube.video(id);
+		setDetails({
+			duration: getDuration(newData.items[0].statistics.duration),
+		});
+	};
+
+	useEffect(() => {
+		fetchStaticsData(video.id.videoId);
+	}, []);
+
 	return (
 		<Wrap className="video-thumbnail">
-			<img className="thumbnail" src={videoBrief.thumbnail} alt={videoBrief.title} />
+			<img
+				key={video.id.videoId}
+				className="thumbnail"
+				src={video.snippet.thumbnails.medium.url}
+				alt={video.snippet.title}
+			/>
 			<div className="duration">
-				<span>{videoBrief.duration}</span>
+				<span>{details.duration}</span>
 			</div>
 		</Wrap>
 	);

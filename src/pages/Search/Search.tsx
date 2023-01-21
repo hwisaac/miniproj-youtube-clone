@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import searchJson from '../../mockup/search.json';
 import youtube from '../../api/youtubeClass';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
@@ -10,7 +10,6 @@ import { useOutletContext } from 'react-router-dom';
 
 const Search = () => {
 	const { toggleSNB } = useOutletContext<any>();
-
 	const keyword = new URLSearchParams(useLocation().search).get('q');
 	const queryClient = useQueryClient();
 	const queryData = queryClient.getQueryData<ISearch>(['search', keyword]);
@@ -46,6 +45,7 @@ const Search = () => {
 	return (
 		<Main>
 			<Container toggleSNB={toggleSNB}>
+			<Container toggleSNB={toggleSNB}>
 				{searchResults?.map((item, index) => (
 					<div key={`video-${item.id.videoId}-${index}`} className="search-element">
 						<VideoLink to={`/${item.id.videoId}`} className="video-element">
@@ -60,16 +60,17 @@ const Search = () => {
 };
 
 const Main = styled.main`
-	width: 100%;
+	max-width: 800px;
 `;
+
 const Container = styled.div<{ toggleSNB: boolean }>`
-	width: 100%;
+	width: ${(props) => (props.toggleSNB ? '80%' : '100%')};
 	position: relative;
 	top: 60px;
 	left: ${(props) => (props.toggleSNB ? '250px' : '90px')};
 	padding: 1.5rem 2rem;
 	.search-element {
-		max-width: 1000px;
+		width: 100%;
 		height: 100%;
 		padding: 1rem;
 		color: #fff;
@@ -78,7 +79,6 @@ const Container = styled.div<{ toggleSNB: boolean }>`
 	}
 `;
 const VideoLink = styled(Link)`
-	min-width: 0px;
 	text-decoration: none;
 	color: inherit;
 	display: grid;
@@ -88,7 +88,11 @@ const VideoLink = styled(Link)`
 `;
 
 const MoreBtn = styled.button`
-	align-self: flex-end;
+	position: relative;
+
+	left: 50vw;
+	right: 0;
+	margin: 0 auto;
 	border: none;
 	background-color: #333;
 	color: white;
@@ -96,7 +100,7 @@ const MoreBtn = styled.button`
 	padding: 0 20px;
 	height: 30px;
 	/* width: auto; */
-	width: 100%;
+	width: 150px;
 	margin: 50px 0;
 	margin-bottom: 100px;
 	cursor: pointer;

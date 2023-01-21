@@ -1,22 +1,43 @@
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import youtube from '../../api/youtubeClass';
+import { formatView } from '../../util/VideoFunction';
+import { formatDate } from '../../util/VideoFunction';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 
-const VideoInfo = ({ videoBrief }) => {
+const VideoInfo = ({ video, channelInfo }) => {
+	const [details, setDetails] = useState({
+		views: '',
+		publishedAt: '',
+	});
+
+	const fetchStaticsData = async (id) => {
+		const newData = await youtube.video(id);
+		setDetails({
+			views: formatView(newData.items[0].statistics.viewCount),
+			publishedAt: formatDate(newData.items[0].snippet.publishedAt),
+		});
+	};
+
+	useEffect(() => {
+		fetchStaticsData(video.id.videoId);
+	}, []);
+
 	return (
 		<Container>
 			<div className="info-container">
 				<div className="channel">
-					<img src={videoBrief.thumbnail} className="channel-thumbnail" alt={videoBrief.title} />
+					<img src={video.snippet.thumbnails.medium.url} className="channel-thumbnail" alt={video.snippet.title} />
 				</div>
 				<div className="text-info">
-					<h3 className="title">{videoBrief.title}</h3>
+					<h3 className="title">{video.snippet.title}</h3>
 					<div className="detail-info">
 						<div className="channel">
-							<div className="channelName">{videoBrief.channelTitle}</div>
+							<div className="channelName">{video.snippet.channelTitle}</div>
 						</div>
 						<div className="detail-data">
 							<span>
-								{videoBrief.views} views • {videoBrief.publishedAt}
+								{details.views} views • {details.publishedAt}
 							</span>
 						</div>
 					</div>
@@ -38,7 +59,6 @@ const Container = styled.div`
 		margin-right: 1rem;
 		width: fit-content;
 	}
-
 	.channel-thumbnail {
 		width: 35px;
 		height: 35px;

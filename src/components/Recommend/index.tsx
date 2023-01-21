@@ -3,8 +3,8 @@
  * 연관 동영상 API를 호출 후, map을 사용하여 VideoItem 컴포넌트를 렌더링합니다.
  */
 
-import { useQuery } from '@tanstack/react-query';
-import React, { useState } from 'react';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
 import VideoItem from './VideoItem';
@@ -13,6 +13,12 @@ import { useMutation } from '@tanstack/react-query';
 const Recommend = ({ videoId }) => {
 	// 패칭된 데이터의 items 를 저장한다.
 	const [items, setItems] = useState<IRelatedVideosItem[]>([]);
+	const queryClient = useQueryClient();
+	const queryData = queryClient.getQueryData<IRelatedVideos>(['related', videoId]);
+
+	useEffect(() => {
+		if (queryData) setItems(queryData.items);
+	}, [queryData]);
 
 	/**
 	 * 데이터를 패칭해옴. 쿼리키['related', videoId] 로 캐싱
