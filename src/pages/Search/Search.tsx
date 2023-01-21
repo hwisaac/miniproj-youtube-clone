@@ -58,17 +58,17 @@ const Search = () => {
 };
 
 const Main = styled.main`
-	width: 100%;
-	position: relative;
+	max-width: 800px;
 `;
+
 const Container = styled.div<{ toggleSNB: boolean }>`
-	width: 100%;
+	width: ${(props) => (props.toggleSNB ? '80%' : '100%')};
 	position: relative;
 	top: 60px;
 	left: ${(props) => (props.toggleSNB ? '250px' : '90px')};
 	padding: 1.5rem 2rem;
 	.search-element {
-		max-width: 1000px;
+		width: 100%;
 		height: 100%;
 		padding: 1rem;
 		color: #fff;
@@ -77,7 +77,6 @@ const Container = styled.div<{ toggleSNB: boolean }>`
 	}
 `;
 const VideoLink = styled(Link)`
-	min-width: 0px;
 	text-decoration: none;
 	color: inherit;
 	display: grid;

@@ -27,7 +27,7 @@ const Home = () => {
 };
 
 const Container = styled.div<{ toggleSNB: boolean }>`
-	min-width: 800px;
+	min-width: ${(props) => (props.toggleSNB ? '700px' : '800px')};
 	top: 60px;
 	left: ${(props) => (props.toggleSNB ? '250px' : '90px')};
 	position: absolute;

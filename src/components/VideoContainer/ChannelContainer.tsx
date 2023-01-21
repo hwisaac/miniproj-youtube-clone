@@ -22,7 +22,7 @@ const ChannelContainer = ({ channelBrief }) => {
 };
 
 const Channel = styled.div`
-	width: 950px;
+	max-width: 950px;
 	display: flex;
 	justify-content: space-between;
 	position: relative;
@@ -31,13 +31,14 @@ const Channel = styled.div`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		img {
-			width: 150px;
-			height: 150px;
-			left: 0;
-			right: 0;
-			margin: 0 auto;
-		}
+	}
+	img {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
 	}
 	.channel-textInfo {
 		width: 70%;
