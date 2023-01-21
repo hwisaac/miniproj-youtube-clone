@@ -5,7 +5,6 @@ import youtube from '../../api/youtubeClass';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
 import { useQuery } from '@tanstack/react-query';
 import { resourceLimits } from 'worker_threads';
-import { useOutletContext } from 'react-router-dom';
 
 const Home = () => {
 	const { toggleSNB } = useOutletContext<any>();

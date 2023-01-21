@@ -6,7 +6,6 @@ import { Link, useOutletContext } from 'react-router-dom';
 import searchJson from '../../mockup/search.json';
 import youtube from '../../api/youtubeClass';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { useOutletContext } from 'react-router-dom';
 
 const Search = () => {
 	const { toggleSNB } = useOutletContext<any>();
@@ -44,7 +43,6 @@ const Search = () => {
 
 	return (
 		<Main>
-			<Container toggleSNB={toggleSNB}>
 			<Container toggleSNB={toggleSNB}>
 				{searchResults?.map((item, index) => (
 					<div key={`video-${item.id.videoId}-${index}`} className="search-element">
