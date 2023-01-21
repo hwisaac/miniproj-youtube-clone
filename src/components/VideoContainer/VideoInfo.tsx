@@ -1,11 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import youtube from '../../api/youtubeClass';
-import { formatView } from '../../util/VideoFunction';
-import { formatDate } from '../../util/VideoFunction';
 import { BsThreeDotsVertical } from 'react-icons/bs';
-import { useQuery } from '@tanstack/react-query';
-import { getDuration } from '../../util/getDuration';
 
 const VideoInfo = ({ videoBrief }) => {
 	return (
@@ -27,7 +21,6 @@ const VideoInfo = ({ videoBrief }) => {
 						</div>
 					</div>
 				</div>
-				{window.location.pathname === '/' && <BsThreeDotsVertical className="dots" />}
 				{window.location.pathname === '/' && <BsThreeDotsVertical className="dots" />}
 			</div>
 		</Container>

@@ -45,11 +45,12 @@ const Channel = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		margin-left: 40px;
-		.channel-info {
-			display: flex;
-			flex-direction: column;
-			margin: 10px;
-		}
+	}
+	.channel-info {
+		display: flex;
+		flex-direction: column;
+		gap: 10px 0;
+		margin: 10px;
 	}
 	.sub-button {
 		background-color: white;
