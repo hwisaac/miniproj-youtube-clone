@@ -9,11 +9,11 @@ const PlayerBox = ({ videoId }) => {
 	return (
 		<Wrapper>
 			<VideoPlyer
-				title={`http://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=http://example.com`}
+				title={`http://www.youtube.com/embed/${videoId}`}
 				id="player"
 				width="100%"
 				height="100%"
-				src={`http://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=http://example.com`}
+				src={`http://www.youtube.com/embed/${videoId}`}
 				itemType="text/html"
 			></VideoPlyer>
 		</Wrapper>
