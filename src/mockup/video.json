@@ -1,0 +1,101 @@
+{
+	"kind": "youtube#videoListResponse",
+	"etag": "uMxckBB5ATh6Nh8893W3w0iK4R4",
+	"items": [
+		{
+			"kind": "youtube#video",
+			"etag": "mfwbGX_RvFf7GI3bIyaI7WCyMHo",
+			"id": "2vnliMZmwZ4",
+			"snippet": {
+				"publishedAt": "2022-06-03T17:00:11Z",
+				"channelId": "UCu1xbgCV5o48h_BYCQD7KJg",
+				"title": "The Truth About Becoming a Web Developer",
+				"description": "Learn how to code the right way here: \n- Master React.js Here: https://bit.ly/LearnReactNow\n- Complete Jr to Sr Web Dev Roadmap: https://bit.ly/Jr2SrRoadMap\n- Master FAANG Coding Interviews: https://bit.ly/FAANGPREP\n\n\n1-on-1 Mentorship: https://calendly.com/chrissean\nChris Sean Talks Podcast: https://spoti.fi/2YuqPEY\nTikTok & Twitter: @RealChrisSean\n\n\nDeveloper Branded: https://developerbranded.com\nJoin my discord channel: https://discord.gg/HctAeFh",
+				"thumbnails": {
+					"default": {
+						"url": "https://i.ytimg.com/vi/2vnliMZmwZ4/default.jpg",
+						"width": 120,
+						"height": 90
+					},
+					"medium": {
+						"url": "https://i.ytimg.com/vi/2vnliMZmwZ4/mqdefault.jpg",
+						"width": 320,
+						"height": 180
+					},
+					"high": {
+						"url": "https://i.ytimg.com/vi/2vnliMZmwZ4/hqdefault.jpg",
+						"width": 480,
+						"height": 360
+					},
+					"standard": {
+						"url": "https://i.ytimg.com/vi/2vnliMZmwZ4/sddefault.jpg",
+						"width": 640,
+						"height": 480
+					},
+					"maxres": {
+						"url": "https://i.ytimg.com/vi/2vnliMZmwZ4/maxresdefault.jpg",
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"channelTitle": "Chris Sean",
+				"tags": [
+					"learn",
+					"code",
+					"life",
+					"of",
+					"web",
+					"developer",
+					"html",
+					"css",
+					"javascript",
+					"query",
+					"js",
+					"php",
+					"angular",
+					"programmer",
+					"software",
+					"frontend",
+					"backend",
+					"front",
+					"back",
+					"programming",
+					"job",
+					"hired",
+					"junior",
+					"jr"
+				],
+				"categoryId": "22",
+				"liveBroadcastContent": "none",
+				"defaultLanguage": "en",
+				"localized": {
+					"title": "The Truth About Becoming a Web Developer",
+					"description": "Learn how to code the right way here: \n- Master React.js Here: https://bit.ly/LearnReactNow\n- Complete Jr to Sr Web Dev Roadmap: https://bit.ly/Jr2SrRoadMap\n- Master FAANG Coding Interviews: https://bit.ly/FAANGPREP\n\n\n1-on-1 Mentorship: https://calendly.com/chrissean\nChris Sean Talks Podcast: https://spoti.fi/2YuqPEY\nTikTok & Twitter: @RealChrisSean\n\n\nDeveloper Branded: https://developerbranded.com\nJoin my discord channel: https://discord.gg/HctAeFh"
+				},
+				"defaultAudioLanguage": "en"
+			},
+			"contentDetails": {
+				"duration": "PT7M20S",
+				"dimension": "2d",
+				"definition": "hd",
+				"caption": "false",
+				"licensedContent": true,
+				"contentRating": {},
+				"projection": "rectangular"
+			},
+			"statistics": {
+				"viewCount": "277886",
+				"likeCount": "9503",
+				"favoriteCount": "0",
+				"commentCount": "639"
+			},
+			"player": {
+				"embedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/2vnliMZmwZ4\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+			}
+		}
+	],
+	"pageInfo": {
+		"totalResults": 1,
+		"resultsPerPage": 1
+	}
+}
