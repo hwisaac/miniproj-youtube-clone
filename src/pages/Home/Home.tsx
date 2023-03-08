@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import styled from 'styled-components';
 import youtube from '../../api/youtubeClass';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
@@ -7,11 +7,12 @@ import { useQuery } from '@tanstack/react-query';
 import { resourceLimits } from 'worker_threads';
 
 const Home = () => {
+	const { toggleSNB } = useOutletContext<any>();
 	const { isLoading, data: result } = useQuery<ISearch>(['search', 'beautiful'], () => youtube.search('beautiful'));
 
 	return (
 		<main>
-			<Container>
+			<Container toggleSNB={toggleSNB}>
 				{!isLoading &&
 					result.items.map((video, index) => (
 						<div key={`${index}${video.id.videoId}`}>
@@ -25,10 +26,10 @@ const Home = () => {
 	);
 };
 
-const Container = styled.div`
-	min-width: 800px;
+const Container = styled.div<{ toggleSNB: boolean }>`
+	min-width: ${(props) => (props.toggleSNB ? '700px' : '800px')};
 	top: 60px;
-	left: 80px;
+	left: ${(props) => (props.toggleSNB ? '250px' : '90px')};
 	position: absolute;
 	padding: 0 2rem;
 	display: grid;

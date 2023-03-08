@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import VideoContainer from '../../components/VideoContainer/VideoContainer';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import searchJson from '../../mockup/search.json';
 import youtube from '../../api/youtubeClass';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 const Search = () => {
+	const { toggleSNB } = useOutletContext<any>();
 	const keyword = new URLSearchParams(useLocation().search).get('q');
 	const queryClient = useQueryClient();
 	const queryData = queryClient.getQueryData<ISearch>(['search', keyword]);
@@ -42,7 +43,7 @@ const Search = () => {
 
 	return (
 		<Main>
-			<Container>
+			<Container toggleSNB={toggleSNB}>
 				{searchResults?.map((item, index) => (
 					<div key={`video-${item.id.videoId}-${index}`} className="search-element">
 						<VideoLink to={`/${item.id.videoId}`} className="video-element">
@@ -57,17 +58,17 @@ const Search = () => {
 };
 
 const Main = styled.main`
-	width: 100%;
-	position: relative;
+	max-width: 800px;
 `;
-const Container = styled.div`
-	width: 100%;
+
+const Container = styled.div<{ toggleSNB: boolean }>`
+	width: ${(props) => (props.toggleSNB ? '80%' : '100%')};
 	position: relative;
 	top: 60px;
-	left: 90px;
+	left: ${(props) => (props.toggleSNB ? '250px' : '90px')};
 	padding: 1.5rem 2rem;
 	.search-element {
-		max-width: 1000px;
+		width: 100%;
 		height: 100%;
 		padding: 1rem;
 		color: #fff;
@@ -76,7 +77,6 @@ const Container = styled.div`
 	}
 `;
 const VideoLink = styled(Link)`
-	min-width: 0px;
 	text-decoration: none;
 	color: inherit;
 	display: grid;

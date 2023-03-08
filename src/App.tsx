@@ -14,7 +14,7 @@ function App() {
 			<Reset />
 			<Header setToggleSNB={setToggleSNB} />
 			<SNB toggleSNB={toggleSNB} setToggleSNB={setToggleSNB} />
-			<Outlet />
+			<Outlet context={{ toggleSNB }} />
 			<ReactQueryDevtools initialIsOpen={false} />
 		</>
 	);
