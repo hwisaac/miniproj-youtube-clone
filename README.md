@@ -20,7 +20,7 @@
 - 1차: 2023.1.16 ~ 2023.1.20(총 5일)
 
 ### 링크 모음
-<a href="https://react-youtube-clone1.netlify.app/">
+<a href="https://grand-faloodeh-6c1eae.netlify.app/">
   <img src="https://img.shields.io/badge/배포사이트-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
 </a>&nbsp;&nbsp;
 <a href="http://moviedb-7.s3-website.ap-northeast-2.amazonaws.com/">
