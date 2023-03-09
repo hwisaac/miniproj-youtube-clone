@@ -17,7 +17,6 @@ const PlayerBox = ({ videoId }) => {
 export default PlayerBox;
 
 const Wrapper = styled.div`
-	border: 1px solid red;
 	background-color: var(--color-dark);
 	height: 600px;
 	margin: 20px 0;
