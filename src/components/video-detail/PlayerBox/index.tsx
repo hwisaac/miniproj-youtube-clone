@@ -4,18 +4,12 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useState } from 'react';
+import VideoPlayer from './VideoPlayer';
 
 const PlayerBox = ({ videoId }) => {
 	return (
 		<Wrapper>
-			<VideoPlyer
-				title={`http://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=http://example.com`}
-				id="player"
-				width="100%"
-				height="100%"
-				src={`http://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=http://example.com`}
-				itemType="text/html"
-			></VideoPlyer>
+			<VideoPlayer videoId={videoId} />
 		</Wrapper>
 	);
 };
@@ -24,18 +18,18 @@ export default PlayerBox;
 
 const Wrapper = styled.div`
 	background-color: var(--color-dark);
-	height: 450px;
+	height: 600px;
 	margin: 20px 0;
 
 	@media ${(props) => props.theme.lg} {
-		height: 400px;
+		/* height: 400px; */
 	}
 	@media ${(props) => props.theme.md} {
-		height: 400px;
+		/* height: 400px; */
 	}
 	@media ${(props) => props.theme.sm} {
-		height: 300px;
+		/* height: 300px; */
 	}
 `;
 
-const VideoPlyer = styled.iframe``;
+// const VideoPlyer = styled.iframe``;
