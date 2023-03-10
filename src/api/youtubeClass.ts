@@ -22,7 +22,7 @@ class Youtube {
 	}
 
 	async search(query: string) {
-		console.log('Fetching: search:', query);
+		// console.log('Fetching: search:', query);
 		return this.axiosClient
 			.get(`/search?part=snippet&maxResults=10&q=${query}`)
 			.then((result) => result.data)
@@ -35,7 +35,7 @@ class Youtube {
 			});
 	}
 	async searchByToken({ query, pageToken }) {
-		console.log('Fetching: search:', query, pageToken);
+		// console.log('Fetching: search:', query, pageToken);
 		return this.axiosClient
 			.get(`/search?part=snippet&maxResults=10&pageToken=${pageToken}&q=${query}`)
 			.then((result) => result.data)
@@ -73,7 +73,7 @@ class Youtube {
 			.get(`/commentThreads?part=snippet&videoId=${videoId}`)
 			.then((result) => result.data)
 			.catch((error) => {
-				console.log('comment에러발생', error);
+				// console.log('comment에러발생', error);
 				return mockupComment;
 			});
 	}
@@ -90,7 +90,7 @@ class Youtube {
 	}
 
 	async related(videoId: string) {
-		console.log('Fetching: videoId', videoId);
+		// console.log('Fetching: videoId', videoId);
 		return this.axiosClient
 			.get(`/search?part=snippet&maxResults=10&type=video&relatedToVideoId=${videoId}`)
 			.then((result) => result.data)

@@ -7,6 +7,7 @@ import { useState } from 'react';
 import VideoPlayer from './VideoPlayer';
 
 const PlayerBox = ({ videoId }) => {
+	console.log(videoId);
 	return (
 		<Wrapper>
 			<VideoPlayer videoId={videoId} />
