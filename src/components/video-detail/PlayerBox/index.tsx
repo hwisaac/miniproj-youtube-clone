@@ -9,12 +9,6 @@ const PlayerBox = ({ videoId }) => {
 	return (
 		<Wrapper>
 			<VideoPlayer videoId={videoId} />
-			<VideoPlayer videoId={videoId} />
-			<VideoPlayer videoId={videoId} />
-			<VideoPlayer videoId={videoId} />
-			<VideoPlayer videoId={videoId} />
-			<VideoPlayer videoId={videoId} />
-			<VideoPlayer videoId={videoId} />
 		</Wrapper>
 	);
 };

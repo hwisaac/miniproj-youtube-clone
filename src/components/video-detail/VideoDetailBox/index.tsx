@@ -21,6 +21,7 @@ import numberToKorean from '../../../util/numberToKorean';
 const VideoDetailBox = ({ videoInfoData }) => {
 	const [detail, setDetail] = useState<IVideoItem>(videoInfoData.items[0]);
 	const [isBrief, setIsBrief] = useState<boolean>(true);
+	const [isBrief, setIsBrief] = useState<boolean>(true);
 
 	const channelId = videoInfoData.items[0].snippet.channelId;
 	const handleDescriptionBox = () => {
