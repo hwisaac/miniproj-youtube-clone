@@ -14,7 +14,7 @@ const Home = () => {
 		<main>
 			<Container toggleSNB={toggleSNB}>
 				{!isLoading &&
-					result.items.map((video, index) => (
+					result?.items?.map((video, index) => (
 						<div key={`${index}${video.id.videoId}`}>
 							<VideoLink to={`/${video.id.videoId}`} key={video.id.videoId}>
 								<VideoContainer video={video} />

@@ -21,7 +21,6 @@ import numberToKorean from '../../../util/numberToKorean';
 const VideoDetailBox = ({ videoInfoData }) => {
 	const [detail, setDetail] = useState<IVideoItem>(videoInfoData.items[0]);
 	const [isBrief, setIsBrief] = useState<boolean>(true);
-	const [isBrief, setIsBrief] = useState<boolean>(true);
 
 	const channelId = videoInfoData.items[0].snippet.channelId;
 	const handleDescriptionBox = () => {
@@ -88,7 +87,7 @@ const VideoDetailBox = ({ videoInfoData }) => {
 
 					{isBrief && (
 						<BriefTags>
-							{detail.snippet.tags.map((tag, index) => (
+							{detail?.snippet?.tags?.map((tag, index) => (
 								<span key={`${tag}-${index}`}>#{tag}</span>
 							))}
 						</BriefTags>
@@ -96,7 +95,7 @@ const VideoDetailBox = ({ videoInfoData }) => {
 				</HeaderInfo>
 				<Description isBrief={isBrief}>{detail.snippet.description}</Description>
 				<Tags>
-					{detail.snippet.tags.map((tag, index) => (
+					{detail?.snippet?.tags?.map((tag, index) => (
 						<li key={`${tag}-${index}`}>#{tag}</li>
 					))}
 				</Tags>

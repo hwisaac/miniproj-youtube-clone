@@ -19,7 +19,7 @@ const Home = () => {
 	return (
 		<Main>
 			<Container className="video-container">
-				{videos.map((video, index) => (
+				{videos?.map((video, index) => (
 					<div className="video-element" key={`${index}${video.id.videoId}`}>
 						<VideoLink to={'/' + video.id.videoId} key={video.id.videoId} className="video-element">
 							{video ? <VideoContainer video={video} /> : null}

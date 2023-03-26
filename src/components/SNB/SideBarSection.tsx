@@ -8,7 +8,7 @@ import styled, { css } from 'styled-components';
 const SideBarSection = ({ toggleSNB, section }) => {
 	return (
 		<SideBarSectionUL toggleSNB={toggleSNB}>
-			{section.map((ele) => (
+			{section?.map((ele) => (
 				<li key={ele.title}>
 					{ele.icon}
 					<span>{ele.title}</span>

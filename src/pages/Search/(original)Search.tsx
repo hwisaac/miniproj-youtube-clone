@@ -28,7 +28,7 @@ const Search = () => {
 	return (
 		<Main>
 			<Container>
-				{searchResults.map((video) => (
+				{searchResults?.map((video) => (
 					<div className="search-element" key={video.id.videoId}>
 						<VideoLink to={'/' + (video.id.videoId && video.snippet.channelTitle)} className="video-element">
 							<VideoContainer video={video} />

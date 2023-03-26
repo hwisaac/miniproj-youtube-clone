@@ -39,7 +39,7 @@ const CommentBox = ({ videoId, commentCount, commentData }) => {
 				<Order>정렬 기준</Order>
 			</Header>
 			<Body>
-				{commentsPack.map((item) => (
+				{commentsPack?.map((item) => (
 					<Comment dataItem={item} key={item.id} />
 				))}
 				<MoreBtn onClick={handleMoreBtn}>댓글 더 보기</MoreBtn>

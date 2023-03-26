@@ -33,7 +33,7 @@ const Recommend = ({ videoId }) => {
 		<Container>
 			<VideosUl>
 				{!isLoading &&
-					items.map((item, index) => {
+					items?.map((item, index) => {
 						return <VideoItem key={item.id.videoId} item={item} />;
 					})}
 			</VideosUl>
